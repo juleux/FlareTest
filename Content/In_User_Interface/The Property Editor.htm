@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>The Property Editor</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="MainPropEdit"></a>The Property Editor</h2>
+        <p>The property editor displays the properties of the currently selected
+object.&#160; The following is true for the Property editor:&#160;&#160;</p>
+        <ul>
+            <li>Properties shown in gray
+ display status information only.&#160; As a general rule, properties shown 
+	in black can be edited.&#160; Interrelated properties (see below) provide 
+	exceptions to this rule.</li>
+            <li>Properties exist for every object in the hierarchy including collection
+ objects (i.e. Locations, All Fibers, NetworkViews).&#160; Use collection object
+ properties to view status information for, or make edits to, all lightpaths,
+ demands, etc. in the collection (group).</li>
+            <li>Some properties are interrelated:&#160; 
+<ul><li>Making
+ changes to one property of an object may change the value of another 
+	property.&#160; For example, the FixedLightPathRouting and 
+	FixedLightPathTimeSlots properties of demand objects are interrelated.&#160; 
+	Setting the FixedLightPathTimeSlots property of a demand to True results in 
+	it's FixedLightPathRouting being set to True (if time slots are fixed then 
+	routing must be fixed also).&#160; Likewise, setting the 
+	FixedLightPathRouting property of a demand to False results in the the 
+	FixedLightPathTimeSlots property being set to False (if lightpath routing is 
+	not fixed, then time slot routing cannot be fixed).</li><li>The value of one property of an object may determine if editing of other 
+	object properties are possible.&#160; For example, if the Local property of 
+	a demand object is set to True, then none of the demand's path or protection 
+	related properties may be edited, as these properties do not apply to local 
+	demands.</li></ul></li>
+        </ul>
+        <p class="FigureTitle">Property Editor</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/PropertyEditorLabeled.bmp" width="565" height="622" />
+        </p>
+        <p class="BackToTopLink"><a href="#MainPropEdit">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;</p>
+        <p class="SeeAlsoLinks"><a href="..\In_NetworkDataTool\The%20Network%20Data%20Tool.htm#DataToolTop">The 
+Network Data Tool</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="The%20User%20Interface.htm#UITop">The User 
+Interface</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

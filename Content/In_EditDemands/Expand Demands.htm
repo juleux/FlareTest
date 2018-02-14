@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Expand Demands</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="DemToolExpand"></a>Expand Demands</h2>
+        <p>The Modeler's <b>Expand Demands</b> tool divides large demands into smaller
+demands based on parameters that you specify.&#160; By routing sets of smaller
+demands instead of large ones, you create additional routing possibilities and
+the potential for a better solution. The expansion parameters you
+specify include:</p>
+        <ul>
+            <li>
+                <p style="margin-bottom: 6;"><b>Quantity Threshold -</b> This parameter determines which demands will
+ be expanded.&#160; Demands with a quantity that is greater
+ than this value will be expanded.&#160; Demands with a quantity that is
+ less than or equal to this value will not be expanded.</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 6;"><b>Expanded Demand Quantity -</b> The quantity
+ you want the newly created demands to have.</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 6;"><b>Split Remainder Into Single
+ Quantity Demands -</b> When checked, any value remaining after
+ the expansion calculation is complete will be used to create additional demands,
+ each having a quantity equal to one.&#160; The number of
+additional demands created will be equal to the remainder.&#160; When left unchecked, one additional demand will be created with a quantity
+equal to the value of the remainder.&#160;&#160;</p>
+            </li>
+        </ul>
+        <p>Demands are expanded using the following calculation:</p>
+        <blockquote>
+            <p><b>Demand Quantity/Expanded Demand Quantity = Number of Demands to Create +
+Remainder (if any).&#160;&#160;</b>
+            </p>
+        </blockquote>
+        <p> To use this tool, select <b>Edit, Demands,
+Expand...</b> from the menu.&#160; The dialog shown below will appear.&#160;&#160;Enter
+the desired values and click <b>Expand</b> to create additional demands based on
+your entries.&#160;Each new demand will appear in the object tree with a default
+name (name of the original demand with an added numerical suffix).</p>
+        <p class="FigureTitle">Expand Demands Dialog</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/ExpandDemands.bmp" width="605" height="160" />
+        </p>
+        <p class="BackToTopLink"><a href="#DemToolExpand">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoLinks">&#160;</p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

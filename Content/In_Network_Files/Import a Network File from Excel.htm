@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Import a Network File from Excel</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="NFImportExcel"></a>Import a Network File from Excel</h2>
+        <p>The ability to import data from network files enables you to merge network 
+information from one or more Excel data files.&#160;&#160; You can import an 
+entire Excel data file or selected groups of data (worksheets) within a file.&#160;&#160;</p>
+        <p>Modeler imports Excel data into the network file that is open and on display at the 
+time of import.&#160; As a precaution, you should save a backup 
+copy of your network file before attempting to import additional data.&#160; To 
+import network data into the Modeler, select <b> File, Import, from Excel</b><b>...</b> from 
+the menu.&#160; Select the Excel file you wish to import data from and 
+click the <b>Open</b> button.&#160; The dialog shown below will appear.&#160;&#160;</p>
+        <p class="FigureTitle">Dialog to Import Data From an Excel File</p>
+        <p>
+            <img border="0" src="../Resources/images/ImportFile.bmp" width="509" height="530" />
+        </p>
+        <p> For each type of worksheet (location, fiber, etc.), the names of the 
+individual worksheets present in the file are listed.&#160; Click the checkbox 
+next to each worksheet that you wish to import or use the <b>Select</b> buttons 
+to select all the worksheets of a given type.&#160; To reverse your selections, 
+click the <b>Toggle All</b> button (upper right).&#160; When your selections are 
+complete, click <b>OK</b>.&#160; Modeler will perform validation checks as it 
+imports your selections.&#160; Any errors that exist will be logged.</p>
+        <h3> Import Options</h3>
+        <p> When the <b>Fix Existing Demand Routing And Set Minimum LightPath Capacities</b>
+option is checked, demands and lightpaths present prior to import will retain
+their routing information.&#160; Specifically, each demand's FixedFiberRouting
+and FixedLightPathRouting properties will be set to True and each lightpath's
+CapacityMinimum property will be set equal to the value of its Capacity
+property.&#160; This option is useful when you would like to import data for a
+later phase of your design.&#160;</p>
+        <p class="BackToTopLink"><a href="#NFImportExcel">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:
+</p>
+        <p class="SeeAlsoLinks"><a href="Create%20an%20Excel%20File%20for%20Import.htm#NFCreateExcel">Create an 
+Excel File for Import</a> <![CDATA[ ]]></p>
+        <p class="SeeAlsoLinks"><a href="NetworkFiles.htm#NFTop">Network Files</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Save%20a%20Network%20File.htm#NFSaveFile">
+Save a Network File</a>
+        </p>
+        <p class="TableBodyEmphasis">&#160;</p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

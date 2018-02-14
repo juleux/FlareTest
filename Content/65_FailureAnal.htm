@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3066" MadCap:lastWidth="834">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Failure Analysis Overview</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="FailTop"></a>Failure Analysis - Mesh</h1>
+        <h3>The Failure Analysis Algorithm</h3>
+        <p>The Failure Analysis algorithm gages the resiliency of a mesh network
+implemented using <MadCap:variable name="Modeler.CompanyName" />'s Broadleaf technology.&#160; As an option, the
+algorithm can adjust the network's shared protection capacity to improve
+failure restoration.&#160; Prior to running this algorithm, the network must 
+contain at least some demand routing information (acquired by running a routing 
+algorithm or via import from <MadCap:variable name="Modeler.ProductName" />). &#160;The Failure Analysis algorithm uses each demand's working and protect path information as it 
+models a user-defined set of failures in a BroadLeaf environment.&#160; Any un-routed demands in the network are ignored by the 
+algorithm.</p>
+        <p>To use the Failure Analysis algorithm, select <b>Algorithms, Mesh, Failure 
+Analysis </b>from the main menu.&#160; The resulting dialog contains the
+following tabs:</p>
+        <ul>
+            <li><a href="65_FailureAnalAuto.htm#FailAutoTop">Automatic</a> - Run the
+ failure analysis algorithm from start to finish.&#160;</li>
+            <li><a href="65_FailureAnalManual.htm#ManualFailTop">Manual</a> - Step through
+ the fail and repair phases of failure analysis and observe the
+ result.</li>
+            <li><a href="65_FailureAnalAdvancedOptions.htm#FailOptionsTop">Advanced</a> 
+	- Select from various options for performing failure analysis.</li>
+            <li><b><a href="65_FailureAnalScenarioEditor.htm#FailScenTop">Scenario Editor</a>
+    - </b>Define a set of failure scenarios for your network or select from a
+ pre-defined list.</li>
+            <li> <a href="65_FailureAnalResults.htm#FailResultsTop">Results</a> - View
+ and/or save the detailed results of a completed analysis.</li>
+        </ul>
+        <h3><span>
+
+
+Failure Scenarios</span>
+        </h3>
+        <p><span>
+
+
+The Modeler provides a set of tools (within the
+<a href="65_FailureAnalScenarioEditor.htm#FailScenTop">Failure Analysis Scenario 
+Editor</a>) for creating and using failure
+scenarios.&#160; A failure scenario is a user-defined list of network objects 
+whose combined failure you want to simulate.&#160; A failure scenario can 
+include any combination of conduit, fiber, location, or lightpath objects.&#160; By creating one or more failure scenarios and then running the
+Failure Analysis algorithm, you can model the impact the object failures will
+have on your network as designed.&#160; 
+</span>
+        </p>
+        <h3>Automatic versus Manual</h3>
+        <p>The Modeler provides both <a href="65_FailureAnalAuto.htm#FailAutoTop">
+automatic</a> and <a href="65_FailureAnalManual.htm#ManualFailTop">manual</a> 
+modes of failure analysis.&#160; Once you have created failure scenarios, you 
+can execute the failure analysis algorithm in automatic or manual mode and then 
+evaluate the results.&#160; Results are presented in a detailed set of tables 
+and in 
+network views.</p>
+        <p>Use automatic failure analysis when you want the algorithm to evaluate each 
+failure scenario individually.&#160; Each scenario is evaluated for multiple 
+iterations (the number of iterations is user-defined).&#160; For each iteration 
+of each failure scenario, the affected circuits are restored in a unique, random 
+order.&#160; The results include a summary of all iterations and the path that 
+each affected demand was re-routed on within each iteration.&#160; </p>
+        <p>Automatic mode also provides you with the option to permit capacity increases 
+as necessary to re-route failed demands.&#160; By default, the failure analysis 
+algorithm treats the capacity of the network as a fixed quantity.&#160; If the 
+algorithm determines that there is insufficient capacity available for 
+re-routing a demand, the demand will fail.&#160; Automatic mode allows you to 
+override the default and have the algorithm increase capacity, as necessary, to 
+avoid demand failure.&#160; Any 
+added capacity is then available for all other demands and failure scenarios.</p>
+        <p>Use manual failure analysis when you want to evaluate the impact of a set of 
+concurrent failures, while maintaining control over the order in which failures 
+and repairs occur.&#160; You begin by creating a list of the failure scenarios 
+you want to evaluate.&#160; The algorithm performs a single iteration for each 
+demand and displays the results as each demand fails and is subsequently 
+repaired. </p>
+        <h3>Deterministic versus Non-Deterministic Results</h3>
+        <p>Within a BroadLeaf network, circuits are restored 
+in either a deterministic or a non-deterministic way, depending on the protection type of 
+the circuit.&#160; OnePlusOne circuits (DRC/CDRC) with no source re-route will 
+restore in a deterministic way.&#160; That is, if the active path fails, the 
+circuit will switch to it's protect path.&#160; In this case, running multiple 
+iterations of Failure Analysis will yield identical results because 
+protection is deterministic and independent of the restoration order.</p>
+        <p>In contrast, any circuit that uses source re-route (i.e. a basic circuit or 
+OnePlusOne with source re-route), will restore in a non-deterministic way.&#160; 
+That is, the switches in the network will dynamically determine the restoration 
+path based on their current view of the network topology.&#160; Because this 
+process is distributed among switches, their potentially differing views of the 
+network topology could vary the final routes that circuits are restored upon.</p>
+        <h3>Modeling Non-Deterministic Behavior</h3>
+        <p><MadCap:variable name="Modeler.CompanyName" />'s BroadLeaf technology uses OSPF (Open Shortest Path First) for 
+demand (circuit) restoration instead of a pre-calculated, deterministic 
+protection scheme.&#160; BroadLeaf employs a distributed approach to restoration 
+in which each switch responds to a failure independently.&#160;&#160; In 
+response to any given failure, multiple switches will attempt to restore 
+their respective failed circuits in parallel.&#160; The order in which 
+restoration takes place is dependent on two factors.&#160; The first factor is 
+the order in which the affected switches receive notification of a failure, 
+which is dependent on the topology of the network and the amount of control 
+plane congestion at the time of the failure.&#160; The second factor is the 
+order in which each switch receives it's circuit failure notification relative 
+to it's most recent OSPF topology update.&#160; If a switch receives a failure 
+notification prior to receiving a topology update, then it will attempt to 
+re-route the circuit using&#160; information from the network's last known 
+state.&#160; The result is that for any given failure, more than one outcome is 
+possible depending on the timing in which failure related events occur.</p>
+        <p>Though the Modeler cannot identically emulate the non-deterministic behavior 
+of Broadleaf, it's&#160; failure analysis algorithm is designed to model it as 
+closely as possible.&#160; For each failure the algorithm models, it creates an accurate list of the 
+circuits that would be affected if the failure occurred in a live network.&#160; 
+For every circuit in the list, the algorithm can determine the optimum 
+restoration path.&#160; In order to model the unpredictable order in which 
+circuits are restored in a live network, the algorithm performs multiple 
+iterations of it's failure analysis, each with a unique order of circuit 
+restoration.&#160; By increasing the number of iterations, you increase the 
+number of random orderings that will be evaluated by the algorithm.&#160; The 
+Modeler provides detailed results for each iteration.&#160; By examining these 
+results, you can get a sense of the affect restoration order has on path 
+selection for a demand.</p>
+        <p>Using this approach, the failure analysis algorithm attempts to provide the 
+information necessary to insure the network has adequate protection capacity.&#160; 
+However, like any system that models a non-deterministic process, the algorithm 
+provides a best case solution that maximizes the probability of success but 
+provides no guarantee.</p>
+        <h3>Maintaining Data Synchronization</h3>
+        <p>The failure analysis dialog is designed to allow you to access the Modeler's 
+main window and return to the dialog.&#160; For example, you can select a demand 
+from within the failure analysis dialog, view it's properties in the property 
+editor, and view it's path information in a network view, all without closing 
+the failure analysis dialog.&#160; When you use this feature, take care not to 
+edit the objects you are viewing.&#160; In order for the data displayed in the 
+dialog to remain synchronized with the data displayed in the rest of the user 
+interface, you must close the dialog prior to making any edits to objects in the 
+network.&#160; In the event that re-synchronization is required, close and 
+re-open the failure analysis dialog to view the revised network data.</p><span><p class="BackToTopLink"><a href="#FailTop">Back to top</a></p><hr /><p>&#160;</p><p>&#160;</p></span>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

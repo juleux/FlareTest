@@ -1,0 +1,234 @@
+/*<meta />*/
+
+body
+{
+	margin-top: 8pt;
+	font-weight: normal;
+	font-size: 12pt;
+	margin-left: 0.25in;
+	color: black;
+	font-family: 'Times New Roman';
+	background-color: #ffffff;
+}
+
+p
+{
+	font-size: 12pt;
+	color: #000000;
+	font-family: 'Times New Roman';
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 18pt;
+	font-family: Arial;
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 14pt;
+	font-family: Arial;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+a:link
+{
+	font-weight: 800;
+	color: forestgreen;
+	text-decoration: none;
+}
+
+a:visited
+{
+	font-weight: bold;
+	color: forestgreen;
+	text-decoration: none;
+}
+
+ol
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.BackToTopLink
+{
+	font-weight: bold;
+	font-size: 8pt;
+	cursor: default;
+	color: forestgreen;
+	font-family: Arial;
+}
+
+.FigureTitle
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: black;
+	font-family: Arial;
+}
+
+.Note
+{
+	border-right: #b0c4de thin solid;
+	padding-right: 4pt;
+	border-top: #b0c4de thin solid;
+	padding-left: 4pt;
+	font-weight: normal;
+	font-size: 10pt;
+	padding-bottom: 4pt;
+	margin: 2pt 6pt;
+	border-left: #b0c4de thin solid;
+	color: black;
+	padding-top: 4pt;
+	border-bottom: #b0c4de thin solid;
+	font-style: normal;
+	background-color: whitesmoke;
+	text-align: left;
+}
+
+.SeeAlsoLinks
+{
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: default;
+	color: #0033CC;
+	font-family: Arial;
+	list-style-type: none;
+	text-align: left;
+	margin-bottom: 2;
+	margin-top: 2;
+	margin-left: 20;
+}
+
+.SeeAlsoText
+{
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: default;
+	color: #0033CC;
+	font-family: Arial;
+	margin-bottom: 5;
+}
+
+.TableHeader
+{
+	padding-right: 3pt;
+	padding-left: 3pt;
+	font-weight: bold;
+	font-size: 10pt;
+	padding-bottom: 1pt;
+	margin: 2pt 3pt;
+	color: black;
+	padding-top: 1pt;
+	font-family: Arial;
+	background-color: whitesmoke;
+	text-align: left;
+}
+
+.TableBody
+{
+	padding-right: 3pt;
+	padding-left: 3pt;
+	font-weight: normal;
+	font-size: 10pt;
+	padding-bottom: 1pt;
+	margin: 2pt 3pt;
+	color: black;
+	padding-top: 1pt;
+	font-family: Arial;
+	text-align: left;
+}
+
+.TableBodyEmphasis
+{
+	padding-right: 3pt;
+	padding-left: 3pt;
+	font-weight: normal;
+	font-size: 10pt;
+	padding-bottom: 1pt;
+	margin: 2pt 3pt;
+	color: brown;
+	padding-top: 1pt;
+	font-family: Arial;
+	text-align: left;
+}
+
+.MiniTableHeader
+{
+	padding-right: 3pt;
+	padding-left: 3pt;
+	font-weight: bold;
+	font-size: 8pt;
+	padding-bottom: 1pt;
+	margin: 2pt 3pt;
+	color: black;
+	padding-top: 1pt;
+	font-family: Arial;
+	background-color: whitesmoke;
+	text-align: left;
+}
+
+.MiniTableBody
+{
+	padding-right: 3pt;
+	padding-left: 3pt;
+	font-weight: normal;
+	font-size: 8pt;
+	padding-bottom: 1pt;
+	margin: 2pt 3pt;
+	color: black;
+	padding-top: 1pt;
+	font-family: Arial;
+	text-align: left;
+}
+
+.MiniTableBodyEmphasis
+{
+	padding-right: 3pt;
+	padding-left: 3pt;
+	font-weight: normal;
+	font-size: 8pt;
+	padding-bottom: 1pt;
+	margin: 2pt 3pt;
+	color: brown;
+	padding-top: 1pt;
+	font-family: Arial;
+	text-align: left;
+}
+

@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Customizing Network Views</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="NetViewCustom"></a>Customizing Network Views</h2>
+        <p>Once a network view has been created, you can customize it by editing its 
+properties to suit your needs.&#160; Network views can be customized in the 
+following ways:</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="795">
+            <tr>
+                <th class="TableHeader" width="175">Description</th>
+                <th class="TableHeader" width="598">Instructions</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Display various types of 
+	fiber, lightpath, demand, and location data.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To select data for display, select a network view and set its <b>
+		FiberLabel
+          </b>(LightPathLabel, DemandLabel, or LocaleLabel) property using the pull-down menu.</li>
+                    </ul>
+                    <blockquote>
+                        <table border="1" cellpadding="0" cellspacing="0" class="MiniTableBody" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="547" height="453">
+                            <tr>
+                                <td class="MiniTableHeader" width="83" height="16">Label Type</td>
+                                <td class="MiniTableHeader" width="66" height="16">Selection</td>
+                                <td class="MiniTableHeader" width="302" height="16">Description</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="83" height="165" rowspan="8">
+			&#160;Fiber</td>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">None</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Label 
+			hidden</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">Name</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Fiber 
+			Name</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="30">
+			Traffic</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="30">
+			Demand traffic over fiber in STS-1 units in the following format:&#160; 
+			Working:ProtectDedicated:ProtectShared:Available</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			Capacity</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Sum 
+			of the working and protect traffic for the lightpaths traveling over 
+			this fiber</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			AdminCost</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Fiber 
+			AdminCost</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">Length</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Fiber 
+			Length</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="30">
+            ConduitIDs</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="30">The 
+			list of conduit id numbers associated with this fiber. &#160;Multiple ids 
+			are separated by colons.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="30">
+            ConduitIDDescriptions</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="30">The 
+			description of each of the conduit ids associated with this fiber. 
+			&#160;Multiple descriptions are separated by colons.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="83" height="272" rowspan="16">
+			&#160;LightPath</td>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">None</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Label 
+			hidden</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">Name</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			LightPath Name</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">Length</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			LightPath Length</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			AdminCost</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			LightPath AdminCost</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="30">
+			Traffic</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="30">
+			Demand traffic over lightpath in STS-1 units in the following 
+			format:&#160; Working:ProtectDedicated:ProtectShared:Available</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			Capacity</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Sum 
+			of the working and protect traffic in lightpath Type units</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			CapacityMaximumType</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Sum 
+			of the working and protect traffic in MaximumType units (the largest 
+			type present in the lightpath collection)</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			CapacityIncremental</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">The 
+			difference between the actual capacity and the minimum capacity of a 
+			lightpath.&#160; When this label is selected any lightpath with an 
+			incremental capacity greater than zero will be highlighted in the 
+			network view.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			CapacityMinMaxCapIncUtil</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			Multiple capacity related properties of a lightpath displayed in the format 
+			- MinimumCapacity:MaximumCapacity:Capacity:IncrementalCapacity:Utilization</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="15">
+			CapacityOverMaximum</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="15">The 
+			difference between the maximum capacity and the actual capacity of a 
+			lightpath</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			Domain</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">The 
+			ring, if any, that this lightpath is associated with.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			RingStackCount</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">The 
+			stack count of the ring associated with this lightpath</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			Utilization</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">The 
+			percentage of this lightpath's capacity in use.&#160; When this 
+			label is selected, each lightpath in the network view is displayed 
+			using a color that corresponds to it's utilization value:<ul><li>Green - Utilization = 0</li><li>Blue - Less than or equal to 25</li><li>Yellow - Less than or equal to 50</li><li>Orange - Less than or equal to 75</li><li>Dark Red - Less than or equal to 100</li><li>Red - Greater than 100</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			ConduitIDs</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">The 
+			list of conduit id numbers associated with this lightpath.&#160; 
+			Multiple ids are separated by colons</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">VPN</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">The 
+			id number of the Virtual Private Network this lightpath is 
+			associated with.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			FailureAnalysisAvailable</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">This 
+			label is useful when you want to look at a network view during
+			<a href="..\65_FailureAnalManual.htm#ManualFailTop">Manual Failure 
+			Analysis</a> to evaluate the impact of one or more failures on the 
+			network.&#160; Select this label to view the quantity of time slots 
+			of each signal type that are available after a manual failure or 
+			repair.&#160; Data is in the format of 
+			Type1:Type3:Type12:Type48:Type192 where  
+	<ul><li>Type1 = OC1_STS1_VC3_DS3_E3_AU3 </li><li>Type3 = OC3_STS3_STM1_VC4 </li><li>Type12 = OC12_STS12_STM4 </li><li>Type48 = OC48_STS48_STM16 </li><li>Type192 = OC192_STS192_STM64</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="83" height="46" rowspan="3">
+			&#160;Demand</td>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">None</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Label 
+			hidden</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="14">Name</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="14">
+			Demand Name</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			Quantity</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			Demand size in demand Type units</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="83" height="61" rowspan="4">
+			&#160;Locale</td>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">None</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">Label 
+			hidden</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="14">Name</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="14">
+			The Name of the location associated with this locale</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			IPAddress</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			The IP Address assigned to this location</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="66" height="16">
+			RouterID</td>
+                                <td class="MiniTableBody" valign="top" width="302" height="16">
+			The Router ID assigned to this location</td>
+                            </tr>
+                        </table>
+                    </blockquote>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Select one of several methods 
+	for displaying fiber, lightpath and demand routing information.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To select a method of displaying fiber, lightpath and demand routing 
+		information, select a network view and set its <b>FiberRouting</b>
+          (LightPathRouting, DemandRouting) property using the pull-down menu.&#160;</li>
+                    </ul>
+                    <blockquote>
+                        <table border="1" cellpadding="0" cellspacing="0" class="MiniTableBody" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="450">
+                            <tr>
+                                <td class="MiniTableHeader" width="68">Routing Type</td>
+                                <td class="MiniTableHeader" width="78">Selection</td>
+                                <td class="MiniTableHeader" width="358">Description</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="68" rowspan="2">Fiber</td>
+                                <td class="MiniTableBody" valign="top" width="78">None</td>
+                                <td class="MiniTableBody" valign="top" width="358">Fibers are not 
+			shown.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="78">Direct</td>
+                                <td class="MiniTableBody" valign="top" width="358">Each fiber is 
+			shown as a line from its start location to its end location.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="68" rowspan="3">
+			&#160;LightPath</td>
+                                <td class="MiniTableBody" valign="top" width="78">None</td>
+                                <td class="MiniTableBody" valign="top" width="358">LightPaths are 
+			not shown.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="78">Direct</td>
+                                <td class="MiniTableBody" valign="top" width="358">Each lightpath is 
+			shown as a line from its start location to its end location.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="78">OverFibers</td>
+                                <td class="MiniTableBody" valign="top" width="358">The fibers over 
+			which a lightpath travels are highlighted when the lightpath is 
+			selected.&#160; The view's FiberRouting property must be set to 
+			Direct to take advantage of this feature.&#160;</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="68" rowspan="3">
+			&#160;Demand</td>
+                                <td class="MiniTableBody" valign="top" width="78">None</td>
+                                <td class="MiniTableBody" valign="top" width="358">Demands are not 
+			shown.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="78">Direct</td>
+                                <td class="MiniTableBody" valign="top" width="358">Each demand is 
+			shown as a line from its start location to its end location.</td>
+                            </tr>
+                            <tr>
+                                <td class="MiniTableBody" valign="top" width="78">
+			OverFibersAndLightPaths</td>
+                                <td class="MiniTableBody" valign="top" width="358">The fibers and 
+			lightpaths over which a demand is routed are highlighted when the 
+			demand is selected.&#160; The view's FiberRouting and/or 
+			LightPathRouting property must be set to Direct to take advantage of 
+			this feature.&#160;</td>
+                            </tr>
+                        </table>
+                    </blockquote>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Display fibers, lightpaths, 
+	and demands as straight or curved lines.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To display the fibers within a view as curved lines, select the view 
+		and set its <b>FibersAsBeziers</b> (LightPathsAsBeziers, 
+		DemandsAsBeziers) property to True.&#160;&#160;Handles will appear on each fiber.&#160; 
+		To form a curve, drag one or both handles on a fiber to the desired 
+		coordinates.&#160; Fiber endpoints remain fixed.</li>
+                        <li>To curve (spread) overlapping fibers, lightpaths, and/or demands 
+		within a view, click on the Spread Link Items icon 
+        <img border="0" src="../Resources/images/SpreadIcon.gif" width="16" height="12" />.&#160; 
+		The <b>FibersAsBeziers</b> (LightPathsAsBeziers, DemandsAsBeziers) 
+		property of a layer must be set to True for spreading to occur.&#160; 
+		Use the view's <b>SpreadFactor</b>
+          property to control the severity of the resulting curves (the relative 
+		distance of each curve's peak from its endpoints).&#160;&#160;</li>
+                        <li>To straighten all fibers, lightpaths and/or demands within a view, 
+		click on the Straighten Link Items icon 
+        <img border="0" src="../Resources/images/StraightenIcon.gif" width="16" height="12" />.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Display or hide individual 
+	locales.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>When a view is created, its locales are visible by default.&#160; To 
+		hide a locale, click on the desired locale in the object tree and set 
+		its <b>Visible</b>
+          property to False.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top"><a name="NetViewRepositionLocales"></a>Reposition locales within a view.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To move a single locale, click on the locale in the network view 
+		window and drag it to the desired coordinates.</li>
+                        <li><b>OR:</b> Click on the desired locale in the object tree and edit 
+		its <b>X</b> and <b>Y</b>
+          (coordinate) properties.</li>
+                        <li>To move a group of two or more locales, first select the desired 
+		locales by holding down the <b>Shift</b> key and clicking on each 
+		locale's icon within the view.&#160; Next, click on one of the selected 
+		locales and drag to the desired coordinates.</li>
+                        <li>To align a group of two or more locales, first select the desired 
+		locales by holding down the <b>Shift</b> key and clicking on each 
+		locale's icon within the view. Next, click on an <b>Alignment </b>tool 
+		icon (left: <img border="0" src="../Resources/images/AlignLeftIcon.gif" width="9" height="16" />, 
+		right: 
+        <img border="0" src="../Resources/images/AlignRightIcon.gif" width="9" height="16" />, 
+		top: <img border="0" src="../Resources/images/AlignTopIcon.gif" width="16" height="9" />, 
+		or bottom: 
+        <img border="0" src="../Resources/images/AlignBottomIcon.gif" width="16" height="9" />) 
+		in the 
+		<a href="..\In_User_Interface\The%20Main%20Toolbar.htm#MainToolbar">Main Toolbar</a>.</li>
+                        <li>To change the distance between every locale within a view, click on 
+		the <b>Expand View Proportionately</b> icon&#160; 
+        <img border="0" src="../Resources/images/ExpandPropIcon.gif" width="14" height="14" />
+          in the 
+		<a href="..\In_User_Interface\The%20Main%20Toolbar.htm#MainToolbar">Main Toolbar</a>.&#160; 
+		Enter the factor by which you wish to expand or contract the view.&#160; 
+		The background image will be expanded/contracted as well.</li>
+                        <li>All of the locales within a view can be repositioned as a group 
+		using the <b>Auto Layout</b><b> Locales </b>
+          tool <img border="0" src="../Resources/images/ZoomAutoIcon.gif" width="15" height="15" /> 
+		.&#160; This tool uses an algorithm to create a best-case view 
+		automatically.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Change the scale of a view.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To increase a view's scale, click on the view in the object tree and 
+		set its
+          <b>Scale</b>
+          property to a number greater than one.&#160; Enter a number between 
+		0.1 and 1 to decrease a view's scale.</li>
+                        <li><b>OR:</b> Change a view's scale by selecting the view and clicking 
+		on a <b>Zoom</b> icon (increase scale: 
+        <img border="0" src="../Resources/images/ZoomInIcon.gif" width="15" height="15" />, 
+		decrease scale: <img border="0" src="../Resources/images/ZoomOutIcon.gif" width="15" height="15" />, 
+		original scale: <img border="0" src="../Resources/images/ZoomOrigIcon.gif" width="15" height="15" />, 
+		or scale to fit in window: <img border="0" src="../Resources/images/ZoomFitIcon.gif" width="15" height="15" />
+          ) in the 
+		<a href="..\In_User_Interface\The%20Main%20Toolbar.htm#MainToolbar">Main Toolbar</a>.</li>
+                        <li><b>OR:</b> Change a view's scale using the 
+		<a href="Using%20the%20Pan%20and%20Zoom%20Window.htm#NetViewPan">Pan 
+		and Zoom</a> Window tool 
+        <img border="0" src="../Resources/images/PanIcon.bmp" width="14" height="14" />
+          located in the upper left corner of the view window.&#160;&#160;</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Edit the colors and icons 
+	used to represent objects.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To change the color used to highlight selected objects within a 
+		view, set its <b>SelectionColor</b> property using the pull-down menu.&#160; 
+		To add a shadow to selected objects within a view, set its
+          <b>SelectionShadow</b> property to True.</li>
+                        <li>Each locale you create is assigned an image, referred to as an icon, 
+		which is used to represent it within the network view.&#160; When a 
+		locale is created, it's IconFilename property is set based on the Type 
+		property of the location it is tied to.&#160; To change a locale icon, click on the desired locale in the object 
+		tree and set its <b>IconFileName</b>
+          property by entering a filename with the .ico extension (or click on <b> 
+		...</b> to browse for a file). </li>
+                        <li>To change fiber (lightpath, demand) color, select a network view and 
+		set its <b>FiberColor
+          </b>(LightPathColor, DemandColor) and <b>FiberColorSelected </b>
+		(LightPathColorSelected, DemandColorSelected) properties using the 
+		pull-down menus.</li>
+                        <li>When the <a href="..\65_FailureAnal.htm">Failure Analysis</a> window is 
+		open, you can select an object (i.e. demand, lightpath) listed in the 
+		Failure Analysis <a href="..\65_FailureAnalResults.htm">Results</a>
+          tab and the fibers and lightpaths associated with it will be 
+		highlighted in the network view.&#160; To change the highlight color of 
+		failed fibers (lightpaths), select a network view and set its <b>
+		FiberColorFailed
+          </b>(LightPathColorFailed) property using the pull-down menu.&#160; To 
+		change the highlight color of fibers (lightpaths) used to restore a 
+		demand, select a network view and set its
+          <b>FiberColorOnRestoration
+          </b>(LightPathColorOnRestoration) property using the pull-down menu.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="175" valign="top">Change the appearance of a 
+	view's background.</td>
+                <td class="TableBody" width="598" valign="top">
+                    <ul>
+                        <li>To change a view's background color, click on the view in the object 
+		tree and set its <b>BackgroundColor</b>
+          property using the pull-down menu.</li>
+                        <li>To change a view's background image, click on the view in the object 
+		tree and set its <b>BackgroundFileName</b>
+          property by entering a filename (or click on <b> ...</b> to browse for 
+		a file).&#160; To scale a view's background image, edit its <b>MapSize</b><b>Width</b> property.</li>
+                        <li>To add a grid to a view, click on the view in the object tree and 
+		edit its <b>GridStyle</b>
+          property using the pull-down menu. To change grid color, edit the 
+		view's <b>GridColor </b>property.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#NetViewCustom">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Network%20Views.htm">Network 
+Views</a> <![CDATA[ ]]></p>
+        <p class="SeeAlsoLinks"><a href="Network%20View%20Examples.htm">Network View 
+Examples</a>
+        </p>
+    </body>
+</html>

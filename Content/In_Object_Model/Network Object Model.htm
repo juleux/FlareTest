@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>The Network Object Model</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <!--webbot bot="PurpleText" PREVIEW="This script is used to create pop-up definitions.
+It works with code at the end of the Body section that references the pop-up object. 
+The file must be previewed in a browser in order to view the pop-ups" -->
+        <script Language="JavaScript">/*<![CDATA[*/
+
+ MyFont="Times New Roman, 10pt"
+ TVText="A traffic vector represents the quantity of time slots for each signal type. Traffic vectors are displayed in the format Type1:Type3:Type12:Type48:Type192 where Type1=OC1_STS1_VC3_DS3_E3_AU3, Type3=OC3_STS3_STM1_VC4, Type12=OC12_STS12_STM4, Type48=OC48_STS48_STM16, Type192=OC192_STS192_STM64"
+	ConduitText="Conduit: A conduit is a number that you can assign to group of fibers and/or lightpaths as a means of stating that they share a common point of failure. What constitutes a point of failure is strictly up to you. Examples include electrical conduit, ports, cards, and shared power sources."
+	DemandText="Demand: A group of point-to-point circuits of user-defined type, quantity, and protection. During the design process, demands are routed over a sequence of lightpaths."
+	FiberText="Fiber: An individual fiber or a set of interconnected fibers that work as one. Fibers have user-defined start and end locations. Networks can be defined and routed with or without fiber information."
+	LocaleText="Locale: A graphical representation of a location. Within each network view, there is one locale object for every location object in the network. Users determine which locales are visible and their X-Y coordinates within the view. "
+	LocationText="Location: A unique physical location where one or more nodes exist."
+	LPText="LightPath: A set of fibers or conduits over which a signal travels. LightPaths travel from a start location to an end location over a user-defined sequence of fibers or conduits."
+	NVText="Network View: A graphical representation of a network. A network view contains a map of interconnected nodes with fiber, lightpath and/or demand information superimposed on top. Network views can be configured to display various types of network data (i.e. traffic, capacity, routing). Network views are covered in more detail in the Network Views section of this help file."
+	RingText="Ring: A set of interconnected lightpaths that form a closed loop."
+	VPNText="Virtual Private Network (VPN): A set of fibers and/or lightpaths that combine to form a private sub-network within a larger network."
+	EthernetText="Ethernet Service: The connection of a standard Ethernet interface to a Sycamore optical switch."
+	
+
+/*]]>*/</script>
+        <h2><a name="NOMTop"></a>The Network Object Model</h2>
+        <p>Understanding the Modeler's object model is key to creating a network
+design.&#160; The Modeler uses objects to represent the elements of a network.&#160;
+Users define network and display requirements by creating objects and setting their
+properties.&#160; The Modeler uses the information contained in objects to fuel its
+algorithms.</p>
+        <p>Modeler objects are grouped together to form collections.&#160; Collection
+objects ( i.e. NetworkViews, LightPaths, All Demands) provide users with information
+about its group of objects as a whole.&#160; For example, the TotalLength
+property of the Fibers object contains the total length of fiber in the
+network.&#160; Collection objects also provide users with the ability to apply
+properties globally to every object in the collection.&#160; For example,
+setting the Visible property of a Locales object to true makes every Locale
+object visible.</p>
+        <p>The diagram below shows the hierarchical structure of the Modeler's object 
+model.&#160; Each object type is linked to the collection object above it, of 
+which it is a member.&#160; To view a description of an object type, click on 
+the object's name in the diagram.</p>
+        <p class="FigureTitle">Network Object Model</p>
+        <blockquote>
+            <blockquote>
+                <p>
+                    <map name="FPMap0">
+                        <area coords="43, 171, 121, 212" shape="rect" href="JavaScript:popup.TextPopup(ConduitText,MyFont,9,9,-1,-1)" />
+                        <area href="JavaScript:popup.TextPopup(LocationText,MyFont,9,9,-1,-1)" shape="rect" coords="36, 217, 158, 282" />
+                        <area href="JavaScript:popup.TextPopup(VPNText,MyFont,9,9,-1,-1)" shape="rect" coords="42, 120, 105, 160" />
+                        <area href="JavaScript:popup.TextPopup(LocaleText,MyFont,9,9,-1,-1)" shape="rect" coords="88, 73, 168, 113" />
+                        <area href="JavaScript:popup.TextPopup(NVText,MyFont,9,9,-1,-1)" shape="rect" coords="41, 21, 153, 67" />
+                        <area href="APS%20Protection%20Groups.htm#APSTop" shape="rect" coords="131, 285, 296, 302" />
+                        <area href="JavaScript:popup.TextPopup(FiberText,MyFont,9,9,-1,-1)" shape="rect" coords="37, 305, 135, 369" />
+                        <area href="JavaScript:popup.TextPopup(LPText,MyFont,9,9,-1,-1)" shape="rect" coords="35, 379, 167, 448" />
+                        <area href="JavaScript:popup.TextPopup(RingText,MyFont,9,9,-1,-1)" shape="rect" coords="43, 456, 125, 520" />
+                        <area href="JavaScript:popup.TextPopup(DemandText,MyFont,9,9,-1,-1)" shape="rect" coords="42, 530, 166, 593" />
+                        <area href="Path%20Protection%20Groups.htm#PPGTop" shape="rect" coords="135, 596, 276, 613" />
+                        <area href="Virtual%20Concatenation%20Groups.htm#VCGTop" shape="rect" coords="42, 625, 238, 670" />
+                        <area href="JavaScript:popup.TextPopup(EthernetText,MyFont,9,9,-1,-1)" shape="rect" coords="90, 678, 196, 696" />
+                    </map>
+                    <img border="0" src="../Resources/images/ObjectModel.bmp" width="297" height="697" usemap="#FPMap0" />&#160;&#160;&#160;&#160;</p>
+            </blockquote>
+        </blockquote>
+        <p class="BackToTopLink"><a href="#NOMTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160; 
+</p>
+        <p class="SeeAlsoLinks"><a href="..\In_Adding_Objects\Adding%20Objects.htm#AddingObjectsTop">
+Add Objects</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="APS%20Protection%20Groups.htm#APSTop">APS/MSP Protection Groups</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Local%20Demands.htm#LocDemTop">Local Demands</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Path%20Protection%20Groups.htm#PPGTop">Path Protection Groups</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Virtual%20Concatenation%20Groups.htm#VCGTop">Virtual Concatenation 
+Groups</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+        <object id="popup" type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11" width="14" height="16"> <![CDATA[ ]]></object>
+    </body>
+</html>

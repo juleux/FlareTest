@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Failure Scenarios</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body><span><h1><a name="FailScenTop"></a>Failure Scenarios</h1><p>The Modeler provides a set of tools for creating and using failure
+scenarios.&#160; A failure scenario is simply a list of objects (conduits,
+fibers, locations, or lightpaths), within a network that are tagged for
+failure.&#160; By creating one or more failure scenarios and then running the
+Failure Analysis algorithm, you can model the impact the object failures will
+have on your network as designed.&#160; You can then use this information as
+input to the design process.&#160;&#160;</p><p>Tools are provided to <a href="#FailScenEdit">create and edit scenarios</a>
+and to <a href="#FailScenCompare">compare</a> the scenarios of a set of
+networks.&#160;</p><h2><a name="FailScenEdit"></a>Create and Edit Failure Scenarios</h2><p>Use the Failure Scenario Editor to create your own set of failure scenarios
+for analysis.&#160; Failure scenarios can be created in one of two ways; <a href="#FailScenManual"> manual</a>
+or <a href="#FailScenAuto">automatic</a>.&#160; You can use one or both of these methods to create and save
+a unique set of failures for your network.&#160; To access this tool, select <b>Algorithms, Mesh, Failure 
+Analysis </b>from
+the main menu.&#160; When the Failure Analysis dialog appears, click on the <b> Scenario Editor</b> tab.&#160;</p><h3><a name="FailScenManual"></a>Manually Create and Edit a Failure Scenario</h3><p>The manual approach to creating a failure scenario involves selecting the
+individual objects whose failures you want to analyze.&#160;&#160;</p><p><b>To create a new scenario:</b>&#160; Click on the <b>New</b> button.&#160;
+A scenario with the default name FailureScenario will be added to the list of
+scenarios (right).&#160;&#160;</p><p><b>To add one or more objects to a scenario:&#160;</b></p><ol><li>Click to select the scenario from the list (right) you want to add an
+ object to.</li><li>Use the radio buttons to select the type of object you want to add.&#160;
+ When you make a selection, objects of the type you selected will be listed
+ directly above.&#160;&#160;</li><li>Click to select an object from the list for transfer or use Shift-Click or
+ Cntl-Click to select multiple objects.</li><li>Click on the <b>&gt;&gt;</b> button (top) to transfer your selection(s) to the
+ list of scenarios (right).</li></ol><p><b>To add one or more objects to every scenario:&#160;</b></p><ol><li>Use the radio buttons to select the type of object you want to add.&#160;
+ When you make a selection, objects of the type you selected will be listed
+ directly above.&#160;&#160;</li><li>Click to select an object from the list for transfer or use Shift-Click or
+ Cntl-Click to select multiple objects.</li><li>Click on the <b>&gt;All</b> button to transfer your selection(s) to every 
+	scenario listed on the right. </li></ol><p><b>To remove an object from a scenario:</b>&#160;&#160;</p><ol><li>Click to select the object from the scenario list (right).&#160;</li><li>Click on the <b>&lt;&lt; </b>button to remove the selected object from the list.</li></ol><p class="FigureTitle">Failure Analysis - Scenario Editor</p><p><img border="0" src="Resources/images/FailAnalScenarioEditor.bmp" width="833" height="574" /></p><h3><a name="FailScenAuto"></a>Automatically Create Failure Scenarios</h3><p>Unlike the manual approach to creating failure scenarios by identifying 
+individual objects for failure, the automatic approach creates a single failure 
+scenario for each object of the type (conduit, location, fiber, or lightpath) 
+you select. It also gives you the option of creating double failure scenarios 
+with the added selection of a second object type.&#160; Double failure scenarios 
+enable you to simulate the simultaneous failure of two objects of the same or of 
+different types.&#160; The automatic portion of the tool creates a double 
+failure scenario for every possible combination of objects of each of the two 
+types you specify.&#160; For example, if you set <b>First Object Type</b> equal 
+to Fibers and <b>Second Object Type</b> equal to LightPaths, a failure scenario 
+will be created to fail every fiber-lightpath combination.</p><p><b>Object Types for Automatic Failure Scenarios include:</b></p><ul><li><b>Conduit:</b>&#160; A failure scenario is created for each conduit that contains one or more mesh lightpaths.</li><li><b>Location:</b>&#160; A failure scenario is created for each location
+ that terminates a mesh lightpath or has a mesh lightpath express through it
+ on it's terminating fibers.&#160;</li><li><b>Fiber:</b>&#160; A failure scenario is created for each fiber that
+ has one or more mesh lightpaths routed over it.</li><li><b>LightPath:</b>&#160; A failure scenario is created for each
+ mesh lightpath.&#160;</li></ul><p><b>To create single or double failure scenarios automatically:</b>&#160;</p><ol><li>Use the <b>First Object Type </b>pull-down (bottom left of the dialog) 
+	to select the first type of object you want to create failure scenarios for.</li><li>If you want to create double failure scenarios to simulate two objects 
+	failing at the same time, use the <b>Second Object Type</b> pull-down to 
+	select the second type of object you want to create failure scenarios for.&#160; 
+	For single failure scenarios using only the first object type, set the <b>
+	Second Object Type</b> to None.</li><li>Click on the <b>&gt;&gt;</b> button (bottom) to create a failure scenario for 
+	every combination of the two object types you selected.&#160; Once there, 
+	you can edit them as desired using the <a href="#FailScenManual">manual 
+	controls</a> described above.</li></ol><h3><a name="FailScenRename"></a>Rename a Failure Scenario</h3><p>To rename a failure scenario, click to select the desired scenario from the
+list (right).&#160; Next, click on the scenario a second time to enable the text
+editor.&#160; Edit the name as desired and hit the Enter key.</p><h3><a name="FailScenDelete"></a>Delete a Failure Scenario</h3><p>To delete a single failure scenario, select the desired scenario from the
+list (right) and click on the <b>Delete Selection </b>button at the bottom of
+the dialog.</p><p>To delete the entire list of failure scenarios, click on the <b>Clear All</b>
+button at the bottom of the dialog.</p><h3><a name="FailScenSave"></a>Save the List of Failure Scenarios</h3><p>To save the current list of failure scenarios, click on the <b>Save To
+Network</b> button at the bottom of the dialog.&#160; When you do so, any
+ongoing edits you make to the list will be retained (regardless of how often you
+close and reopen the Failure Analysis dialog or how many edits you make) until
+the <b>Clear All</b> button is pressed.&#160; To retain the list indefinitely,
+you must click
+on the <b>Save To Network</b> button and then 
+<a href="In_Network_Files\Save%20a%20Network%20File.htm#NFSaveFile">save</a>
+the network file itself.</p><p class="Note"><b>Note</b>:&#160; Use the <b>Save To Network</b> feature to
+store the set of failure scenarios you use most frequently to analyze your
+network.&#160; When you want to create a different set of scenarios to test out
+a potential design change, use the <b>Clear All</b> button to delete the
+existing list and then use the dialog controls to generate a new list.&#160; As
+long as you don't click on the <b>Save to Network</b> button, your original list
+will be reinstated each time you close and reopen the Failure Analysis dialog.</p><p class="BackToTopLink"><a href="#FailScenTop">Back to top</a></p><hr /><h2><a name="FailScenCompare"></a>Compare Failure Scenarios&#160;</h2><p>You can compare the failure scenarios of the current network to a second
+network of your choosing.&#160; To do so, open the 
+<a href="In_Network_Compare\Compare%20Networks.htm#CompNetTop">Network
+Compare</a> tool by clicking on the Compare Networks icon <img border="0" src="Resources/images/CompareNetworks.gif" width="6" height="17" />
+    or selecting <b>Tools, Compare...</b> from the main menu.&#160;Then follow
+these steps:</p><ol><li>Select the network you want to compare scenarios with.</li><li>If the object filter for Failure Scenarios has a checkmark next to it, 
+	disable the filter by removing the checkmark. When the filter is disabled, failure scenario information will be 
+	included in the Objects Unique to A/B and Common Objects lists.</li><li>To filter an object type out of the comparison, click on the <b>Failure
+ Scenario</b> tab (bottom left) and place a checkmark next to the desired
+ object type(s).</li></ol><p class="Note">Note:&#160; Failure Scenarios must be <a href="#FailScenSave">saved
+to the network </a> in order for the Compare Network tool to detect them.</p><p class="FigureTitle">Compare Networks - Failure Scenarios</p><p class="FigureTitle"><img border="0" src="Resources/images/NetCompareFA.bmp" /></p><p class="BackToTopLink"><a href="#FailScenTop">Back to top</a></p><hr /><p>&#160;</p></span>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

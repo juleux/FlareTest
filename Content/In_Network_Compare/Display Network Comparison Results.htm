@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Display Network Comparison Results</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="CompTop"></a>Display Network Comparison Results</h2>
+        <p>To get started with the Network Compare tool:</p>
+        <ol>
+            <li>Click on the Compare Networks icon <img border="0" src="../Resources/images/CompareNetworks.gif" width="6" height="17" />
+    or select <b>Tools, Compare...</b> from the main menu.&#160; The dialog shown below 
+ will appear.&#160; The name of the network that is currently open will be 
+ listed as Network A.</li>
+            <li>Select Network B, the network you wish to compare the current network to, 
+ by clicking on the ellipsis button and selecting the desired file.&#160; </li>
+        </ol>
+        <p>When these steps are complete, the dialog will display the comparison
+results.&#160; Comparison results consist of lists of objects 
+unique to each network, a list of objects common to both networks, and a list of
+the mismatched properties of objects common to both networks.&#160;&#160;</p>
+        <p class="FigureTitle">Network Compare Dialog</p>
+        <p>
+            <img border="0" src="../Resources/images/NetworkCompare1.bmp" width="935" height="553" />
+        </p>
+        <h3>Unique Objects</h3>
+        <p>When an object is present in Network A and not present in Network B, it
+appears in the Objects Unique to Network A list.&#160; Likewise, when an object
+is present in Network B and not present in Network A, it appears in the Objects
+Unique to Network B list.&#160; The Modeler updates these two lists whenever you
+apply an <a href="Apply%20Object%20Filters.htm">object filter</a> or a 
+<a href="Apply%20Property%20Filters.htm">property filter</a>
+using the controls at the bottom of the dialog.</p>
+        <h3>Common Objects</h3>
+        <p>When an object of the same name exists in both networks, it is referred to as 
+a common object.&#160; Common objects appear in the Common Objects list.&#160; 
+While common objects must share the same name, the values of their remaining 
+properties may differ.&#160; A common object whose property values differ 
+between networks is called a mismatch.&#160; Mismatches are highlighted with the <img border="0" src="../Resources/images/Mismatch.gif" width="10" height="10" /> 
+symbol.&#160;&#160; A common object whose property values are the same in both 
+networks is called a match.&#160; Matches are highlighted with the <img border="0" src="../Resources/images/Match.gif" width="9" height="8" />
+symbol. </p>
+        <p>You can use the <b>Show</b> control at the bottom of the dialog to filter the 
+Common Objects list.&#160; To select a filter, click on the type of results 
+(matches, mismatches, or all) you want to include in the list.&#160; </p>
+        <p>The Modeler updates the Common Objects list whenever you apply a filter using 
+the <a href="Apply%20Object%20Filters.htm">object filter</a>, 
+<a href="Apply%20Property%20Filters.htm">property 
+filter</a>, or show control at the bottom of the dialog.</p>
+        <h3>Mismatches</h3>
+        <p> When a mismatch (as indicated by this symbol: <img border="0" src="../Resources/images/Mismatch.gif" width="10" height="10" />) is selected from the list of Common Objects, the Mismatches list
+(top right) displays a list of the properties that differ between the two
+objects.&#160; The name of each property is listed along with it's value in each
+network.&#160; Using the <a href="Apply%20Property%20Filters.htm">property filter</a> control, you can filter
+out properties that you want to exclude from the comparison.&#160; When all
+of the properties by which two mismatched objects differ are filtered out, the
+status of the pair will change from a mismatch to a match.&#160;</p>
+        <p class="BackToTopLink"><a href="#CompTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:</p>
+        <p class="SeeAlsoLinks"><a href="Apply%20Object%20Filters.htm">Apply Object Filters</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Apply%20Property%20Filters.htm">Apply Property Filters</a>
+        </p>
+        <p class="SeeAlsoLinks"> <a href="Compare%20Networks.htm">
+Compare Networks</a></p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

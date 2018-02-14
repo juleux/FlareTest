@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" /><title>Add a LightPath</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="AddingLightPaths"></a>Add a LightPath</h2>
+        <p>There are two methods for adding a lightpath to your design.&#160; The <a href="#AddFiberSelect">Fiber
+Selection</a> method and the <a href="#AddLocSelect">Location Only</a>
+method.&#160; Use the Fiber Selection method when you want to select the
+individual fibers over which a lightpath will travel.&#160; Use the Location
+Only method to create a lightpath along with a conduit for it to travel
+over.&#160; Lightpaths added using this method are created without fiber
+assignments.</p>
+        <h3><a name="AddFiberSelect"></a>Fiber Selection Method</h3>
+        <p>To use the Fiber Selection method to create a lightpath, you need the
+following information:</p>
+        <ul>
+            <li>The lightpath's start and end locations</li>
+            <li>The sequence of fibers you want the lightpath to travel over</li>
+        </ul>
+        <p>When you use this method to add a lightpath to your design, the locations and
+fibers you select cannot be edited directly.&#160; Instead, you must delete
+the lightpath in question and create a new lightpath with the correct
+information.&#160;</p>
+        <p>To add a lightpath to your design by selecting fibers:</p>
+        <ol>
+            <li>
+                <p style="margin-right: 0;margin-bottom: 5;">Click on the <b>Add LightPath</b> icon
+<span style="color: #0000ff;"><img border="0" src="../Resources/images/AddLightpath.gif" width="12" height="18" /></span> in the 
+	<a href="The%20Object%20Toolbar.htm">Object
+ toolbar</a> or select <b>Edit, Add, LightPath </b>from the main menu.&#160; The
+ Add LightPath 
+	<img border="0" src="../Resources/images/Mode_trunk.BMP" width="32" height="32" />cursor
+ will appear.</p>
+            </li>
+            <li>
+                <p style="margin-right: 0;margin-bottom: 5;"><b>Select the desired sequence
+ of fibers:</b>&#160;
+ Press and hold the Shift key.&#160; While continuing to hold the Shift key,
+ click on each fiber <b> in order</b> (Fiber 1 then Fiber 2, etc.) from the Start locale
+ (Baltimore) to the End locale
+ (Charlotte) (see below).</p>
+            </li>
+        </ol>
+        <p style="margin-top: -2;margin-bottom: -2;">&#160;</p>
+        <blockquote>
+            <p class="Note">Note:&#160; In some situations (i.e. multiple fibers and
+ lightpaths in a
+ concentrated area), it may be difficult to pinpoint a specific fiber in the
+ network view.&#160; In these instances it is helpful to hide the lightpath
+ layer while performing this procedure.&#160;&#160; To do so, set the
+ LightPathRouting property of the current view to None.</p>
+            <p class="FigureTitle">Add a LightPath - Select Fibers from Start to End</p>
+            <p>
+                <img border="0" src="../Resources/images/AddLPView3.bmp" width="423" height="296" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="3"><b>Define the new lightpath:&#160;</b> Move the cursor over the
+ Start locale of the lightpath until it's icon changes to a hand.&#160; Click on the Start locale
+ (Baltimore) of the lightpath.&#160; Hold the mouse button down
+ and drag towards the End locale (Charlotte) of the lightpath.&#160; A black line
+ will appear as you drag.&#160; When the black line shows the desired
+ connection, release the mouse button (see below).&#160;  </li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Add a LightPath - Define LightPath</p><span style="color: #0000ff;"><p><img border="0" src="../Resources/images/AddLPView4.bmp" width="423" height="297" /></p></span>
+        </blockquote><span style="color: #0000ff;"> <![CDATA[ ]]></span>
+        <ol>
+            <li value="4">A new lightpath will appear in the network view (see below).&#160;
+ If a lightpath does not appear, verify that the fibers were selected in
+ the proper order and that the path you chose was valid.&#160;&#160;</li>
+        </ol>
+        <p style="margin-top: -2;margin-bottom: -2;">&#160;</p>
+        <blockquote>
+            <p class="Note">Note:&#160; If you turned the lightpath layer off to perform
+ this procedure, the lightpath will not appear until you set the current
+ view's LightPathRouting property to Direct.</p>
+            <p class="FigureTitle">Add a LightPath - Network View</p>
+            <p>
+                <img border="0" src="../Resources/images/AddLPView5.bmp" width="424" height="298" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="5">A new lightpath object will appear in the Object tree.&#160; It's
+ properties will be displayed in the Property editor. Modeler
+ gives each new lightpath a default name, based on it's start and end
+ locations, and a set of default property
+ values.&#160; The LightPath Length property defaults to the sum of the length of
+ the lightpath's fibers.&#160; Using the
+ Property editor, enter values for the lightpath's Length, AdminCost, and Type properties
+ (see below).</li>
+        </ol><span style="color: #0000ff;"><blockquote><p class="FigureTitle">Add a LightPath - Object Tree and Property Editor</p></blockquote></span>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/AddLPTree.bmp" width="440" height="507" />
+        </p>
+        <h3><a name="AddLocSelect"></a>Location Only Method</h3>
+        <p>To use the Location Only method to create a lightpath, the only information you need is the lightpath's start and end locations.&#160; When you use this method to add a
+lightpath to your design, the following is true:</p>
+        <ul>
+            <li>Fiber selections cannot be added in the future.</li>
+            <li>The start and end locations you selected cannot be edited directly.&#160; Instead, you
+ must delete the lightpath in question and create a new lightpath with the
+ correct information.&#160;</li>
+        </ul>
+        <p>To add a lightpath to your design without selecting fibers:</p>
+        <ol>
+            <li>
+                <p style="margin-bottom: 5;">Click on the <b>Add LightPath</b> icon
+<span style="color: #0000ff;"><img border="0" src="../Resources/images/AddLightpath.gif" width="12" height="18" /></span> in the Object
+ toolbar or select <b>Edit, Add, LightPath </b>from the main menu.&#160; The
+ Add LightPath 
+	<img border="0" src="../Resources/images/Mode_trunk.BMP" width="32" height="32" />cursor
+ will appear.</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 5;"><b>Define the new lightpath:</b> Within the 
+	network view, move the cursor
+ over the Start locale of the lightpath until it's icon changes to a
+ hand.&#160; Click on the Start locale (Baltimore), hold the mouse button down,
+ and drag towards the End locale (NewLocation) of the lightpath.&#160; A black line
+ will appear as you drag.&#160; When the black line shows the desired
+ connection, release the mouse button.</p>
+            </li>
+        </ol>
+        <blockquote>
+            <p style="margin-bottom: 5;" class="FigureTitle">Add a LightPath without
+ Selecting Fibers - Click and Drag from Start Location to
+ End Location</p>
+            <p style="margin-bottom: 5;">
+                <img border="0" src="../Resources/images/AddLPView6.bmp" width="424" height="298" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="3">
+                <p style="margin-bottom: 5;">A new lightpath will appear in the network view (see
+ below).&#160; A new conduit object will be created and assigned to the
+ lightpath.</p>
+            </li>
+        </ol>
+        <blockquote>
+            <p style="margin-bottom: 5;" class="FigureTitle">Add a LightPath without
+ Selecting Fibers - Network View</p>
+            <p style="margin-bottom: 5;">
+                <img border="0" src="../Resources/images/AddLPView7.bmp" width="424" height="298" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="4">
+                <p style="margin-bottom: 5;">A new lightpath object will appear in the Object tree.&#160; It's
+ properties will be displayed in the Property editor. The Modeler
+ gives each new lightpath a default name, based on it's start and end
+ locations, and a set of default property
+ values.&#160; The ConduitId property is set to the Id of the newly created conduit.&#160;
+ Using the
+ Property editor, enter values for the lightpath's Length, AdminCost, and Type properties.</p>
+            </li>
+        </ol><span><p class="BackToTopLink"><a href="#AddingLightPaths">Back to top</a></p><hr /></span>
+        <p class="SeeAlsoText">See Also:&#160; </p>
+        <p class="SeeAlsoLinks"><a href="Setting%20Default%20Object%20Properties.htm">
+Set Default Object Properties</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="The%20Object%20Toolbar.htm">
+The Object Toolbar</a>
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

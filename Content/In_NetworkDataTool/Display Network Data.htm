@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3063" MadCap:lastWidth="817">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Display Network Data</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="DataToolView"></a>Display Network Data</h2>
+        <p>Using the Network Data Tool, you can display detailed information about a set 
+of objects of your choosing. </p>
+        <p>To select an object and the type of data you want to display,
+<a href="The%20Network%20Data%20Tool.htm">open</a> the Network 
+Data Tool, select the <b>Reports</b> tab, and follow these steps:</p>
+        <ol>
+            <li><b>Select an Object Type -</b> Use the pull-down menu to select an 
+	object type.&#160; When you do so, a list of objects of the type you 
+	selected will appear in the <b>Filtered Objects</b> list.</li>
+            <li><b>Select a Filter (optional) - </b>If the list of objects to select 
+	from is extensive, you have the option of applying one or more filters to 
+	pare down the list and make the task of locating objects easier.&#160; Each object type has its own set of 
+	filters to choose from.&#160; Examples include group name, type, and start 
+	location.&#160; For instructions on applying a filter, read the
+	<a href="Filter%20Network%20Data.htm">Filter Network Data</a> section of this help 
+	file.&#160; </li>
+            <li><b>Select an Object(s) -</b> Click to select an object from the list or select multiple objects by 
+	holding down the Cntl or Shift key while you click.&#160; To select the 
+	entire list, click on the <b>Select All</b> button at the bottom of the 
+	dialog.&#160; To clear your selections, click on the <b>Clear All</b> button 
+	at the bottom of the dialog.</li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Network Data Tool - Select an Object</p>
+            <p class="FigureTitle">
+                <img border="0" src="../Resources/images/DataToolSelect.bmp" width="639" height="455" />
+            </p>
+        </blockquote>
+        <ol start="4">
+            <li><b>Select a Report Type -</b> For each type of object, there is a list 
+	of report types to choose from.&#160; Refer to the table below for a 
+	description of each report type.&#160; The data points included in any one 
+	report type vary depending on the type of object (i.e. conduit, location) 
+	the data is associated with.&#160; To select a report type, click on the pull-down labeled
+	<b>Report</b> and scroll down to make your selection.&#160; </li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Network Data Tool - Description of Report Types</p>
+            <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="656">
+                <tr>
+                    <th class="TableHeader" width="143">Report Type</th>
+                    <th class="TableHeader" width="239">Description</th>
+                    <th class="TableHeader" width="242" height="18">Objects Report 
+			Applies To</th>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Data</td>
+                    <td class="TableBody" width="239" valign="top" height="18">Data 
+			reports provide descriptive information about each object.&#160; 
+			Examples include start and end locations, scope, type, and group.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Location, 
+			Fiber, LightPath, Ring, Demand, Virtual Concatenation Group</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Traffic</td>
+                    <td class="TableBody" width="239" valign="top" height="18">Traffic 
+			reports provide information about the type and amount of traffic 
+			flowing over, flowing through, or dropping at each object. </td>
+                    <td class="TableBody" width="242" valign="top" height="18">Conduit, 
+			Location, Fiber, LightPath, Ring </td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Capacity</td>
+                    <td class="TableBody" width="239" valign="top" height="18">Capacity 
+			reports provide various capacity related data points such as 
+			incremental capacity, maximum capacity, and minimum capacity.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Conduit, 
+			Location, Fiber, LightPath</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Hosted 
+			Items</td>
+                    <td class="TableBody" width="239" valign="top" height="18">Hosted 
+			Items reports provide a list of the objects that are hosted by 
+			(associated with) each object in the report.&#160; For example, the 
+			Fiber Hosted Items report contains a list of the lightpaths, rings, 
+			and demands that are routed over each fiber included in the report.&#160;&#160; </td>
+                    <td class="TableBody" width="242" valign="top" height="18">Conduit, 
+			Location, Fiber, LightPath, Ring, Path Protection Group, Virtual 
+			Concatenation Group </td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Hosts</td>
+                    <td class="TableBody" width="239" valign="top" height="18">Host 
+			reports provide a list of the objects that host each object in the 
+			report.&#160; For example, the LightPath Hosts report contains a 
+			list of the fibers, conduits, and locations that combine to create 
+			working and protect paths for each lightpath included in the report.&#160;&#160; </td>
+                    <td class="TableBody" width="242" valign="top" height="18">Fiber, 
+			LightPath, Ring, Demand, Path Protection Group, Virtual 
+			Concatenation Group</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Ports</td>
+                    <td class="TableBody" width="239" valign="top" height="18">Port 
+			reports provide detailed connection information for each location 
+			included in the report.&#160; Examples include connection name, 
+			connection type, time 
+			slots, chassis, slot, and port numbers.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Location</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">APS/MSP 
+			Protection Groups</td>
+                    <td class="TableBody" width="239" valign="top" height="18">These 
+			reports provide descriptive information about the APS/MSP 
+			Protection Groups associated with each location included in the 
+			report.&#160; APS/MSP Protection Group information is imported from <MadCap:variable name="Modeler.CompanionProduct" />.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Location</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Path 
+			Protection Groups</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report provides descriptive information about the Path 
+			Protection Groups associated with each location included in the 
+			report.&#160; Path Protection Group information is imported from <MadCap:variable name="Modeler.CompanionProduct" />.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Location</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Virtual 
+			Concatenation Groups</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report provides descriptive information about the Virtual 
+			Concatenation Groups associated with each location included in the 
+			report.&#160; Virtual Concatenation Group information is imported from <MadCap:variable name="Modeler.CompanionProduct" />.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Location</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Time 
+			Slots</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report contains a list of the time slot assignments for each 
+			lightpath included in the report.&#160; For each time slot 
+			assignment, the report contains a variety of information that 
+			describes the time slot itself, the lightpath and demand assigned to 
+			it, and the hardware associated with it.&#160;&#160; </td>
+                    <td class="TableBody" width="242" valign="top" height="18">LightPath</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Fiber 
+			Routing</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report lists the fibers that each lightpath is routed over.&#160; 
+			Included is the name of the fiber and it's start and end locations.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">LightPath</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">Routing</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report lists the time slots, lightpaths, fibers, conduits, 
+			locations, and rings associated with each demand's routing path.&#160; 
+			It also provides routing statistics for each demand such as 
+			AdminCost, Length, Fiber Hops, LightPath Hops, and Latency.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Demand</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">
+			Connections</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report provides detailed connection information for each demand 
+			included in the report.&#160; Examples include connection name, connection type, time 
+			slots, chassis, slot, and port numbers.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Demand</td>
+                </tr>
+                <tr>
+                    <td class="TableBody" width="143" valign="top" height="18">
+			Ethernet Services</td>
+                    <td class="TableBody" width="239" valign="top" height="18">This 
+			report provides descriptive information about the Ethernet Services associated with each 
+			Virtual Concatenation Group included in the 
+			report.&#160; The report includes physical placement information as 
+			well as logical and physical address information. VCG and Ethernet 
+			Service information is imported from 
+			<MadCap:variable name="Modeler.CompanionProduct" />.</td>
+                    <td class="TableBody" width="242" valign="top" height="18">Virtual 
+			Concatenation Group</td>
+                </tr>
+            </table>
+        </blockquote>
+        <p>When these steps are complete, the report data associated with your object 
+selections will appear in the table 
+located on the Reports tab of the dialog (as shown above).&#160; You can sort the data by 
+clicking on the desired column heading.&#160; When you do so, an up-arrow will 
+appear to indicate that the data in the column is listed in ascending order.&#160; 
+Click on the arrow to toggle the sort order between ascending and descending.&#160;
+</p>
+        <p>To <a href="Export%20Network%20Data%20to%20Excel.htm">export the data</a> 
+you've selected, click on the <b>Save to Excel</b> button on the upper-right 
+side of the Reports tab.</p>
+        <p class="BackToTopLink"><a href="#DataToolView">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:</p>
+        <p class="SeeAlsoLinks"><a href="Export%20Network%20Data%20to%20Excel.htm">
+Export Network Data to Excel</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Filter%20Network%20Data.htm">
+Filter Network Data</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="The%20Network%20Data%20Tool.htm">The Network Data Tool</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="View%20and%20Edit%20Object%20Properties%20NDT.htm">View and Edit Object 
+Properties</a>
+        </p>
+        <p class="BackToTopLink">&#160;</p>
+    </body>
+</html>

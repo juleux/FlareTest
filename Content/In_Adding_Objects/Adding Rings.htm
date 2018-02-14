@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" /><title>Add a Ring</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="AddingRingsTop"></a>Add a Ring</h2>
+        <p>This section describes the process for creating rings using the Modeler's
+<a href="The%20Object%20Toolbar.htm">Object toolbar</a>.&#160; The Modeler also provides an algorithm that uses the available data
+to generate a set of rings for an entire network.&#160; For more information on
+this algorithm, read the <a href="..\67_RingCover.htm#RingTop">Ring Cover</a>
+section of this help document.</p>
+        <p>Rings can be created from a set of fibers or a set of&#160; lightpaths.&#160;
+To add a ring, you must generate a list of the fibers or lightpaths that will
+connect to form the ring.&#160; The process varies slightly
+depending on whether fibers or lightpaths are being used.</p>
+        <p>&#160;To add a ring to your design:</p>
+        <ol>
+            <li>Using a network view, select the fibers or lightpaths that will form the
+ ring.&#160; Selections can be made using one of the following methods:</li>
+        </ol>
+        <p class="MiniTableBody">&#160;</p>
+        <blockquote>
+            <ul>
+                <li><b>Click and drag</b> a selection box (rubberband) around the desired
+ fibers and/or lightpaths.&#160; LightPaths must be visible within the view
+ in order to select them (the LightPathRouting property of the current view
+ must be set to Direct).&#160;&#160;</li>
+                <li>Hold down the <b>Cntl</b> key and <b>Click</b> to select each fiber/lightpath.</li>
+            </ul>
+            <p class="BackToTopLink" style="margin-top: -1;margin-bottom: -1;">&#160;</p>
+            <p class="Note">Note:&#160; You can skip this step if you prefer to make your selections
+ using the Add
+ Ring dialog as shown below.&#160; The Add Ring dialog provides a complete list
+ of fibers or lightpaths to choose from.&#160; To skip this step, click on any
+ object in the network view, then proceed to step 2.</p>
+            <p class="FigureTitle">Add a Ring - Select Fibers and LightPaths using
+ Click and Drag</p>
+            <p class="FigureTitle">
+                <img border="0" src="../Resources/images/SelectRing.bmp" width="662" height="297" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="2">Click on the <b>Add Ring</b> icon 
+  <img border="0" src="../Resources/images/AddRing.gif" width="11" height="11" />
+    in the Object toolbar or select <b>Edit, Add, Ring </b>from the main menu.
+ The dialog shown below will appear.&#160; Enter a
+ unique name for your ring and click <b>OK</b>.</li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Add a Ring - Enter a Unique Name</p>
+            <p class="FigureTitle">
+                <img border="0" src="../Resources/images/AddRingDialogName.bmp" width="359" height="145" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="3">Using the Add Ring dialog, select one of two methods for
+ creating rings by clicking on the appropriate tab: <b> From Fibers</b> or <b> From
+ LightPaths</b>.&#160;</li>
+        </ol>
+        <blockquote>
+            <p>The <b>From Fibers</b> dialog is shown below.&#160; On the left is a list
+ of fibers that are available to add to this ring.&#160; Any fibers you
+ selected prior to opening the dialog are listed under <b>Selected Fibers</b>.&#160;
+ Fibers can be transferred between the two lists using the arrow controls at the
+ bottom of the dialog.&#160; When you are satisfied with your list of <b>Selected
+ Fibers</b>, select the ring locations that require Add/Drop capability.&#160;
+ To select an Add/Drop location, click to place a checkmark next to it in the <b>Select
+ Add/Drop Locations</b> list.</p>
+            <p>The <b> From LightPaths</b> dialog works in the much same way as the <b> From Fibers</b> dialog.&#160;
+ LightPaths can be transferred between a list of available lightpaths and a list
+ of selected lightpaths using arrow controls.&#160; This dialog differs
+ however, in that Add/Drop locations need not be selected - they are derived from the list of selected
+ lightpaths.&#160;&#160;</p>
+            <p class="FigureTitle">Add a Ring - Add Ring Dialog&#160;- From Fibers</p>
+            <p>
+                <img border="0" src="../Resources/images/AddRingDialogFiber.bmp" width="932" height="472" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="4"> A ring will appear in the network view (see below).</li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Add a Ring - Network View</p>
+            <p>
+                <img border="0" src="../Resources/images/AddRingView4.bmp" width="424" height="298" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="5">A new ring object will appear in the Object tree with a list of
+ the lightpaths it contains.&#160; When you select a ring in the object tree,
+ it's
+ properties are displayed in the Property editor.&#160; Modeler
+ gives each new ring a default name and a set of default property
+ values.&#160; Using the
+ Property editor, enter values for the ring's Architecture and Type properties (see below).</li>
+        </ol>
+        <p class="FigureTitle">Add a Ring - Object Tree and Property Editor</p>
+        <blockquote>
+            <p class="BackToTopLink">
+                <img border="0" src="../Resources/images/AddRingTree.bmp" width="565" height="557" />
+            </p>
+        </blockquote>
+        <ol>
+            <li value="7">When a ring is created using the <b>From Fibers</b> tab in the
+ ring dialog, Modeler creates a set of lightpaths for the ring.&#160; Modeler
+ gives each new lightpath a default name and a set of default property
+ values.&#160; LightPath Length is given a value equal to the sum of the length of its fibers.&#160;
+ Using the
+ Property editor, enter values for each lightpath's Length, AdminCost, and Type properties (see below).</li>
+        </ol>
+        <blockquote>
+            <p>When a ring is created using the <b>From LightPaths</b> tab in the ring
+dialog, the selected lightpaths remain in the LightPaths collection.&#160; LightPath Name and other property values remain
+unchanged.</p>
+        </blockquote><span><p class="BackToTopLink"><a href="#AddingRingsTop">Back to top</a></p><hr /></span>
+        <p class="SeeAlsoText">See Also:&#160; </p>
+        <p class="SeeAlsoLinks"><a href="Setting%20Default%20Object%20Properties.htm">
+Set Default Object Properties</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="The%20Object%20Toolbar.htm">
+The Object Toolbar</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="..\67_RingCover.htm">The 
+Ring Cover Algorithm</a>
+        </p>
+    </body>
+</html>

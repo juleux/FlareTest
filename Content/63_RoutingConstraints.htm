@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1993" MadCap:lastWidth="817">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Routing Constraints</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="top"></a>Routing Constraints</h2><span><p>Within the Modeler, constraints exist to provide you with input into the 
+process of routing mesh demands.&#160; Any potential routing path that does not comply with a 
+constraint is assessed a cost penalty which limits it's chances of being 
+selected as the lowest cost solution.&#160; Regardless of which routing method you are using (Routing, Optimized Routing, 
+or Manual Routing), you can access the Routing Constraints dialog and use it to 
+specify the constraints you want applied during the route selection process.&#160;</p><p class="Note"><b>Note:&#160; </b>Routing Constraint settings are maintained as 
+long as the current network file remains in use.&#160; Any changes you make to 
+routing constraints will impact the result of all subsequent routing operations 
+(standard, manual, or optimized) until the file is closed.&#160; Routing 
+constraint settings are not saved with the network file.&#160; Each time you 
+open or import a network file, routing constraint settings are returned to their 
+default values. </p><p>The Routing Constraints dialog is shown below.&#160; To set constraints, 
+click on the desired option for each constraint, then click <b>OK</b>.&#160; The 
+impact each constraint option has on the routing process is described below.</p><p class="FigureTitle">Routing Constraints Dialog</p><p class="FigureTitle"><img border="0" src="Resources/images/RoutingConstraints.bmp" width="397" height="393" /></p><h3>Constrain LightPaths By Maximum Capacity</h3><p>Select one of these three options:</p><ul><li><b>Off:</b>&#160; Maximum lightpath capacity is not factored into routing 
+ decisions.</li><li><b>Hard</b>: If routing a given demand over a lightpath will cause the
+ lightpath to exceed maximum capacity, then that lightpath will be excluded as part of a potential solution for that demand.&#160; </li><li><b>Soft:</b>&#160; If routing a given demand over a lightpath will cause
+ the lightpath to exceed maximum capacity, then a cost penalty is assessed on
+ the lightpath making it less likely to become part of the lowest cost
+ solution for that demand.&#160;</li></ul><h3>Constrain LightPaths By Minimum Capacity</h3><p>Select one of these two options:</p><ul><li><b>Off:</b>&#160; Minimum lightpath capacity is not factored into the 
+ routing process.</li><li><b>Soft:</b>&#160; If routing a given demand over a lightpath will cause
+ the lightpath to exceed minimum capacity, then a cost penalty is assessed on
+ the lightpath making it less likely to become part of the lowest cost
+ solution for that demand.&#160;</li></ul><h3>Constrain LightPaths By VPN</h3><p>Select one of these three options:</p><ul><li><b>Off:</b>&#160; VPN assignments are not factored into the routing 
+ process.</li><li><b>Hard</b>: If a given demand has a different VPN than that of a
+ lightpath, then that lightpath will be excluded as part
+ of a potential solution for that demand.&#160;</li><li><b>Soft:</b>&#160;If given demand has a different VPN than that of a
+ lightpath, then a cost penalty is assessed on the lightpath making it less
+ likely to become part of the lowest cost solution for that demand.&#160;</li></ul><h3>Constrain Locations By Through Traffic</h3><p>Select one of these three options:</p><ul><li><b>Off:</b>&#160; Through traffic property values for locations are not factored into the routing 
+ process.</li><li><b>Hard</b>: If routing a given demand through a location results in it's
+ through traffic requirements being violated, then
+ the lightpaths associated with the location will be excluded as part
+ of a potential solution for that demand.&#160;</li><li><b>Soft:</b>&#160; If routing a given demand through a location results in
+ it's through traffic requirements being violated, then a cost penalty is assessed on
+ the lightpaths associated with the location.&#160; As a result, the affected
+ lightpaths are less likely to become part of the lowest cost
+ solution for that demand.&#160;<p style="margin-top: -4;margin-bottom: -4;">&#160;&#160;&#160;</p></li></ul><p class="Note"><b>Note:</b>&#160; The PermitThroughTraffic property determines
+the through traffic requirements for each location.&#160; Through traffic can be
+permitted on any lightpath (terminating or express) associated with a location, permitted on express
+lightpaths passing through a location on it's terminating fibers, or prohibited from using any lightpath
+associated with a location.</p><p>For assistance with the routing constraints described above,&#160; please contact the design tools
+team at <a href="mailto:designtools@sycamorenet.com">designtools@sycamorenet.com</a>.</p><p class="BackToTopLink"><a href="#top">Back to top</a></p><hr /><p class="BackToTopLink">&#160;</p></span>
+    </body>
+</html>

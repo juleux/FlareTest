@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Manual Failure Analysis</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="ManualFailTop"></a>Manual Failure Analysis</h1>
+        <p>Use the Manual Failure Analysis tool when you want to analyze the impact of a
+set of failures while maintaining control over the order in which failures and
+repairs occur.&#160; All manual failures are evaluated and repaired based on two 
+assumptions.&#160; The first assumption is that lightpath capacity is fixed.&#160; 
+The second assumption is that <span>non-failed 
+resources of all failed demands can be used during the repair process.</span></p>
+        <p>Prior to running this algorithm, the network must contain at least some 
+demand routing information (acquired by running a routing algorithm or via 
+import from Silvx Manager).&#160;&#160; The Failure Analysis algorithm uses the working path (for
+Unprotected and SharedPath demands) and 
+protect path (for OnePlusOne demands) assigned to each demand to analyze 
+failures.&#160; Any un-routed demands in the network are ignored by the 
+algorithm.</p>
+        <p>The process for performing a manual failure analysis is as follows:</p>
+        <ul>
+            <li>Open the Failure Analysis dialog by selecting <b>Algorithms, Mesh, Failure
+ Analysis</b> from the main menu.</li>
+            <li>Use the <a href="65_FailureAnalScenarioEditor.htm#FailScenEdit"> Failure Scenario Editor</a> to create the scenarios you want to
+ analyze.</li>
+            <li>Click on the <a href="65_FailureAnalAdvancedOptions.htm#FailOptionsTop">Advanced</a> tab to select advanced options for manual failure 
+	analysis or skip this step and use the default options.</li>
+            <li>Click to select the Manual tab.&#160;&#160;</li>
+            <li>Use the manual controls described below to select the scenarios you want
+ to analyze and step through the desired sequence of failures and repairs.</li>
+            <li>Use the <a href="65_FailureAnalResults.htm#FailResultsTop"> Results</a> tab to evaluate the impact of failures and repairs as
+ you progress through your analysis sequence.&#160; If a network view is 
+	open, it will be updated to reflect the status of the network as each change 
+	occurs.</li>
+        </ul>
+        <p>Refer to the sections that follow for detailed information on using the
+Manual Failure Analysis tool to <a href="#ManualFailAnalyze">select the scenarios</a>
+that will undergo <a href="#ManualFailFail">failure </a>and <a href="#ManualFailRepair">repair</a>.</p>
+        <p class="BackToTopLink"><a href="#ManualFailTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManualFailAnalyze"></a>Select Scenarios to Analyze</h2>
+        <p>When you click on the Manual tab, a list of the failure scenarios available
+for selection appears.&#160; To select a scenario, click on it's name.&#160; 
+Multiple scenarios can be selected by holding down the Cntl or Shift keys while 
+you click on the desired scenario names.&#160; When your selection is complete, click on the <b>&gt;&gt;</b> 
+button.&#160; The scenario(s) you chose will now be appear in the
+"To Fail" list of scenarios.&#160; To remove a scenario from the 
+selection list, click on
+it's name in the "To Fail" column followed by the <b>&lt;&lt; </b>
+button. </p>
+        <p class="FigureTitle"><span>Failure Analysis Dialog,
+Manual Tab - Select Scenarios</span>
+        </p>
+        <p class="FigureTitle">
+            <img border="0" src="Resources/images/FailAnalManualSelect.bmp" width="669" height="333" />
+        </p>
+        <h2><a name="ManualFailFail"></a> Fail Scenarios</h2>
+        <p>To perform a manual failure, you must first <a href="#ManualFailAnalyze">
+create a list of the scenario(s) you wish to fail</a>.&#160; When your list is complete, click on the
+<b>Calculate</b>
+button at the bottom of the Manual tab in the Failure Analysis dialog.&#160; When you do so, the algorithm will
+perform the failures listed in the "To Fail" column (along with any 
+selected repairs in the "To Repair" column) and update both the Results tab and 
+the network view.&#160; The list of failed scenarios will move to the "To 
+Repair" column within the Manual tab.&#160; Note that all of the failure 
+scenarios in the "To Fail" list will be failed as a group.&#160;</p>
+        <p class="FigureTitle"><span>Failure Analysis Dialog,
+Manual Tab - Fail Scenarios</span>
+        </p>
+        <p class="FigureTitle">
+            <img border="0" src="Resources/images/FailAnalManualFail.bmp" width="669" height="372" />
+        </p>
+        <h2><a name="ManualFailRepair"></a> Repair Scenarios
+</h2>
+        <p>To perform a manual repair, you must first <a href="#ManualFailFail">fail the 
+scenario(s) that you wish to repair</a>. To select a scenario for repair, click on it's name in the "To
+Repair" list.&#160; Multiple scenarios can be selected for repair by holding
+down the Cntl or Shift keys while you click on the desired scenario names.&#160; When your list
+is complete, click on the <b>Calculate</b> button.&#160; When you do so,
+the algorithm will perform the selected repairs (along with any failures listed 
+in the "To Fail" column) and update both the Results
+tab and the network view.&#160; The list of repaired scenarios will return to the "To Select From" 
+column within the Manual tab.&#160; To return the Manual tab to it's original 
+state upon opening, click on the <b>Reset</b> button.</p><span><p class="FigureTitle">Failure Analysis Dialog, Manual Tab - Repair Scenarios</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalManualRepair.bmp" width="805" height="395" /></p><p class="BackToTopLink"><a href="#ManualFailTop">Back to top</a></p><hr /><p class="BackToTopLink">&#160;</p></span>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

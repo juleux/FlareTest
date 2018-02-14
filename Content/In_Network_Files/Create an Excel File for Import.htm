@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Create an Excel File for Import</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="NFCreateExcel"></a>Create an Excel File for Import</h2>
+        <p>Network information can be entered into Excel using the format described 
+below and then 
+<a href="Import%20a%20Network%20File%20from%20Excel.htm#NFImportExcel">imported</a> into the Modeler.&#160;
+Network data exported to Excel is stored using this same format.&#160;&#160;</p>
+        <p>A network data file stores data in the following types of worksheets:</p>
+        <ul>
+            <li>Locations</li>
+            <li>Fibers</li>
+            <li>Rings</li>
+            <li>LightPaths</li>
+            <li>Demands</li>
+        </ul>
+        <p> To create a network data file, create an Excel file with the desired worksheets
+and enter data in the format described below.&#160; Guidelines for creating
+worksheets include:</p>
+        <ul>
+            <li>
+                <p style="margin-bottom: 3;">Multiple worksheets of the same type can be present in a single network
+ data
+ file.&#160; Each worksheet of a given type represents a group and has a
+ unique name.&#160; Groups can be used in any number of ways - they are often
+ used to represent phases of network implementation, geographic areas, or
+ various design approaches to be analyzed.&#160;</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 3;">In order for Modeler to properly read in your data, each worksheet must be
+ given a name beginning with its type (Locations, Fibers, etc.) followed by
+ an optional group name.&#160;
+ Examples include: Locations, Fibers Phase2, Demands (3), LightPaths
+ NorthEast.&#160;&#160;Group names should be limited to alphanumeric
+ characters.</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 3;">A network data file need not contain every type of
+ worksheet.&#160; Worksheets can be combined in a multitude of ways.&#160;
+ Base your selections on the type of network (mesh or ring) being designed
+ and on the ways in which you want to group information.&#160; For a list of
+ the information required by Modeler's routing algorithms, read the
+    <a href="..\62_PrepRoute.htm#PrepRouteTop">Preparation
+ for Routing</a> section of this help document.</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 3;">The data Modeler looks for in each type of worksheet is described in the 
+    <a href="#NFLocation">tables</a>
+    below.&#160; Data is entered in columns with predefined header names.&#160;
+ Some columns are required and must be present for the file to open
+ properly.&#160;</p>
+            </li>
+            <li>
+                <p style="margin-bottom: 3;"> Additional information may be included in a worksheet as
+desired.&#160; The Modeler treats additional columns as described in the 
+    <a href="#NFUserProp">UserProperties</a>
+    section below.</p>
+            </li>
+        </ul>
+        <p style="margin-top: -2;margin-bottom: -2;"><span>&#160;&#160;</span>
+        </p>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <h3><a name="NFUserProp"></a>User Properties</h3>
+        <p>The Modeler's UserProperties feature enables you to include additional data
+in a network data file.&#160; The additional data is not directly used by the
+Modeler.&#160; It is pass-through information, visible during the design
+process, present in Modeler generated reports, and exportable to other
+applications.&#160;&#160;</p>
+        <p> To create a UserProperty:</p>
+        <ol>
+            <li>Select the desired Locations, Fibers, Rings, LightPaths, or Demands worksheet(s).
+  </li>
+            <li>Add the desired column(s) of information with a header entry in the first
+ row.</li>
+        </ol>
+        <p>Tips for using UserProperties include:</p>
+        <ul>
+            <li>They can't be created to the right of the Fiber1...FiberN columns on the
+ LightPaths sheets.</li>
+            <li>They only carry text values in and out of the Modeler's object model, not
+ Excel formulas.
+  </li>
+            <li>They appear in reports that present data from the worksheet they reside in
+ (i.e. LightPath UserProperties will be included in the LightPath Traffic
+ report).
+  </li>
+            <li>To keep an Excel worksheet&#160;column from being read into&#160;UserProperties,
+ either leave the first header row blank or simply use the character '#' as
+ the first character of the header name.
+  </li>
+            <li>They can be created and editing using the Property editor.&#160;&#160;</li>
+        </ul>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <h3><a name="NFLocation"></a>Locations Worksheet</h3>
+        <p>Locations worksheet names must begin with the word <i>Locations</i>.&#160;
+Any additional text following <i>Locations</i> is considered a group name.&#160;
+Locations worksheets contain all or part of the information
+described in the table below.&#160; Each worksheet of this type has required
+data.&#160; The names of columns containing required data are <span style="color: #800000;">highlighted</span>.&#160;&#160;Columns do not have to be arranged in any
+specific order, but must be properly named.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="641">
+            <tr>
+                <th class="TableHeader" width="200">Column Name(s)</th>
+                <th class="TableHeader" width="425">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top">Name</td>
+                <td class="TableBody" width="425" valign="top">Enter a unique name for each location.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">LongName</td>
+                <td class="TableBody" width="425" valign="top">A location descriptor
+ (non-unique) used for documentation.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Locked</td>
+                <td class="TableBody" width="425" valign="top">Enter True to protect a
+ location from being deleted.&#160; If this column is absent from the
+ worksheet,
+ this property defaults to a value of False.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top"> Longitude, Latitude</td>
+                <td class="TableBody" width="425" valign="top">Optional input. Provides relative map placement
+ within the Modeler.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">CLLI, Building, Hub</td>
+                <td class="TableBody" width="425" valign="top">Optional input. Location information used for documentation.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Type</td>
+                <td class="TableBody" width="425" valign="top">Optional input. Determines 
+	the icon used to represent the location in each network view.&#160; Valid 
+	entries include:&#160; SN16000, SN9000, SN3000, Switch. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">PermitThroughTraffic</td>
+                <td class="TableBody" width="425" valign="top">Optional input. Enter the type of lightpath
+ that can be routed through a location.&#160; Valid
+ entries include:
+      <ul><li>Any LightPath</li><li>Express LightPaths</li><li>None</li></ul></td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <h3><a name="NFFiber"></a>Fibers Worksheet</h3>
+        <p>Fibers worksheet names must begin with the word <i>Fibers</i>.&#160; Any
+additional text following<i> Fibers</i> is considered a group name.&#160; Fibers
+worksheets contain all or part of the information
+described in the table below.&#160; Each worksheet of this type has required
+data.&#160; The names of columns containing required data are <span style="color: #800000;">highlighted</span>.&#160;&#160;Columns do not have to be arranged in any
+specific order, but must be properly named.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="641">
+            <tr>
+                <th class="TableHeader" width="200">Column Name(s)</th>
+                <th class="TableHeader" width="425">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top">Name</td>
+                <td class="TableBody" width="425" valign="top">Enter a unique name for each
+ fiber.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">LongName</td>
+                <td class="TableBody" width="425" valign="top">A fiber descriptor
+ (non-unique) used for documentation.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Locked</td>
+                <td class="TableBody" width="425" valign="top">Enter True to protect a fiber
+ from being deleted.&#160; If this column is absent from the worksheet, this
+ property defaults to a value of False.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top">StartLocation, EndLocation</td>
+                <td class="TableBody" width="425" valign="top">Enter the name of the
+ location where each fiber starts/ends.&#160; Values must match the Name
+ property of a location.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top"><span style="color: #000000;">Cost</span>
+                </td>
+                <td class="TableBody" width="425" valign="top">Use to assign cost to a
+ fiber, with units of your choice (fiber length is typically used).&#160;
+ Used by the Modeler for routing purposes.&#160; If this column is absent
+ from the worksheet, this property defaults to a value of 1.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Length</td>
+                <td class="TableBody" width="425" valign="top">Enter a value for fiber
+ length. If this column is absent from the worksheet, this property defaults to
+ a value of 1.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">ConduitIDs</td>
+                <td class="TableBody" width="425" valign="top">Enter identifiers, separated
+ by colons, for the
+ conduits the fiber passes through.&#160;If this column is absent from the
+ worksheet, this property
+ is set to the value of the fiber's Name property.</td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <h3><a name="NFRing"></a>Rings Worksheet</h3>
+        <p>Rings worksheet names must begin with the word <i>Rings</i>.&#160; Any
+additional text following<i> Rings</i> is considered a group name.&#160; Rings worksheets
+contain all or part of the information
+described in the table below.&#160; Each worksheet of this type has required
+data.&#160; The names of columns containing required data are <span style="color: #800000;">highlighted</span>.&#160;&#160;Columns do not have to be arranged in any
+specific order, but must be properly named.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="641">
+            <tr>
+                <th class="TableHeader" width="200">Column Name(s)</th>
+                <th class="TableHeader" width="425">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top">Name</td>
+                <td class="TableBody" width="425" valign="top">Enter a unique name for each
+ ring.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">LongName</td>
+                <td class="TableBody" width="425" valign="top">A ring descriptor
+ (non-unique) used for documentation.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Locked</td>
+                <td class="TableBody" width="425" valign="top">Enter True to protect a ring from being deleted.&#160; If this column is absent from the
+ worksheet, this
+ property defaults to a value of False.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top"><span style="color: #000000;">Architecture</span>
+                </td>
+                <td class="TableBody" width="425" valign="top">Enter the type of ring
+ architecture.&#160; Valid entries include:
+      <ul><li>BLSR2F_MSSSPRING2F</li><li>BLSR4F_MSSSPRING4F (default)</li><li>ASYM4F</li><li>UPSR_SNCP</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Type</td>
+                <td class="TableBody" width="425" valign="top">Enter the type of lightpath
+ that can be assigned to each ring.&#160; Valid
+ entries include:<ul><li>OC3_STM1</li><li>OC12_STM4</li><li>OC48_STM16</li><li>OC192_STM64 (default)</li></ul></td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <h3><a name="NFLightPath"></a>LightPaths Worksheet</h3>
+        <p>LightPaths worksheet names must begin with the word <i>LightPaths</i>.&#160;
+Any additional text following<i> LightPaths</i> is considered a group
+name.&#160; LightPaths worksheets contain all or part of the information
+described in the table below.&#160; Each worksheet of this type has required
+data.&#160; The names of columns containing required data are <span style="color: #800000;">highlighted</span>.&#160;&#160;Columns do not have to be arranged in any
+specific order - with one exception, the Fiber1..FiberN columns must be the
+rightmost columns in the worksheet.&#160;&#160;Columns must be properly named.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="641">
+            <tr>
+                <th class="TableHeader" width="200">Column Name(s)</th>
+                <th class="TableHeader" width="425">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top">Name</td>
+                <td class="TableBody" width="425" valign="top">Enter a unique name for each
+ lightpath.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top"> LongName</td>
+                <td class="TableBody" width="425" valign="top">A lightpath descriptor
+ (non-unique) used for documentation.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Locked</td>
+                <td class="TableBody" width="425" valign="top">Enter true to protect a
+ lightpath from being deleted.&#160; If this column is absent from the
+ worksheet, this property defaults to a value of False.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="200" valign="top">StartLocation, EndLocation</td>
+                <td class="TableBody" width="425" valign="top">Enter the name of the
+ location where each lightpath starts/ends. Values must be defined as fiber
+ termination points, in other words they must match the StartLocation/EndLocation
+ property of a fiber.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Cost</td>
+                <td class="TableBody" width="425" valign="top">Enter a value to assign cost to a
+ lightpath, with units of your choice (fiber length is typically used).&#160;
+ Used by the Modeler for routing purposes. If this column is absent from
+ the worksheet, this property defaults to a value of 1.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Length</td>
+                <td class="TableBody" width="425" valign="top">Enter a value for lightpath
+ length. If this column is absent from the worksheet, this property defaults to
+ the sum of the Length of each fiber in the lightpath.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">ConduitIDs</td>
+                <td class="TableBody" width="425" valign="top">Enter identifiers, separated
+ by colons, for the
+ conduits the lightpath passes through. If this column is absent from the
+ worksheet, this property defaults to a list of the unique ConduitIds for each
+ fiber in the lightpath.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">VPN</td>
+                <td class="TableBody" width="425" valign="top">Enter the numeric Id of the
+ Virtual Private Network (if any) associated with this lightpath.&#160; If this column is absent from
+ the worksheet, this property defaults to a value of 0.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Domain</td>
+                <td class="TableBody" width="425" valign="top">Enter the name of the ring
+ (if any) associated with this lightpath.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Type</td>
+                <td class="TableBody" width="425" valign="top">Enter lightpath type.&#160; Valid entries include:
+      <ul><li>OC-3</li><li>OC-12</li><li>OC-48</li><li>OC-192 (default)</li><li>STM-1</li><li>STM-4</li><li>STM-16</li><li>STM-64</li></ul><p><span style="font-family: Arial;">The Modeler works with standard groupings rather than individual
+ lightpath types.&#160; When a network file is opened, the Modeler converts
+ each Type entry to the appropriate group.&#160; Examples of groups
+ include:</span></p><ul><li>OC3_STM1</li><li>OC12_STM4</li><li>OC48_STM16</li><li>OC192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">CapacityMinimum</td>
+                <td class="TableBody" width="425" valign="top">The minimum capacity
+ of a lightpath.&#160; Enter the amount of any pre-existing lightpath 
+ capacity.&#160;
+ Defaults to a value of 0 which disables capacity checks.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">CapacityMaximum</td>
+                <td class="TableBody" width="425" valign="top">The maximum capacity
+ of a lightpath. This value is used by routing algorithms to limit the 
+ capacity of a lightpath.&#160;
+ Defaults to a value of 0 which disables capacity checks.
+    </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">TrafficProtectShared</td>
+                <td class="TableBody" width="425" valign="top">The amount of shared path 
+	protect traffic routed over this lightpath in STS-1 (SONET) or STM-1 (SDH) 
+	units depending on network type.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">ProtectSharedTV</td>
+                <td class="TableBody" width="425" valign="top">The quantity of time slots of 
+	each signal type assigned to the demand's protect shared 
+	path in the format of Type1:Type3:Type12:Type48:Type192 where 
+	<ul><li>Type1 = OC1_STS1_VC3_DS3_E3_AU3 </li><li>Type3 = OC3_STS3_STM1_VC4 </li><li>Type12 = OC12_STS12_STM4 </li><li>Type48 = OC48_STS48_STM16 </li><li>Type192 = OC192_STS192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Fiber1, ...
+ Fiber11</td>
+                <td class="TableBody" width="425" valign="top">Identifies the fiber(s) that
+ the lightpath travels over.&#160; Enter a fiber name in the Fiber1
+ column.&#160; Enter additional fiber names in Fiber2&#160; through Fiber11
+ as required.&#160;&#160;Values must match the Name property of a fiber and
+ provide a valid path from the lightpath's StartLocation to its EndLocation.</td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <h3><a name="NFDemand"></a>Demands Worksheet</h3>
+        <p>Demands worksheet names must begin with the word <i>Demands</i>.&#160; Any
+additional text following<i> Demands</i> is considered a group name.&#160;
+Demands worksheets contain all or part of the information
+described in the table below.&#160; Each worksheet of this type has required
+data.&#160; The names of columns containing required data are <span style="color: #800000;">highlighted</span>.&#160;&#160;Columns do not have to be arranged in any
+specific order, but must be properly named. </p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="639" height="237">
+            <tr>
+                <th class="TableHeader" width="199" height="18">Column Name(s)</th>
+                <th class="TableHeader" width="424" height="18">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="199" valign="top" height="18">Name</td>
+                <td class="TableBody" width="424" valign="top" height="18">Enter a unique name for each
+ demand.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">LongName</td>
+                <td class="TableBody" width="424" valign="top" height="18">A demand descriptor
+ (non-unique) used for documentation.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">Locked</td>
+                <td class="TableBody" width="425" valign="top">Enter true to protect a
+ demand from being deleted.&#160; If this column is absent from the
+ worksheet,
+ this property defaults to a value of False.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="199" valign="top" height="34">StartLocation, EndLocation</td>
+                <td class="TableBody" width="424" valign="top" height="34">Enter the name of the
+ location where each demand starts/ends.&#160; Values must be defined as
+ LightPath termination points - they must match the StartLocation/ EndLocation
+ property of a LightPath.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="157" valign="top" height="34">Scope</td>
+                <td class="TableBody" width="335" valign="top" height="34">Enter the scope
+ of each demand.&#160; Modeler's routing algorithms factor scope into the
+ demand routing process.&#160; Valid entries include:
+      <ul><li>Mesh&#160;</li><li>Ring&#160;</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top">VPN</td>
+                <td class="TableBody" width="425" valign="top">Enter the numeric Id of the
+ Virtual Private Network (if any) associated with this demand.&#160; If this column is absent from
+ the worksheet, this property defaults to a value of 0.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="199" valign="top" height="39"><span style="color: #000000;">Type</span>
+                </td>
+                <td class="TableBody" width="424" valign="top" height="39">Enter the demand
+ type.&#160;Valid entries
+ include:&#160;
+      <ul><li>
+      AU3, DS-3, VC3, VC4, E3</li><li> STM-1, STM-4, STM-16, STM-64</li><li>STS-1, STS-3, STS-12, STS-48, STS-192</li><li> OC-1, OC-3, OC-12, OC-48, OC-192</li></ul><p><span style="font-family: Arial;">The Modeler works with standard groupings rather than individual demand
+ types.&#160; When a network file is opened, the Modeler converts each Type
+ entry to the appropriate group.&#160; Examples of groups include:</span></p><ul><li>OC1_STS1_VC3_DS3_E3_AU3 (default)</li><li>OC3_STS3_STM1_VC4</li><li>OC12_STS12_STM4</li><li>OC48_STS48_STM16</li><li>OC192_STS192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="200" valign="top"><span style="color: #000000;">Quantity</span>
+                </td>
+                <td class="TableBody" width="425" valign="top">Enter demand size (must be 
+ greater than or equal to 0) in units
+ specified by the Type field. If this column is absent from the worksheet, this property defaults to
+ a value of 1.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="199" valign="top" height="18"><span style="color: #000000;">ProtectionType</span>
+                </td>
+                <td class="TableBody" width="424" valign="top" height="18">Enter the
+ protection type.&#160; Valid entries
+ include:&#160;
+      <ul><li>Unprotected (working only)&#160;</li><li>OnePlusOne (working and protect)&#160;</li><li> SharedPath (working and protect)</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="199" valign="top" height="18"><span style="color: #000000;">DiverseGroup</span>
+                </td>
+                <td class="TableBody" width="424" valign="top" height="18">Enter the name of 
+	the Diverse Group this demand is a member of.&#160;&#160; Each demand within 
+	a diverse group is routed diversely from the every other demand in the 
+	group.&#160; If this column is absent from the worksheet, this column 
+	defaults to a null value and no diverse groups will be present.</td>
+            </tr>
+            <tr>
+                <td class="TableBodyEmphasis" width="199" valign="top" height="18"><span style="color: #000000;">NodeProtection</span>
+                </td>
+                <td class="TableBody" width="424" valign="top" height="18">Used to factor in
+ node protection.&#160; Enter True when node protection is
+ present.&#160; Enter False when it is absent. If this column is absent
+ from the worksheet, this property defaults to a value of False.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Description</td>
+                <td class="TableBody" width="424" valign="top" height="18">A demand descriptor used for documentation.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Fixed TimeSlots</td>
+                <td class="TableBody" width="424" valign="top" height="18">When True, 
+	prevents routing algorithms from making changes to existing time slot 
+	assignments.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Working, Protect</td>
+                <td class="TableBody" width="424" valign="top" height="18">Used to specify lightpaths
+ for use as working and protect paths.&#160; Enter lightpath names in
+ order, separated by commas.&#160;Values must match the Name property of a
+ lightpath and provide a valid path from the demand's StartLocation to its
+ EndLocation.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Working Starting 
+	TimeSlots, Protect Starting TimeSlots</td>
+                <td class="TableBody" width="424" valign="top" height="18">Used to specify 
+	time slots for use as working and protect paths for mesh demands.&#160; 
+	Starting time slot information is displayed in the following format:&#160; 
+	Starting Time Slots for Hop1 (one for each demand quantity, separated by 
+	colons), Starting Time Slots for Hop2, ... An example is shown below.<blockquote><p><img border="0" src="../Resources/images/StartingTimeSlotFormat.bmp" width="289" height="104" /></p></blockquote><p><span style="font-family: Arial;">If you would like to assign consecutive 
+	blocks of time slots for demands with a quantity greater than one, use the 
+	sample format below:</span></p><blockquote><p><img border="0" src="../Resources/images/MultipleDemandTimeSlotFormat.bmp" width="355" height="90" /></p></blockquote><p>&#160;</p></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Fixed Routing</td>
+                <td class="TableBody" width="424" valign="top" height="18">When True,
+ prevents routing algorithms from making changes to working and protect
+ paths.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Routing Notes</td>
+                <td class="TableBody" width="424" valign="top" height="18">Contains text
+ messages from routing algorithms.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Broadleaf Source 
+ Reroute</td>
+                <td class="TableBody" width="424" valign="top" height="18">Used to specify 
+ the state (on/off) of Broadleaf Source Rerouting.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Broadleaf
+ Reversion</td>
+                <td class="TableBody" width="424" valign="top" height="18">Enter the
+ reversion type.&#160; Valid entries
+ include:&#160;
+      <ul><li>Disabled&#160;</li><li>Manual&#160;</li><li> Auto</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="199" valign="top" height="18">Broadleaf Trunk
+ Restoration</td>
+                <td class="TableBody" width="424" valign="top" height="18">Used to specify
+ the state (on/off) of Broadleaf Trunk Restoration.</td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#NFCreateExcel">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:
+</p>
+        <p class="SeeAlsoLinks"><a href="Import%20a%20Network%20File%20from%20Excel.htm#NFImportExcel">Import a 
+Network File from Excel</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="NetworkFiles.htm#NFTop">Network Files</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Save%20a%20Network%20File.htm#NFSaveFile">
+Save a Network File</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="615" MadCap:lastWidth="942">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Derive LightPath Length From Great Circle Distance</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="DeriveLPTop"></a>Derive LightPath Length From Great Circle Distance </h1>
+        <p>The distance between the locations in 
+a network (i.e. fiber length or lightpath length) must be known in order for the Modeler's algorithms to function 
+properly.&#160; Use this command to calculate the length of the lightpaths in a 
+network based on the coordinates (latitude and longitude) of it's locations.&#160; 
+Use of this command is valid only when there is a direct physical link between the 
+start and end locations of the lightpath. In other words, using this command 
+when express lightpaths are present will yield inaccurate results.&#160; When 
+express lightpaths are in use, first
+<a href="62_DeriveFiberLengthFromGCD.htm#DeriveLPTop">derive fiber length from great circle distance</a> 
+and then <a href="62_DeriveLPFromFiber.htm#PrepLPLen">derive lightpath length from fiber length</a>.</p>
+        <p>When you execute the Derive LightPath Length From Great Circle Distance 
+command, the Modeler calculates the great circle 
+distance between each pair of locations in the network and sets lightpath length 
+equal to it.&#160; Great circle distance is the distance between two locations 
+on the earth's surface.&#160; The Modeler calculates great circle distance using 
+the Latitude and Longitude property values for each location as input.&#160; The 
+curvature of the earth's surface is factored into the calculation.</p>
+        <p>Using this command, lightpath lengths can be set for all of the lightpaths in 
+the network or for a group of lightpaths.&#160; To use this command:</p>
+        <ol>
+            <li>Within the Object tree, click on the All LightPaths object or on the 
+	name of the lightpath group you want to work with.&#160; </li>
+            <li>Under the Commands heading in the Property Editor, locate the LengthsFromGreatCircleDistance property and select <b>True</b> from the 
+	pull-down menu.&#160; </li>
+        </ol>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160; 
+</p>
+        <p class="SeeAlsoLinks"><a href="62_DeriveFiberLengthFromGCD.htm#DeriveFiberTop">Derive Fiber Length From Great Circle Distance</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="62_DeriveLPFromFiber.htm#PrepLPLen">Derive LightPath Length From 
+Fiber Length </a>
+        </p>
+    </body>
+</html>

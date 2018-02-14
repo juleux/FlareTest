@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3815" MadCap:lastWidth="817">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Demand Routing - Mesh</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="RouteTop"></a>Demand Routing - Mesh</h1>
+        <p>The Route Demands algorithm combines the routing of work and 
+protect paths for all demand protection types (UnProtected, OnePlusOne and 
+SharedPath). </p>
+        <p>You can run the Route Demands algorithm using either default or advanced routing options.&#160; 
+Default routing options are in effect from the moment you install the Modeler.&#160; 
+Their values are carefully selected to provide optimum routing results for a 
+majority of applications.&#160; Routing options retain their default values 
+unless you elect to edit them using either the <a href="#RouteOptAdv">Advanced 
+tab</a> or the <a href="63_RoutingConstraints.htm#top">Routing Constraints</a> 
+dialog.&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="Note"><b>Note:&#160; </b>Once edited, default routing option values 
+can be reinstated.&#160; The majority of routing options return to their default 
+values upon closure of the Route Demands dialog, others are reset when 
+the network file is closed, and still others are reset only when you click a 
+button to return them to their default value.&#160; For instructions on 
+reinstating the default values of routing options that have been edited, refer 
+to the <a href="63_DefaultRoutingOptions.htm#DROTop">Apply Default Routing 
+Options</a> section of this help file.</p>
+        <p>Advanced routing options are helpful in 
+those rare situations where default parameters do not provide the desired 
+results.&#160; Each routing option is described in the <a href="#RouteOptAdv">
+Advanced Routing Options</a> section of this help file.</p>
+        <p>Once you have determined which options to use, follow the steps below to 
+initiate the routing process:</p>
+        <ol>
+            <li>Create any additional objects or object properties necessary to define 
+	your network.&#160; Refer to the list of
+	<a href="62_PrepRoute.htm#PrepMinimum">Minimum Routing Requirements</a> described in the
+	<a href="62_PrepRoute.htm#PrepRouteTop">Preparation for
+Routing</a> section of this help file. </li>
+            <li>Select <b>Algorithms, Mesh, Route Demands</b> from the main
+menu. The following dialog will
+appear displaying an empty log: </li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Route Demands Dialog, Basic Tab</p>
+            <p>
+                <img border="0" src="Resources/images/RouteBasic.bmp" width="577" height="317" />
+            </p>
+        </blockquote>
+        <ol start="3">
+            <li>If you want to execute the algorithm using default routing options, 
+	proceed to the next step.&#160; Otherwise, click on the <b>Advanced</b> tab and 
+	select the desired <a href="#RouteOptAdv">advanced routing options</a>.&#160; 
+	When complete, click to return to the <b>Basic</b> tab.</li>
+            <li>Click the <b>Calculate</b> 
+button on the Basic tab to execute the routing algorithm.&#160;</li>
+        </ol>
+        <p>Upon initiation, the Route Demands algorithm will perform the tasks 
+listed below for all mesh demands that are enabled for routing.&#160;&#160;</p>
+        <ul>
+            <li>Routes the demand working and protect paths over the lightpath layer 
+	taking ProtectionType into account.&#160; Note that demands whose FixedLightPathRouting property 
+	is set to True will not have their working and
+ protect paths changed.&#160; Demands whose DoNotRoute property is set to 
+	True will not be routed.&#160; Demands are routed based on lightpath admin
+ costs.</li>
+            <li>Updates the lightpath TrafficWorking and TrafficProtectDedicated properties which are used to calculate the lighpath
+ Capacity property.&#160; The TrafficProtectShared property is set equal to
+ zero for all lightpaths.</li>
+            <li>Updates the ConduitDiverse and NodeDiverse properties.</li>
+            <li>Lists any UnRouted and NonDiverse Demands in the Results window.</li>
+            <li>Loads network statistics information into the log.</li>
+        </ul>
+        <p>The appearance of network information in the log portion of the dialog is 
+your signal that the routing process is complete.&#160; For tips on evaluating routing results, read the
+<a href="69_EvaluateRouting.htm#EvalTop">Evaluating
+Routing Results</a> section of this help file.</p>
+        <p class="BackToTopLink"><a href="#RouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="RouteAdv"></a>Advanced Routing Options</h2>
+        <p>The Advanced tab of the Routing Optimization dialog is shown below.<span>&#160;
+By making selections in this dialog, you determine which factors take precedence 
+during the routing process.&#160; Your selections will also influence the amount 
+of time required for the algorithm to complete it's analysis.&#160; Use the 
+description of each option (included below) to determine the desired settings.&#160; 
+When your selections are complete, return to the <b>Basic</b> tab and click on 
+the <b>Calculate</b> button to initiate the routing process.</span></p>
+        <p class="FigureTitle">Route Demands Dialog, Advanced Tab</p>
+        <p>
+            <img border="0" src="Resources/images/RouteAdv.bmp" width="468" height="328" />
+        </p><span><p>A description of each advanced routing option is provided below.&#160; Unless 
+noted otherwise, any changes you make to option values are retained until the 
+Route Demands dialog is closed.&#160; </p></span>
+        <h3>Diverse Routing Algorithm</h3>
+        <p>Select one of these three options:</p>
+        <ul><span><li><b>Broadleaf:</b>&#160; A diverse routing algorithm based on <MadCap:variable name="Modeler.CompanyName" />'s
+ embedded Broadleaf algorithm is used to route demands.</li><li><b>Modeler:</b> A diverse routing algorithm, custom developed for the
+ Modeler, is used to route
+ demands.&#160;</li><li><b>Both Broadleaf and Modeler:</b>&#160; The Broadleaf algorithm is
+ executed first, followed by the Modeler algorithm in the event that a demand</li></span>'s
+ routing paths are <span>non-diverse.&#160;
+</span></ul>
+        <h3>Diversity Iterations</h3>
+        <p><span>The value of Diversity Iterations is used by
+the Modeler algorithm.&#160; Diversity Iterations defines the maximum 
+number of attempts to find diverse working and protect paths for each protected 
+demand. The default value is typically sufficient to ensure diversity.&#160; 
+However, certain topologies are more complex and require a greater number of 
+diversity iterations. There are scenarios for which a finding a diverse route is 
+not possible, perhaps due to Conduit Id settings or hard maximum capacity 
+constraints. For these scenarios, you can increase the speed of the algorithm by setting
+diversity iterations to a lower number.</span>
+        </p>
+        <h3><span>Diversity Step Size</span>
+        </h3>
+        <p><span>Diversity Step Size applies to the Modeler
+algorithm.&#160; The optimum value for step size (optimum being the best result
+in the least amount of time) can vary greatly depending on the characteristics
+of a particular network.&#160; To determine a good working value for your
+network, run the Route
+Demands algorithm with a range of step size values and observe the impact on
+routing results.</span>
+        </p>
+        <h3>Defaults</h3>
+        <p>Use the <b>Defaults</b> button to return each selection in the Diverse 
+Routing Options box to it's default value. Default values exist for the Use 
+Broadleaf Algorithm and Use Modeler Algorithm checkboxes, for the number of 
+Diversity Iterations, and for Diversity Step Size.&#160; </p>
+        <p class="Note"><span><b>Note:&#160; </b>Diverse 
+Routing Option settings are retained indefinitely unless you reset them by 
+clicking on the <b>Defaults</b> button.&#160; Diverse Routing Options include 
+Routing Algorithm, Diversity Iterations, and Diversity Step Size settings.</span>
+        </p>
+        <h3>Routing Constraints</h3>
+        <p><span>Routing constraints provide a means of 
+setting priorities for lightpath selection during the routing process.&#160; 
+Based on your constraint selections, penalties are applied to potential 
+solutions that do not meet the selected criteria.&#160; By comparing the 
+combined penalties for each potential solution, the Modeler's routing algorithms 
+can identify the solution that best meets your criteria. To select options for 
+routing constraints, click on the <b>Routing Constraints...</b> 
+button.&#160; For a description of routing constraints, read the
+<a href="63_RoutingConstraints.htm#top">Routing Constraints</a> section of this 
+help file.</span>
+        </p>
+        <p class="Note"><span><b>Note:&#160; </b>Routing Constraint settings are 
+retained as 
+long as the current network file remains open.&#160; If you have made any 
+recent changes to routing constraints (regardless of which routing algorithm was 
+in use), click on the <b>Routing Constraints</b> button to verify that 
+constraint values reflect your current needs.&#160; 
+
+</span>
+        </p>
+        <h3 style="margin-top: 20;">Detailed Log</h3>
+        <p>When checked, the log will include various property values used by Modeler's
+routing algorithms while evaluating each demand's working and protect paths. This information is primarily intended to assist
+Modeler software
+developers with debugging algorithms.&#160; This is a resource intensive feature
+and should remain unchecked for most
+network design projects.</p>
+        <h3><a name="RouteAdvSortDemands"></a>Randomly Sort Demands</h3><span><p>When checked (checked is the default),
+demands will be sorted in a random fashion prior to the algorithm being
+run.&#160; When more than one demand in a network is eligible to be routed over
+the same path, the order in which the routing algorithm processes demands will
+influence the outcome.&#160;&#160;</p></span>
+        <p>For assistance with the algorithm options described above,&#160; please contact the design tools
+team at <a href="mailto:designtools@sycamorenet.com">designtools@sycamorenet.com</a>.</p>
+        <p class="BackToTopLink"><a href="#RouteTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;<a href="In_Network_Files\Create%20an%20Excel%20File%20for%20Import.htm#NFCreateExcel">  <![CDATA[ ]]></a></p>
+        <p class="SeeAlsoLinks"><a href="63_DefaultRoutingOptions.htm#DROTop">Apply Default Routing Options</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="69_EvaluateRouting.htm#EvalTop">Evaluating Routing Results</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="66_OptimizedRouting.htm#RouteOptTop">Optimized Demand Routing</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="62_PrepRoute.htm#PrepRouteTop">Preparation for Routing</a>
+        </p>
+        <p class="BackToTopLink">&#160;</p>
+    </body>
+</html>

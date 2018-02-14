@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Evaluate Routing Results</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+        <style>
+div.Section1
+{
+	page: Section1;
+}
+
+</style>
+    </head>
+    <body>
+        <p />
+        <script Language="JavaScript">/*<![CDATA[*/
+
+ MyFont="Times New Roman, 10pt"
+ TVText="A traffic vector represents the quantity of time slots for each signal type. Traffic vectors are displayed in the format Type1:Type3:Type12:Type48:Type192 where Type1=OC1_STS1_VC3_DS3_E3_AU3, Type3=OC3_STS3_STM1_VC4, Type12=OC12_STS12_STM4, Type48=OC48_STS48_STM16, Type192=OC192_STS192_STM64"
+
+/*]]>*/</script>
+        <h1><a name="EvalTop"></a>Evaluating Routing Results</h1>
+        <p>Each of Modeler's algorithms provides a snapshot of routing results in the
+form of a basic log.&#160; Additional information is available by viewing
+<a href="#EvalNetStat">Network
+Statistics</a>, <a href="#EvalLPStat">LightPath Routing Information</a>,
+<a href="#EvalDemStat">Demand Routing Information</a>, <a href="#EvalUnRouted">UnRouted
+Demands</a>, and <a href="#EvalNonDiverse">Non-Diverse
+Demands</a> as described below.&#160;&#160;</p>
+        <h2><a name="EvalNetStat"></a>Network Statistics</h2>
+        <p>Network statistics provide an overview of a network and its routing results.&#160; To view network statistics, click on the View Network Statistics
+icon <img border="0" src="Resources/images/ViewStatisticsIcon.bmp" width="16" height="16" /> or select <b>Tools,
+Statistics</b> from the menu.&#160; The dialog shown below
+will appear.&#160;&#160;</p>
+        <p class="FigureTitle">Network Statistics - Mesh Network</p>
+        <p class="FigureTitle">
+            <img border="0" src="Resources/images/NetworkStats.bmp" width="946" height="514" />
+        </p>
+        <p class="BackToTopLink"><a href="#EvalTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="EvalLPStat"></a>LightPath Routing Information</h2>
+        <p>To view routing statistics on lightpaths as a group, click on the All LightPaths
+object in the Object tree and display it's Statistics properties in the Property
+editor.</p>
+        <p>To view routing information for a specific lightpath, click on the desired 
+lightpath in the Object tree and display it's properties in the Property editor.&#160; 
+Some of the lightpath properties used to evaluate routing results are described 
+in the table below.</p>
+        <table border="1" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="625" cellspacing="0" cellpadding="0">
+            <tr>
+                <th class="TableHeader" width="112">Group</th>
+                <th class="TableHeader" width="142">Name</th>
+                <th class="TableHeader" width="336">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="112" valign="top" rowspan="4">Time Slots
+	<p class="TableBody">(applies to Mesh lightpaths only)</p></td>
+                <td class="TableBody" width="142" valign="top">Available</td>
+                <td class="TableBody" width="336" valign="top">The quantity of time slots 
+	that were not assigned during the routing process, expressed as a
+	<a href="JavaScript:popup.TextPopup(TVText,MyFont,9,9,-1,-1)">traffic vector</a>.
+</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">ProtectDedicated</td>
+                <td class="TableBody" width="336" valign="top">The quantity of time slots 
+	set aside for dedicated protect traffic, expressed as a
+	<a href="JavaScript:popup.TextPopup(TVText,MyFont,9,9,-1,-1)">traffic vector</a>.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">ProtectShared</td>
+                <td class="TableBody" width="336" valign="top">The quantity of time slots 
+	set aside for shared protect traffic, expressed as a
+	<a href="JavaScript:popup.TextPopup(TVText,MyFont,9,9,-1,-1)">traffic vector</a>.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">Working</td>
+                <td class="TableBody" width="336" valign="top">The quantity of time slots 
+	set aside for working path traffic, expressed as a
+	<a href="JavaScript:popup.TextPopup(TVText,MyFont,9,9,-1,-1)">traffic vector</a>.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="112" valign="top" rowspan="9">Traffic</td>
+                <td class="TableBody" width="142" valign="top">TrafficAvailable</td>
+                <td class="TableBody" width="336" valign="top">The amount of traffic 
+	available for routing on a lightpath in units specified by the lightpath's 
+	TrafficUnits property. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficMaximum</td>
+                <td class="TableBody" width="336" valign="top">The maximum amount of traffic 
+	that can be routed over a lightpath in units specified by the 
+	lightpath's TrafficUnits property. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficProtectDedicated</td>
+                <td class="TableBody" width="336" valign="top">The amount of dedicated 
+	protect traffic routed over a lightpath in units specified by the 
+	lightpath's TrafficUnits property. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficProtectShared</td>
+                <td class="TableBody" width="336" valign="top">The amount of shared protect 
+	traffic routed over a lightpath in units specified by the lightpath's 
+	TrafficUnits property. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficTotal</td>
+                <td class="TableBody" width="336" valign="top">The total amount of traffic 
+	routed over a lightpath in units specified by the lightpath's TrafficUnits 
+	property. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficTotalUsed</td>
+                <td class="TableBody" width="336" valign="top">The sum of the amount of 
+	protect shared, protect dedicated, and working traffic in units specified by 
+	the lightpath's TrafficUnits property.&#160; </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficUnits</td>
+                <td class="TableBody" width="336" valign="top">Traffic units are determined 
+	by the value of the network's 
+	<a href="In_Adding_Objects\Setting%20Default%20Object%20Properties.htm#SetDefaultTop">Type 
+	property</a> (SONET or SDH).&#160; Units for SONET networks are STS-1/DS-3.&#160; 
+	Units for SDH networks are VC4.&#160; </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">TrafficWorking</td>
+                <td class="TableBody" width="336" valign="top">The amount of working path 
+	traffic routed over a lightpath in units specified by the lightpath's 
+	TrafficUnits property. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="142" valign="top">Utilization</td>
+                <td class="TableBody" width="336" valign="top">The percentage of lightpath capacity in use.</td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#EvalTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="EvalDemStat"></a>Demand Routing Information</h2>
+        <p>To view statistics on demands as a group, click on the All Demands
+object in the Object tree and display it's Statistics properties in the Property
+editor.</p>
+        <p>To view routing information for a specific demand, click on the desired 
+demand in the Object tree and display it's properties in the Property editor.&#160; 
+Some of the demand properties used to evaluate routing results are described in 
+the table below.</p>
+        <table border="1" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" cellspacing="0" cellpadding="0">
+            <tr>
+                <th class="TableHeader" width="103">Group</th>
+                <th class="TableHeader">Name</th>
+                <th class="TableHeader" width="377">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">Path-Protect, 
+	Path-Working</td>
+                <td class="TableBody" valign="top">Path</td>
+                <td class="TableBody" valign="top" width="377">Contains a reference to the 
+	path's start and end location, as well as the demand it is assigned to.&#160; 
+	(Use a network view for a bird's eye view of the path.)&#160; Click on the 
+	ellipsis button to <a href="70_ManualRouting.htm#top">manually edit</a> 
+	the path.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">PathAdminCost</td>
+                <td class="TableBody" valign="top" width="377">The combined admin costs of
+ the lightpaths over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">PathFiberHops</td>
+                <td class="TableBody" valign="top" width="377">The number of
+ fibers over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">
+	PathFixedLightPathRouting</td>
+                <td class="TableBody" valign="top" width="377">True/False.&#160; A value of 
+	True indicates that the set of lightpaths over which the demand is routed is 
+	fixed and cannot be changed by a routing algorithm.&#160; </td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">
+	PathFixedLightPathTimeSlots</td>
+                <td class="TableBody" valign="top" width="377">True/False.&#160; A value of 
+	True indicates that the set of timeslots allotted to this demand is 
+	fixed and cannot be changed by a routing algorithm.&#160; </td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">PathLatency</td>
+                <td class="TableBody" valign="top" width="377">The sum of the propagation 
+	delays (in msec) of
+ the lightpaths over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">PathLength</td>
+                <td class="TableBody" valign="top" width="377">The sum of the lengths of the lightpaths over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">PathLightPathHops</td>
+                <td class="TableBody" valign="top" width="377">The number of
+ lightpaths over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">PathStartingTimeSlots<p class="TableBody">(applies to 
+	mesh demands only)</p></td>
+                <td class="TableBody" valign="top" width="377">Contains the starting number 
+	of each time slot assignment for a demand.&#160; Each path over which a 
+	demand is routed may contain one or more lightpath hops.&#160; During the routing process, a set of time slots is 
+	assigned to each hop in the path.&#160; The number of time slot assignments 
+	in each set is equal to the quantity (number of circuits of a specified type) 
+	of the demand being routed. Starting time slot information is displayed in 
+	the following format:&#160; Starting Time Slots for Hop1 (one for each 
+	demand quantity, separated by colons), Starting Time Slots for Hop2, ... An 
+	example is shown below.<blockquote><p><img border="0" src="Resources/images/StartingTimeSlotFormat.bmp" width="289" height="104" /></p></blockquote><p class="TableBody">Note that for the Protect path, starting time slots are assigned only 
+	when the demand's ProtectionType property is equal to OnePlusOne.&#160; For 
+	unprotected demands, there are no time slot assignments and this field 
+	remains blank.&#160; For shared path demands, the correct quantity of time 
+	slots are set aside, but are not assigned (this approximates real world 
+	conditions) and starting time slots are set to zero.</p></td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">Path-Protect</td>
+                <td class="TableBody" valign="top">ProtectToWorkLengthRatio</td>
+                <td class="TableBody" valign="top" width="377">The ratio of
+ protect path length to working path length.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">Routing Diversity</td>
+                <td class="TableBody" valign="top">CommonConduitList</td>
+                <td class="TableBody" valign="top" width="377">Contains a list of every 
+	conduit that has both the working and protect path of a demand routed over 
+	it.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">CommonLocationList</td>
+                <td class="TableBody" valign="top" width="377">Contains a list of every 
+	location that has both the working and protect path of a demand routed 
+	through it.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">ConduitDiverse</td>
+                <td class="TableBody" valign="top" width="377">Yes/No.&#160; A value of Yes 
+	indicates that the working and protect paths for the demand do not share a conduit.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">Diverse</td>
+                <td class="TableBody" valign="top" width="377">Yes/No.&#160; A value of Yes 
+	indicates that the working and protect paths for the demand do not share a conduit 
+	or a node.&#160; <a href="#EvalNonDiverse">Non-Diverse demands</a> are 
+	listed in the Results window.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">NodeDiverse</td>
+                <td class="TableBody" valign="top" width="377">Yes/No.&#160; A value of Yes 
+	indicates that the demand has node protection and it's working and protect paths 
+	do not share a node.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" valign="top" width="103">&#160;</td>
+                <td class="TableBody" valign="top">VPNViolated</td>
+                <td class="TableBody" valign="top" width="377">True/False.&#160; A value of 
+	True indicates that one of the demand's paths (working or protect) is not 
+	routed within the demand's VPN.&#160; For this to occur, the
+	<a href="63_Routing.htm#RouteAdv">By VPN Routing Constraint</a> must have 
+	been set to Off or Soft when routing.</td>
+            </tr>
+        </table>
+        <p class="BackToTopLink"><a href="#EvalTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="EvalUnRouted"></a>UnRouted Demands</h2>
+        <p>When un-routed demands are present in your network, the UnRouted Demands tab
+will appear in the Results window.&#160; Click on the tab to view a list of the
+demands that are not routed.</p>
+        <p class="FigureTitle">Algorithm Results - UnRouted Demands</p>
+        <p class="FigureTitle">
+            <img border="0" src="Resources/images/UnRoutedDemands.bmp" width="721" height="224" />
+        </p>
+        <p class="BackToTopLink"><a href="#EvalTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="EvalNonDiverse"></a>Non-Diverse Demands</h2>
+        <p>A demand is non-diverse if it has protection (it's ProtectionType property is
+set to OnePlusOne or Shared) and it meets at least one of the following
+criteria:</p>
+        <ul>
+            <li>The demand's working and protect paths share a conduit.</li>
+            <li>The demand has node protection (it's NodeProtection property is True) and it's working and protect paths share a
+ node.</li>
+        </ul>
+        <p>When non-diverse demands are present in your network, the Non-Diverse Demands
+tab will appear in the Results window.&#160; Click on the NonDiverse Demands tab 
+to view a list of the demands that are not diversely routed. </p>
+        <p class="FigureTitle">Algorithm Results - Non-Diverse Demands</p>
+        <p>
+            <img border="0" src="Resources/images/NonDiverseDemands.bmp" width="757" height="575" />
+        </p>
+        <p class="BackToTopLink"><a href="#EvalTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+        <p class="BackToTopLink">&#160;</p>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+        <object id="popup" type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11" width="14" height="16"> <![CDATA[ ]]></object>
+    </body>
+</html>

@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Demand Routing Report</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="RepDemandRoute"></a>Demand Routing Report</h2>
+        <p>This report is provided as a worksheet entitled "Demand
+Routing".&#160; It contains the information described in the table
+below.&#160; Use this report to evaluate routing for one or more demands in your
+proposed design.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="646" height="1028">
+            <tr>
+                <th class="TableHeader" width="132">Type of Data</th>
+                <th class="TableHeader" width="166">Column Name(s)</th>
+                <th class="TableHeader" width="316">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="9">Demand<p>&#160;&#160;&#160;&#160;</p>
+	&#160;&#160;&#160;&#160;<p>&#160;&#160;&#160;&#160;</p>
+	&#160;&#160;&#160;&#160;<p>&#160;&#160;</p>
+	&#160;&#160;<p>&#160;&#160;</p></td>
+                <td class="TableBody" width="166" valign="top">Name, LongName,
+ Locked, StartLocation, EndLocation</td>
+                <td class="TableBody" width="316" valign="top">This is user
+ supplied information that uniquely describes each demand.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Local</td>
+                <td class="TableBody" width="316" valign="top">True if the demand starts and 
+	ends at the same location.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Scope</td>
+                <td class="TableBody" width="316" valign="top">This is user
+ supplied input for demand scope.&#160; Valid entries include:
+      <ul><li>Mesh&#160;</li><li>Ring&#160;</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">VPN</td>
+                <td class="TableBody" width="316" valign="top">The virtual private network
+ (VPN)
+ this demand is assigned to.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Quantity</td>
+                <td class="TableBody" width="316" valign="top">Demand size specified by
+ user.&#160; Units are based on Type entry below.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Type</td>
+                <td class="TableBody" width="316" valign="top">This is user
+ supplied input for demand
+ type.&#160; Valid entries
+ include:&#160;
+      <ul><li>
+      AU3, DS-3, VC3, VC4, E3</li><li> STM-1, STM-4, STM-16, STM-64</li><li>STS-1, STS-3, STS-12, STS-48, STS-192</li><li> OC-1, OC-3, OC-12, OC-48, OC-192</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Protection Type</td>
+                <td class="TableBody" width="316" valign="top">This is user
+ supplied input for demand protection.&#160; Valid entries
+ include:&#160;
+      <ul><li>Unprotected (working only)&#160;</li><li>OnePlusOne (working and protect)&#160;</li><li> SharedPath (working and protect)&#160;</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">DiverseGroup</td>
+                <td class="TableBody" width="316" valign="top">This is a user supplied 
+	property that identifies the name (if any) of the Diverse Group this demand 
+	is a member of.&#160;&#160; Each demand within a diverse group is routed 
+	diversely from the every other demand in the group.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Node Protection</td>
+                <td class="TableBody" width="316" valign="top">True if node protection was specified by the user.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="4">Broadleaf<p>&#160;&#160;</p>
+	&#160;&#160;<p>&#160;&#160;&#160;&#160;</p></td>
+                <td class="TableBody" width="166" valign="top">Broadleaf Source
+ Reroute</td>
+                <td class="TableBody" width="316" valign="top">On if Broadleaf Source
+ Rerouting was specified by the user.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Broadleaf Trunk
+ Restoration</td>
+                <td class="TableBody" width="316" valign="top">On if Broadleaf
+ Trunk Restoration was specified by the user.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Broadleaf Trunk
+ Reversion</td>
+                <td class="TableBody" width="316" valign="top">User
+ specified.&#160; Valid entries
+ include:&#160;
+      <ul><li>Disabled&#160;</li><li>Manual&#160;</li><li> Auto&#160;</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Description</td>
+                <td class="TableBody" width="316" valign="top">A user supplied
+ description for each demand.&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="3">Demand Routing<p>&#160;&#160;</p>
+	&#160;&#160;</td>
+                <td class="TableBody" width="166" valign="top">Routing Notes</td>
+                <td class="TableBody" width="316" valign="top">Contains text
+ messages from routing algorithms.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Fixed Routing</td>
+                <td class="TableBody" width="316" valign="top">If true, routing
+ algorithms did not change existing routing.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Fixed Timeslots</td>
+                <td class="TableBody" width="316" valign="top">If true, routing
+ algorithms did not change existing timeslot assignments.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">Source, 
+	Destination</td>
+                <td class="TableBody" width="166" valign="top">Chassis, Slot, Port</td>
+                <td class="TableBody" width="316" valign="top">Identifies the hardware 
+	allocated to a demand's source/destination location.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Starting TimeSlot</td>
+                <td class="TableBody" width="316" valign="top">The Starting TimeSlot 
+	allocated to a demand's source/destination.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">LightPaths</td>
+                <td class="TableBody" width="166" valign="top">Working, Protect</td>
+                <td class="TableBody" width="316" valign="top">The sequential
+ list of lightpaths (comma delimited) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Working Starting Timeslots, Protect 
+	Starting Timeslots</td>
+                <td class="TableBody" width="316" valign="top">The sequential
+ list of the timeslots (comma delimited) over which a demand route starts.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top">Fibers&#160;<br />
+      (included if fibers are present in the network)</td>
+                <td class="TableBody" width="166" valign="top">Working, Protect</td>
+                <td class="TableBody" width="316" valign="top">The sequential
+ list of fibers (comma delimited) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="3">Conduits<p>&#160;&#160;</p>
+	&#160;&#160;</td>
+                <td class="TableBody" width="166" valign="top">Working, Protect</td>
+                <td class="TableBody" width="316" valign="top">The sequential
+ list of conduits (colon delimited) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Common</td>
+                <td class="TableBody" width="316" valign="top">The
+ list of conduits (colon delimited) shared by the working and protect
+ paths.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Conduit Diverse</td>
+                <td class="TableBody" width="316" valign="top">Yes if demand
+ working and protect paths are diverse. The working and protect paths for a
+ conduit diverse demand do not share any conduits.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="3">Intermediate
+ Locations<p>&#160;&#160;</p>
+	&#160;&#160;</td>
+                <td class="TableBody" width="166" valign="top">Working, Protect</td>
+                <td class="TableBody" width="316" valign="top">The sequential
+ list of intermediate locations (colon delimited) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Common</td>
+                <td class="TableBody" width="316" valign="top">The
+ list of intermediate locations (colon delimited) shared by the working and
+ protect paths.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Node Diverse</td>
+                <td class="TableBody" width="316" valign="top">Yes if demand
+ working and protect paths are diverse. The working and protect paths for a
+ node diverse demand do not share any nodes.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">Rings&#160;<br />
+      (included if rings are present in the network)<p>&#160;&#160;&#160;</p></td>
+                <td class="TableBody" width="166" valign="top">Rings</td>
+                <td class="TableBody" width="316" valign="top">The list of rings
+ (comma delimited) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Ring Count</td>
+                <td class="TableBody" width="316" valign="top">The number of
+ rings over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">Length<p>&#160;&#160;&#160;</p></td>
+                <td class="TableBody" width="166" valign="top">Work, Protect</td>
+                <td class="TableBody" width="316" valign="top">The length of
+ each type of demand route.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Protect/Work</td>
+                <td class="TableBody" width="316" valign="top">The ratio of
+ protect path length to working path length.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">Latency</td>
+                <td class="TableBody" width="166" valign="top">Work, Protect</td>
+                <td class="TableBody" width="316" valign="top">An estimate of the end to end 
+	delay (in msec) seen by a circuit.&#160; The estimate is derived from the 
+	network property values of LengthUnit (kilometers or miles) and 
+	RefractiveIndex, combined with the Speed of Light.&#160; The value you enter 
+	for a refractive index should be representative of the overall index of the 
+	fiber in your network.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Protect/Work</td>
+                <td class="TableBody" width="316" valign="top">The ratio of
+ protect path latency to working path latency.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">Fiber Hops<p>&#160;&#160;&#160;</p></td>
+                <td class="TableBody" width="166" valign="top">Work, Protect</td>
+                <td class="TableBody" width="316" valign="top">The number of
+ fibers over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Protect/Work</td>
+                <td class="TableBody" width="316" valign="top">The ratio of
+ protect path fiber hops to working path fiber hops.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="3">LightPath Hops<p>&#160;&#160;&#160;</p></td>
+                <td class="TableBody" width="166" valign="top">Work, Protect</td>
+                <td class="TableBody" width="316" valign="top">The number of
+ lightpaths over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Protect/Work</td>
+                <td class="TableBody" width="316" valign="top">The ratio of
+ protect path lightpath hops to working path lightpath hops.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">STS1 Equiv</td>
+                <td class="TableBody" width="316" valign="top">The number of
+ lightpath hops in STS1 units (as opposed to Type units above) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top" rowspan="2">Equiv LightPath Hops</td>
+                <td class="TableBody" width="166" valign="top">Work, Protect</td>
+                <td class="TableBody" width="316" valign="top">The number of
+ lightpath hops in STS1 units (as opposed to Type units above) over which a demand is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="166" valign="top">Protect/Work</td>
+                <td class="TableBody" width="316" valign="top">The ratio of
+ protect path equivalent lightpath hops to working path equivalent
+ lightpath hops.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="132" valign="top">Admin Cost</td>
+                <td class="TableBody" width="166" valign="top">Work, Protect</td>
+                <td class="TableBody" width="316" valign="top">The combined admin costs of
+ the lightpaths over which a demand is routed.</td>
+            </tr>
+        </table>
+        <p>To generate a report, click on the Export Excel Report
+icon<span>&#160;</span><img border="0" src="../Resources/images/Report.gif" width="14" height="16" />, or
+select <b>Tools, Reporting</b> from the menu. Place a checkmark next to the 
+type of report you wish to create, then click <b>OK</b>.</p>
+        <p class="BackToTopLink"><a href="#RepDemandRoute">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Generating%20Reports.htm#ReportTop">Generate Reports</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

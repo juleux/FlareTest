@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Failure Analysis Results</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body><span><h1><a name="FailResultsTop"></a>Failure Analysis Results</h1><p>The Modeler provides detailed failure analysis results using a set of tables 
+that work in conjunction with a network view. Open any network view that 
+displays lightpath information prior to running the Failure Analysis algorithm.&#160; 
+After running the algorithm, click on the <b>Results</b> tab.&#160; Display the 
+network view alongside the results tables by selecting <b>Window, Tile 
+Horizontally</b> from the menu. When you select an object
+(i.e. demand, lightpath) from one of the tables, it's corresponding lightpaths 
+will be highlighted in the network view.
+</p><p class="FigureTitle">Failure Analysis Results - Results Table and Network View</p><p><img border="0" src="Resources/images/FailAnalMapDemands.bmp" width="709" height="512" /></p><p class="Note">When you navigate back and forth between the failure analysis 
+dialog and the rest of the user interface, take care not to edit the objects you 
+are viewing.&#160; In order for the data displayed in the dialog to remain 
+synchronized with the data displayed in the rest of the user interface, you must 
+close the dialog prior to making any edits to objects in the network.
+</p><p>The results tables contain the following information:
+</p><ul><li>Relevant <a href="#FailResultLP">statistics for the lightpaths</a>
+    evaluated by the algorithm.&#160; Capacity and utilization information is
+ included.</li><li>Relevant <a href="#FailResultFailure">statistics for the failure scenarios</a>
+    evaluated by the algorithm.&#160; Includes a description of the failure and
+ a summary of the resulting demand failures.</li><li>Detailed information about the results of
+ each failure scenario including:</li></ul><blockquote><ul><li><b><a href="#FailResultDetailLP">Affected lightpaths</a></b> - for each 
+	failure scenario, a detailed list of the lightpaths affected by the 
+	failures.</li><li><b><a href="#FailResultDetailIter">Iteration details</a></b> - for each failure scenario, a list of results 
+ for each iteration of the analysis.</li><li><b><a href="#FailResultDetailDemands">Affected demands</a></b>&#160;- for each failure scenario, a detailed 
+ list of the demands affected by the failures.</li><li><b><a href="#FailResultDetailPath">Path information</a></b> - for each affected demand, a detailed list of 
+ the paths used to restore it.</li><li><a href="#FailResultDetailVCG">Affected Virtual Concatenation Groups</a> 
+	- for each failure scenario, a list of 
+ the VCGs affected by the failures.</li></ul></blockquote><p>A description of how to access each type of results information follows.&#160;
+To <a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">export</a> all of the 
+results information to Excel, place 
+a checkmark next to the<b> Save All Tables </b>option, and click the <b>Save to Excel </b>button.</p><h2><a name="FailResultLP"></a>LightPath Statistics
+</h2><p>To view lightpath statistics, click on the <b>LightPaths</b> tab located
+within the <b>Results</b> dialog.&#160; A sample table is shown below.&#160;
+When you click to select a lightpath from the list, it will be highlighted
+within the network view.&#160; When you click on the <b>Save to Excel</b> 
+button, the data in this table will be 
+<a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="FigureTitle">Failure Analysis Results - LightPaths Tab</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalGridLP.bmp" width="769" height="293" /></p><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><h2><a name="FailResultFailure"></a>Failure Scenarios</h2><p>To view a list of failure scenarios, click on the <b>Failure Scenarios </b> tab located
+within the <b>Results</b> dialog.&#160; A sample table is shown below.&#160;&#160; 
+When you click on the <b>Save to Excel</b> button, the data in this table will 
+be <a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="FigureTitle">Failure Analysis Results - Failure Scenarios Tab</p><h3><img border="0" src="Resources/images/FailAnalGridFailScenario.bmp" width="714" height="321" /></h3><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><h2><a name="FailResultDetailLP"></a>Affected LightPaths</h2><p>To view detailed lightpath information for a specific failure scenario, locate the
+desired scenario within the list of Failure Scenarios (located on the <b>FailureScenarios</b>
+tab) and click on the plus sign to the left of it.&#160; Select <b>Affected LightPaths</b> from the pop-up list.&#160; A sample list of
+Affected LightPaths is shown below.
+When you click to select a lightpath from the list, it will be highlighted
+within the network view.&#160; When you click on the <b>Save to Excel</b> 
+button, the Affected LightPaths data for all of the Failure Scenarios will be 
+<a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="FigureTitle">Failure Analysis Results - Affected LightPaths</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalGridDetail.bmp" width="876" height="266" /></p><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><h2><a name="FailResultDetailIter"></a>Iteration Details</h2><p>To view detailed iteration information for a specific failure scenario, locate the
+desired scenario within the list of Failure Scenarios (located on the <b>FailureScenarios</b>
+tab) and click on the plus sign to the left of it.&#160; Select <b>Iteration
+Details</b> from the pop-up list.&#160; A sample list of Iteration Details is shown below.&#160; 
+When you click on the <b>Save to Excel</b> button, the Iteration Details 
+information for all of the Failure Scenarios will be 
+<a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="Note"><b>Note:</b>&#160; By default, iteration details are not
+included as part of the results.&#160; To include iteration details in the
+results, click on the <a href="65_FailureAnalAuto.htm#FailAutoAdv">Advanced</a> tab in the Failure
+Analysis dialog and place a checkmark next to <b>Show Iteration Details</b>.</p><p class="FigureTitle">Failure Analysis Results - Iteration Details</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalGridIter.bmp" width="645" height="271" /></p><p>For each iteration the algorithm performs, demand information is compiled 
+using the categories described
+below.&#160;&#160;</p><table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="643"><tr><th class="TableHeader" width="219">Demand Category</th><th class="TableHeader" width="402">Description</th></tr><tr><td class="TableBody" valign="top" width="219">Ring Restored Protected Demands</td><td class="TableBody" width="402" valign="top">Demands (including 
+	unprotected demands) that have been successfully restored by ring protection 
+	(one or more rings on a demand's path).</td></tr><tr><td class="TableBody" valign="top" width="219">Mesh Restored Protected Demands</td><td class="TableBody" width="402" valign="top">Demands that have been 
+	successfully restored by dynamic mesh restoration.&#160; Note that dynamic 
+	restoration is attempted only on demands whose BroadLeafSourceReroute 
+	property is set to On.&#160; For demands that traverse one or more rings, 
+	dynamic mesh restoration is attempted only if ring protection fails.&#160; 
+	By default, the algorithm restores demands over mesh lightpaths.&#160; The 
+	algorithm restores demands over ring lightpaths only when the
+	<a href="65_FailureAnalAdvancedOptions.htm#FailOptionsCombinedProtection"><b>Permit Restoration Over Rings</b> <![CDATA[ ]]></a>option is selected on the Advanced 
+	tab of the Failure Analysis dialog.</td></tr><tr><td class="TableBody" valign="top" width="219">Failed Protected<span>
+      Demands
+</span></td><td class="TableBody" width="402" valign="top">Includes the following:
+      <ul><li>OnePlusOne demands for which no alternate route could be found in
+ response to the failure of both it's working and protect paths.</li><li>SharedPath demands for which no alternate route could be found, 
+		either by ring protection or dynamic mesh restoration.</li></ul></td></tr><tr><td class="TableBody" valign="top" width="219">Failed Unprotected<span>
+      Demands
+</span></td><td class="TableBody" width="402" valign="top">Affected, unprotected demands 
+	for which dynamic mesh restoration was not attempted.</td></tr><tr><td class="TableBody" valign="top" width="219">Unprotected OnePlusOne<span>
+      Demands
+</span></td><td class="TableBody" width="402" valign="top"><span>OnePlusOne
+ demands <span>which have one available path </span></span><span>and one failed
+ path after all alternate routes have been evaluated. </span></td></tr></table><p>For each type of demand, the resulting volume of traffic is quantified using
+the following three terms:</p><table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="643"><tr><th class="TableHeader" width="219">Term</th><th class="TableHeader" width="402">Description</th></tr><tr><td class="TableBody" valign="top" width="219"># Demands</td><td class="TableBody" width="402" valign="top">The number of demands of a
+ particular type.</td></tr><tr><td class="TableBody" valign="top" width="219">Qty Demands</td><td class="TableBody" width="402" valign="top">For a set of demands, the sum
+ of the values of their Quantity properties.</td></tr><tr><td class="TableBody" valign="top" width="219">Traffic Demands</td><td class="TableBody" width="402" valign="top">Total traffic for a set of
+ demands.&#160; Traffic is calculated (in units defined for the network as
+ a whole) using the demand's Quantity and Type properties.</td></tr></table><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><h2><a name="FailResultDetailDemands"></a>Affected Demands</h2><p>To view detailed demand information for a specific failure scenario, locate the
+desired scenario within the list of Failure Scenarios (located on the <b>FailureScenarios</b>
+tab) and click on the plus sign to the left of it.&#160; Select <b>Affected
+Demands</b> from the pop-up list.&#160; A sample list of Affected Demands is shown below.&#160;
+When you click to select a demand from the list, it's path will be highlighted
+within the network view.&#160; When you click on the <b>Save to Excel</b> 
+button, the Affected Demands data for all of the Failure Scenarios will be 
+<a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="FigureTitle">Failure Analysis Results - Affected Demands</p><p><img border="0" src="Resources/images/FailAnalGridDemands.bmp" width="650" height="391" /></p><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><h2><a name="FailResultDetailPath"></a>Path Information for Affected Demands</h2><p>To view path information for a specific demand, locate the
+desired demand (the Restored property must be non-zero for a restoration path to
+exist) within the list of Affected Demands and click on the plus sign to the left of it.&#160; Select
+<b>Paths</b> from the pop-up list.&#160; A sample list of
+Paths is shown below.&#160; When you click to select a path from the
+list, both the failed and the restored paths will be highlighted within the
+network view.&#160; When you click on the <b>Save to Excel</b> button, all of 
+the Path data within the results tables will be 
+<a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="Note"><b>Note:</b>&#160; By default, paths are not
+included as part of the results.&#160; To include path information in the
+results, click on the <a href="65_FailureAnalAuto.htm#FailAutoAdv">Advanced</a> tab in the Failure
+Analysis dialog and place a checkmark next to <b>Show Paths</b>.</p><p class="FigureTitle">Failure Analysis Results - Paths</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalMapRestor.bmp" width="670" height="540" /></p><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><h2><a name="FailResultDetailVCG"></a>Affected Virtual Concatenation Groups</h2><p>To view detailed information about the virtual concatenation groups affected 
+by a specific failure scenario, locate the
+desired scenario within the list of Failure Scenarios (located on the <b>FailureScenarios</b>
+tab) and click on the plus sign to the left of it.&#160; Select <b>Affected
+Virtual Concatenation Groups</b> from the pop-up list.&#160; A sample list of 
+Affected Virtual Concatenation Groups is shown below.&#160;
+When you click to select a VCG from the list, it's endpoints will be highlighted
+within the network view.&#160; When you click on the <b>Save to Excel</b> 
+button, the Virtual Concatenation Group data for all of the Failure Scenarios 
+will be <a href="65_Export%20FA%20Results%20to%20Excel.htm#FailResultExport">exported</a> to an Excel file.</p><p class="FigureTitle">Failure Analysis Results - Affected Virtual Concatenation 
+Groups</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalGridVCG.bmp" width="679" height="294" /></p><p class="BackToTopLink"><a href="#FailResultsTop">Back to top</a></p><hr /><p>&#160;</p></span>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

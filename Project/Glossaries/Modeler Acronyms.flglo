@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term0"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>APS</Term>
+    </Terms>
+    <Definition
+      Link="">Automatic Protection Switching</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term1"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>BLSR</Term>
+    </Terms>
+    <Definition
+      Link="">Bidirectional Line Switched Ring</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term2"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>CBS</Term>
+    </Terms>
+    <Definition
+      Link="">Committed Burst Size</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term3"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>CIR</Term>
+    </Terms>
+    <Definition
+      Link="">Committed Information Rate</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term4"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>DAA</Term>
+    </Terms>
+    <Definition
+      Link="">Design Analysis Application</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term5"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>EBS</Term>
+    </Terms>
+    <Definition
+      Link="">Excess Burst Size</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term6"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>EIR</Term>
+    </Terms>
+    <Definition
+      Link="">Excess Information Rate</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term7"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>ES</Term>
+    </Terms>
+    <Definition
+      Link="">Ethernet Service</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term8"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>GCD</Term>
+    </Terms>
+    <Definition
+      Link="">Great Circle Distance</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term9"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>LP</Term>
+    </Terms>
+    <Definition
+      Link="">LightPath</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term10"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>MSP</Term>
+    </Terms>
+    <Definition
+      Link="">Multiplex Section Protection</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term11"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>NMA</Term>
+    </Terms>
+    <Definition
+      Link="">Network Modeling Application</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term12"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>OC</Term>
+    </Terms>
+    <Definition
+      Link="">Optical Carrier</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term13"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>OSPC</Term>
+    </Terms>
+    <Definition
+      Link="">Open Shortest Path First</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term14"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>PPG</Term>
+    </Terms>
+    <Definition
+      Link="">Path Protection Group</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term15"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>SDH</Term>
+    </Terms>
+    <Definition
+      Link="">Synchronous Digital Hierarchy</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term16"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>STM</Term>
+    </Terms>
+    <Definition
+      Link="">Synchronous Transport Mode/Module</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term17"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>SONET</Term>
+    </Terms>
+    <Definition
+      Link="">Synchronous Optical Network</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term18"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>VCG</Term>
+    </Terms>
+    <Definition
+      Link="">Virtual Concatenation Group</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Acronyms.Term19"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>VPN</Term>
+    </Terms>
+    <Definition
+      Link="">Virtual Private Network</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

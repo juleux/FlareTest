@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="6165" MadCap:lastWidth="834">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Import Network Data from Silvx Manager</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="NFImportSilvxMgr"></a>Import Network Data from <MadCap:variable name="Modeler.CompanionProduct" /></h1>
+        <p><MadCap:variable name="Modeler.CompanionProduct" /> is a tool to help operators collect 
+and manage live network data.&#160; When you establish a connection to a <MadCap:variable name="Modeler.CompanionProduct" /> server, you can import data from an existing network into the Modeler 
+and use it to create a network file.</p>
+        <p>To import data from <MadCap:variable name="Modeler.CompanionProduct" />, select <b>File, Import, from <MadCap:variable name="Modeler.CompanionProduct" /></b>  from Modeler's main menu.&#160; 
+The Modeler will create a new network
+file to contain data imported from <MadCap:variable name="Modeler.CompanionProduct" />.&#160; If a file is currently
+open, the Modeler will prompt you to save or exit it before displaying the<b> 
+Import Network from <MadCap:variable name="Modeler.CompanionProduct" /></b> dialog.&#160; The dialog is composed of 
+multiple tabs.&#160; Each tab represents a step in the import process.&#160; The 
+process begins with the <b>Select Data Source</b> tab and progresses 
+from left to right until complete.</p>
+        <p class="Note"><b>Note:</b>&#160; The <MadCap:variable name="Modeler.CompanionProduct" /> Import tool&#160; requires 
+an advanced license from <MadCap:variable name="Modeler.CompanyName" /> and the proper installation of the Oracle Data 
+Provider.&#160; For the files and instructions necessary to enable you to import 
+data from <MadCap:variable name="Modeler.CompanionProduct" />r, contact your local <MadCap:variable name="Modeler.CompanyName" /> representative.</p>
+        <h2><a name="NFSelectDataSource"></a>Select a Data Source and Get Data</h2>
+        <p>There are two methods of obtaining data from <MadCap:variable name="Modeler.CompanionProduct" />:</p>
+        <ul>
+            <li><b><a href="#NFConnect">Direct Connection to a <MadCap:variable name="Modeler.CompanionProduct" /> Server</a> 
+	- </b>Use this approach to transfer network data directly from <MadCap:variable name="Modeler.CompanionProduct" /> 
+	to a network file.&#160; This approach incorporates current network 
+	conditions and is suitable for most applications.</li>
+            <li><b><a href="#NFImportScriptFile">Importing Data from a <MadCap:variable name="Modeler.CompanionProduct" /> 
+	File</a> -&#160; </b>This offline data collection approach makes use of a 
+	script file to collect data from <MadCap:variable name="Modeler.CompanionProduct" /> and store it in a file for 
+	import at a later time. <b>&#160;</b>This approach is particularly useful 
+	for applications where network access is limited.</li>
+        </ul>
+        <h3><a name="NFConnect"></a>Connect to a <MadCap:variable name="Modeler.CompanionProduct" /> Server</h3>
+        <p>To use this approach to importing data, you must establish a connection to the Oracle 
+database located on your <MadCap:variable name="Modeler.CompanionProduct" /> 
+Server.&#160; To establish a connection, click on the <b>Connect to <MadCap:variable name="Modeler.ProductFamily" /> 
+Server</b> button on the Select Data Source tab.&#160; Next, enter the information you use to logon to the Oracle 
+database and click the <b>Connect</b> button.&#160; 
+When you do so, the Modeler will use the information to connect to the server.&#160; 
+When a connection has been established, the <b>Select a User Group</b> tab will 
+appear.</p>
+        <p class="Note">Note:&#160; Most network operators use the default port for 
+Oracle of 1521.&#160; However, in some applications, an alternate port is 
+assigned.&#160; If you are having difficulty establishing a connection, ask your 
+network operator to specify the correct port number.</p>
+        <p class="FigureTitle">Import Network Data From <MadCap:variable name="Modeler.CompanionProduct" /> - Connect to 
+Oracle Database on Server</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/SilvxConnect.bmp" width="611" height="438" />
+        </p>
+        <p>Use the <b>Select User Group</b> tab to select the type of network data you 
+wish to import.&#160; To select data for import:</p>
+        <ol>
+            <li><a href="#NFSelectUG">Select a user group</a> by clicking on the desired 
+	row in the list of user groups.&#160; </li>
+            <li>Click the <b>Get Data</b> button to proceed to the 
+	<b>Browse Network Data</b> tab.</li>
+        </ol>
+        <p class="FigureTitle">Import Network Data From <MadCap:variable name="Modeler.CompanionProduct" /> - Select a User 
+Group</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/SilvxUserGroup.bmp" width="619" height="292" />
+        </p>
+        <p><a name="NFSelectUG"></a>When a connection to a <MadCap:variable name="Modeler.CompanionProduct" /> server is 
+established, the<b> Select User Group</b> tab displays a list of the user groups present on the 
+server.&#160; User groups are established within <MadCap:variable name="Modeler.CompanionProduct" /> to enable you to 
+control who has access to the various portions of your network.&#160; By 
+selecting a user group on this tab, you are effectively selecting the subset of 
+network data that you wish to import.&#160; Network objects will be imported 
+based on the following conditions:</p>
+        <ul>
+            <li>For locations, the location must be a member of the selected user group 
+	or of a sub-group (child) of the user group.</li>
+            <li>For trunks and circuits, both endpoints must be a member of the selected 
+	user group or of a sub-group (child) of the user group.</li>
+            <li>For circuit paths, all of the trunks that the path traverses must be a 
+	member or of a sub-group (child) of the user group.</li>
+        </ul>
+        <p>Network objects that do not meet the above criteria or are only partially 
+configured (i.e. a circuit without a path) will not be imported.&#160; If errors 
+exist, the Modeler will display an error log upon import completion.&#160; A 
+list of any objects that failed importation will be included in the log.</p>
+        <h3><a name="NFImportScriptFile"></a>Select a <MadCap:variable name="Modeler.CompanionProduct" /> Import File</h3>
+        <p>Prior to using this approach to importing data, you must create an import 
+file by executing a Unix script (available from <MadCap:variable name="Modeler.CompanyName" />) to collect network data 
+and store it in an xml file.&#160; To import the 
+file you created, click on the <b>Select a <MadCap:variable name="Modeler.ProductFamily" /> Import File</b> button 
+on the Select Data Source tab.&#160; Next, click on the <b>Select</b> button and 
+use the file browser to locate the desired file.&#160; When your file selection 
+is complete, click the <b>Get Data</b> button to proceed to the 
+	<b>Browse Network Data</b> tab. </p>
+        <p class="Note">Note: The Select a User Group tab is not applicable when the 
+data source is an import file.</p>
+        <p class="FigureTitle">Import Network Data From <MadCap:variable name="Modeler.CompanionProduct" /> - Select an Import 
+File</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/SilvxOpenScript.bmp" width="741" height="454" />
+        </p>
+        <h2><a name="NFBrowseData"></a>Browse Network Data</h2>
+        <p>The <b>Browse Network Data</b> tab contains a list of data tables obtained 
+from your network data source and allows you to preview the data selected for import.&#160; 
+Using the list, click on the name of a data table to display it's contents in 
+the grid below.&#160; Within the data grid, you can:</p>
+        <ul>
+            <li>Rearrange columns by clicking on a column name and 
+dragging it to the desired location.</li>
+            <li>Sort the data using the 
+column of your choice as the index.&#160; To do so, click on the name of the 
+column you wish to sort by.&#160; An arrowhead will appear. Click on the 
+arrowhead to alternate between an ascending or a descending sort order.</li>
+            <li>Copy all or part of the data to the clipboard for use in other 
+	applications (i.e. Excel).&#160; To do so, use Cntl-Click or Shift-Click to 
+	select the rows of data you wish to copy then use Cntl-C to place the data 
+	in the clipboard.</li>
+        </ul>
+        <p>You can revise your selection of data types if necessary.&#160; To do so, 
+return to the <b><a href="#NFSelectUG">Select a User Group</a></b> tab, adjust your selections, and click 
+the <b>Get Data</b> button.&#160; The <b>Browse Network Data </b>tab will be updated 
+to reflect your changes.</p>
+        <p>To save a snapshot of the entire set of data tables, click on the
+<a href="Use%20Import%20DataSets.htm#SaveDataSetTop">Save DataSet</a> button.&#160; 
+To open a previously saved data set file, click on the
+<a href="Save%20an%20Imported%20DataSet.htm#SaveDataSetTop">Open DataSet</a> 
+button.</p>
+        <p>To proceed to the <b><a href="#NFImportOpt">Select Import Options</a></b> 
+tab, click the <b>Next</b> button at the bottom of the dialog.</p>
+        <p class="FigureTitle">Import Network Data From <MadCap:variable name="Modeler.CompanionProduct" /> - Browse Network 
+Data</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/SilvxNetData.bmp" width="625" height="513" />
+        </p>
+        <h2><a name="NFImportOpt"></a>Select Data Import Options</h2>
+        <p>
+            <img border="0" src="../Resources/images/SilvxImportOptions.bmp" width="634" height="346" />
+        </p>
+        <p class="FigureTitle">Network Data Import Options</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="641">
+            <tr>
+                <th class="TableHeader" width="137">Import Option</th>
+                <th class="TableHeader" width="482">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">Nodes</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import all SN16000, SN9000, and SN3000 locations.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">APS</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import any 
+	<a href="..\In_Object_Model\APS%20Protection%20Groups.htm#APSTop">APS/MSP Protection 
+	Groups</a> that are present in the network.&#160; 
+	APS/MSP protection groups are listed in the Object tree under the location they are 
+	assigned to.&#160; This option is available only when the Nodes option is 
+	also selected. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">PPG</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import any 
+	<a href="..\In_Object_Model\Path%20Protection%20Groups.htm#PPGTop">Path Protection Groups</a> that are present in the network.&#160; 
+	Path protection groups are listed in the Object tree under the demand they 
+	are assigned to. </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">Ethernet</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import any 
+	<a href="..\In_Object_Model\Virtual%20Concatenation%20Groups.htm#VCGTop">Virtual Concatenation Groups</a> that are configured in the 
+	network.&#160; Virtual Concatenation Groups appear in the Object tree with 
+	the Ethernet Services they connect listed as child objects underneath them.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">Mesh</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import all BroadLeaf trunks that have both trunk endpoints configured 
+	and all Broadleaf circuits including local circuits.&#160; When importing from a live network, any circuits that are 
+	not fully operational at the time of import will be brought in as un-routed 
+	demands and any trunks that are not fully operational will not be brought 
+	in.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">Ring</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import all 2-Fiber and 4-Fiber BLSR/MS-SPRing rings.&#160; UPSR/SNCP 
+	rings are not available for import.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">Aggregate Mesh Trunks Into LightPaths</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will combine trunks of similar attributes (i.e. same StartLocation and 
+	EndLocation, Type, AdminCost, VPN, and ConduitIDs) into a single lightpath 
+	with a CapacityMinimum equal to the number of aggregated trunks.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="137" valign="top">Load UnReachable Demand Paths</td>
+                <td class="TableBody" width="482" valign="top">When checked, the Modeler 
+	will import demand paths despite the fact that they are nonresponsive.&#160; </td>
+            </tr>
+        </table>
+        <h2>Select a Format Network and Begin Importing Data</h2>
+        <p>The Modeler allows you to assign coordinates to imported locations based on 
+the location coordinates present in a network file that you specify.&#160; The 
+coordinates determine the relative position of locations within each network 
+view.&#160; Use this feature to avoid having to reposition locations every time you import data from 
+your network.&#160; If you choose not to select a network file, the Modeler will 
+assign default coordinates, creating a grid of locations within each network 
+view.&#160; </p>
+        <p>To select a format network, click on the <b>Select</b> button and 
+use the file browser to locate the desired file.&#160; When your file selection 
+is complete, click the <b>Import</b> button to begin the transfer of data that 
+completes the import process.&#160; Selecting a format network is optional.&#160; To 
+transfer data 
+without selecting a format network, avoid the <b>Select</b> button and click 
+only the <b>Import</b> button.&#160; The Modeler will begin importing data and 
+log any errors that occur.</p>
+        <p>To create a network file that you can use as a format network, follow the steps 
+below:</p>
+        <ol>
+            <li>Perform an import from <MadCap:variable name="Modeler.CompanionProduct" /> without selecting a format network.</li>
+            <li>When the import is complete, the Modeler will display your network data 
+	using a default network view named LightPaths.&#160;
+	<a href="..\In_NetworkViews\Customizing%20Network%20Views.htm#NetViewRepositionLocales">Position the locales</a> 
+	within the LightPaths view as desired.</li>
+            <li><a href="Save%20a%20Network%20File.htm#NFSaveFile">Save the file</a>, noting the file name.</li>
+            <li>The next time you import, use the saved file as the source for your 
+	location coordinates.</li>
+        </ol>
+        <p class="FigureTitle">Import Network Data From Silvx Manager - Select a 
+Network Format</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/SilvxFormat.bmp" width="692" height="381" />
+        </p>
+        <p class="BackToTopLink"><a href="#NFImportSilvxMgr">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also: </p>
+        <p class="SeeAlsoLinks"><a href="Import%20a%20Network%20File%20from%20Excel.htm#NFImportExcel">Import a 
+Network File from Excel</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="NetworkFiles.htm#NFTop">Network Files</a>
+        </p>
+    </body>
+</html>

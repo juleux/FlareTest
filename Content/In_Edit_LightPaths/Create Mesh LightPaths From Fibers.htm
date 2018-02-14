@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Create Mesh LightPaths From Fibers</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="LPToolCreate"></a>Create Mesh LightPaths from Fibers</h2>
+        <p>Use
+this tool to create lightpaths by drawing property information from the fibers present in 
+your network.&#160; To use this tool, select <b>Edit,
+LightPaths, Create Mesh LightPaths From Fibers...</b> from the menu.&#160; The dialog shown below
+will appear.&#160;&#160;</p>
+        <p>When the <b>Skip any Fibers</b> option is checked, a lightpath is created for 
+each fiber in the network for which no pre-existing mesh lightpath exists 
+(pre-existing ring lightpaths are ignored).&#160; A 
+pre-existing lightpath is any mesh lightpath that has the same start and end location 
+as the fiber in question.&#160; Select the <b>Skip any Fibers</b> option when 
+you want to insure that at least one mesh lightpath exists for each pair of
+locations connected by fiber.&#160; When the <b> Skip any Fibers</b> option is 
+left unchecked, a mesh lightpath is created for each fiber in the network, regardless of
+the presence of pre-existing mesh lightpaths.&#160; When ready, click <b>OK</b> to create lightpaths.</p>
+        <p class="FigureTitle">Create Mesh LightPaths from Fibers Dialog</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/CreateLP.bmp" width="322" height="122" />
+        </p>
+        <p>
+Each newly created lightpath will appear in the object tree with a default name based on it's start and end
+ locations and a set of default property
+ values:</p>
+        <ul>
+            <li>The StartLocation and EndLocation properties are set to those of the 
+	corresponding fiber.</li>
+            <li>The Length and ConduitID properties are set to those of the 
+	corresponding fiber.&#160; </li>
+            <li>The AdminCost property is given a default value of 1.</li>
+            <li>The Type property is given the
+	<a href="..\In_Adding_Objects\Setting Default Object Properties.htm">
+	default</a> LightPath Type value for the network.</li>
+        </ul>
+        <p>You can use the
+<a href="..\In_NetworkDataTool\View%20and%20Edit%20Object%20Properties%20NDT.htm#DataToolPropEdit">
+Network Data Tool</a> or the 
+<a href="..\In_User_Interface\The%20Property%20Editor.htm#MainPropEdit">Property Editor</a> to change these values as necessary.</p>
+        <p class="BackToTopLink"><a href="#LPToolCreate">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="..\In_Adding_Objects\Setting%20Default%20Object%20Properties.htm">
+Set Default Object Properties</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="LightPath%20AdminCosts%20Property.htm#LPToolAdmin">Set LightPath Admin 
+Costs</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="..\In_User_Interface\The%20Property%20Editor.htm#MainPropEdit">The
+Property Editor</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="..\In_NetworkDataTool\View%20and%20Edit%20Object%20Properties%20NDT.htm">
+View and Edit Object Properties</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

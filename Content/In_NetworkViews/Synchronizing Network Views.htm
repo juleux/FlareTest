@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Synchronizing Network Views</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="NetViewSync"></a>Synchronizing Network Views</h2>
+        <p>
+    Synchronization changes the layout (locale coordinates, visibility, and icon 
+	properties) of a network view to match the layout of a base view of your choice.&#160; It can
+also change a network's location coordinates (latitude and longitude properties)
+to match the locale coordinates (X and Y properties) of a selected (base) view.&#160;
+Examples of situations where synchronization might be helpful include:</p>
+        <ul>
+            <li>You want multiple network views to have the same locale properties.</li>
+            <li>You want all new network views to have a specific layout.</li>
+        </ul>
+        <p>When a new view is created, Modeler calculates each locale's coordinates
+using the Latitude and Longitude properties of its corresponding location along
+with the offset values defined in the
+<a href="..\In_ViewingOptions\Locale%20Converter.htm">Locale
+Converter</a>.&#160; As a locale is repositioned within a view, its X and Y
+properties are updated accordingly, but the coordinates of its corresponding location
+remain
+unchanged.&#160; When you synchronize with the <b>Location
+Latitude and Longitude</b> option selected, each location's coordinates are
+overwritten with the X and Y properties of its corresponding locale within the
+base view.&#160; Any new views that are then created (with locale latitude and
+longitude conversion values set
+equal to one) will have the same locale positioning as the base view.</p>
+        <p>To synchronize one or more network views, select <b>View, Synch
+NetworkViews</b> from the main menu.&#160;The dialog shown below will
+appear.&#160; Enter the information as described below then click OK.</p>
+        <p>
+            <img border="0" src="../Resources/images/SyncView.bmp" width="517" height="411" />
+        </p>
+        <p class="BackToTopLink"><a href="#NetViewSync">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Network%20Views.htm">Network 
+Views</a> <![CDATA[ ]]></p>
+        <p class="SeeAlsoLinks"><a href="Network%20View%20Examples.htm">Network View 
+Examples</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Sycamore Networks">Sycamore Networks</Variable>
+  <Variable
+    Name="ProductName"
+    Comment=""
+    EvaluatedDefinition="Silvx Modeler">Silvx Modeler</Variable>
+  <Variable
+    Name="ProductFamily"
+    Comment=""
+    EvaluatedDefinition="Silvx Insight">Silvx Insight</Variable>
+  <Variable
+    Name="CompanionProduct"
+    Comment=""
+    EvaluatedDefinition="Silvx Manager">Silvx Manager</Variable>
+</CatapultVariableSet>

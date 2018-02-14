@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Set LightPath Admin Costs</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="LPToolAdmin"></a>Set LightPath Admin Costs</h2>
+        <p>The LightPath AdminCost property allows you to assign a "cost"
+value to each lightpath.&#160; When you set the AdminCosts for the lightpaths in
+your design, you are in effect assigning a relative priority to each lightpath
+(higher cost = lower priority).&#160; These priorities are factored into the
+decisions made by Modeler's routing algorithms.&#160; The Set LightPath Admin 
+Costs tool allows you to set the admin costs of a group of lightpaths by 
+applying a simple equation.</p>
+        <p>To use this tool, select <b>Edit, LightPaths, Admin
+Costs...</b> from the menu.&#160; The dialog shown below
+will appear.&#160;&#160;</p>
+        <p class="FigureTitle">Set LightPath Admin Cost</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/LPAdminCost.bmp" width="769" height="444" />
+        </p>
+        <p>To change lightpath admin cost values, follow the steps below:</p>
+        <ol>
+            <li><b>Select a Filter (optional) - </b>If the list of lightpaths to select 
+	from is extensive, you have the option of applying one or more filters to 
+	pare down the list.&#160; To select a filter, click to place a checkmark 
+	next to it then use the pull-down menu to select a value.</li>
+            <li><b>Select one or more LightPaths -</b> Click to select a lightpath from the 
+	filtered list or select multiple lightpaths by 
+	holding down the Ctrl or Shift key while you click.&#160; To select the 
+	entire list, click on the <b>Select All</b> button.&#160; To clear your selections, click on the <b>Clear All</b> button.</li>
+            <li><b>Enter values into the Equation -</b> Use the descriptions below to 
+	determine the desired values for each component of the admin cost equation.&#160; 
+	Use the arrow keys or type in a value for each component and click <b>OK</b> 
+	to calculate admin costs for the selected lightpaths.&#160; </li>
+        </ol>
+        <blockquote>
+            <p style="margin-top: -2px;margin-bottom: -2px;" class="FigureTitle">Admin 
+	Cost Equation Components</p>
+            <p style="margin-top: -2px;margin-bottom: -2px;" class="FigureTitle">&#160;</p>
+            <table borderColorDark="#B0C4DE" cellPadding="0" borderColorLight="#F5F5F5" border="1" cellspacing="0">
+                <tr>
+                    <th width="145" class="TableHeader" valign="top">Length Coefficient</th>
+                    <td class="TableBody" width="572">
+This value will be multiplied by lightpath
+ length to calculate a length based cost. The default value is one as 
+lightpath length must be a factor in the cost calculation.</td>
+                </tr>
+                <tr>
+                    <th width="145" class="TableHeader" valign="top">Conduits Coefficient</th>
+                    <td class="TableBody" width="572">
+This value will be multiplied by the
+ number of conduits a lightpath has to calculate a conduit based cost. The 
+default value is zero which excludes conduits from the cost calculation.</td>
+                </tr>
+                <tr>
+                    <th width="145" class="TableHeader" valign="top">Hops Coefficient</th>
+                    <td class="TableBody" width="572">
+This value will be multiplied by the
+ number of fiber hops a lightpath has to calculate a fiber based cost. The 
+default value is zero which excludes fiber hops from the cost calculation.</td>
+                </tr>
+                <tr>
+                    <th width="145" class="TableHeader" valign="top">Offset</th>
+                    <td class="TableBody" width="572">
+This value for base cost will be added to values for
+ length based cost, conduit based cost, and fiber based cost to calculate the AdminCost for each
+lightpath.&#160; The default value is zero which excludes an offset from the 
+cost calculation.</td>
+                </tr>
+            </table>
+        </blockquote>
+        <p class="BackToTopLink"><a href="#LPToolAdmin">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;<a href="..\62_PrepRoute.htm"> <![CDATA[ ]]></a></p>
+        <p class="SeeAlsoLinks"><a href="..\62_PrepRoute.htm"> 
+Preparation for Routing</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

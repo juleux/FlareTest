@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Assign Demands to a VCG</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="AssignDemandsTop"></a>Assign Demands to a Virtual Concatenation 
+Group</h2>
+        <p>While a virtual concatenation group (VCG) can have multiple demands assigned 
+to it, a demand can only be assigned to a single virtual concatenation group.</p>
+        <p>In order for a demand to be assigned to a
+<a href="..\In_Object_Model\Virtual%20Concatenation%20Groups.htm#VCGTop">Virtual 
+Concatenation Group</a>, the following criteria must be met:</p>
+        <ul>
+            <li>The demand's Type must be compatible with the virtual concatenation 
+	group's Structure.&#160; For example, an <span style="font-family: Arial;">OC1_<b>STS1_VC3</b>_DS3_E3_AU3</span> 
+	demand is compatible with a <b><span style="font-family: Arial;">STS1_VC3</span></b> 
+	virtual concatenation group.</li>
+            <li>The demand's endpoints (StartLocation, EndLocation) must be the same as 
+	the virtual concatenation group's endpoints (EndPointLocation1, 
+	EndPointLocation2) with one exception.&#160; If the virtual concatenation 
+	group starts and ends at the same location (EndPointLocation1 = 
+	EndPointLocation2), then that location must be identical to either one of 
+	the demand's endpoints.&#160; </li>
+        </ul>
+        <p>The Modeler provides two methods for managing the assignment of demands to 
+virtual concatenation groups.&#160; One method entails using the Property editor 
+to select the VCG the demand will be assigned to.&#160; The other method entails 
+using the Assign Demands dialog and works best when you need to edit multiple 
+assignments.</p>
+        <p><a name="AssignPropEditor"></a>To edit demand assignments using the Property 
+Editor:</p>
+        <ol>
+            <li><a href="..\In_User_Interface\Select%20an%20Object.htm#SelectObjectTop">
+	Select</a> the demand you want to edit.</li>
+            <li>In the
+	<a href="..\In_User_Interface\The%20Property%20Editor.htm#MainPropEdit">
+	Property editor</a>, click on the VirtualConcatenationGroup property.</li>
+            <li>Use the pulldown to select the VCG you want the current demand to be 
+	assigned to.&#160; Only VCGs that meet the assignment criteria (described 
+	above) will appear in the list.</li>
+        </ol>
+        <blockquote>
+            <p style="margin-left: -3px;margin-right: -3px;" class="FigureTitle">Property 
+Editor - Setting VirtualConcatenationGroup Property of a Demand</p>
+            <p>
+                <img border="0" src="../Resources/images/AssignVCG.bmp" width="589" height="350" />
+            </p>
+        </blockquote>
+        <p><a name="AssignDialog"></a>To edit demand assignments using the Assign 
+Demands dialog:</p>
+        <ol>
+            <li>Select <b>Edit, VirtualConcatenationGroups, Assign Demands</b> from the 
+	menu.&#160; The dialog shown below will appear.</li>
+            <li>Using the pulldown, select the Virtual Concatenation Group (VCG) you want to 
+	edit.&#160; The <b>Assigned Demands</b> field (right) will list any demands 
+	that are currently assigned to the VCG you selected. The <b>Assignable Demands</b> 
+	field (left) will list demands that meet the selection criteria (described 
+	above).&#160; By default, demands that are assigned to other VCGs are 
+	excluded from this list.&#160; To incorporate previously assigned demands 
+	into the <b>Assignable Demands</b> list, click to deselect the <b>UnAssigned 
+	Demands Only</b> option at the bottom of the dialog.&#160; </li>
+            <li>Add or Remove Demand Assignments: 
+	<ul type="disc"><li><p style="margin-top: 3px;margin-bottom: 3px;">To assign a new demand to 
+		the VCG being edited, click on the desired demand in the <b>Assignable Demands</b> list 
+		then click the <b>&gt;&gt;</b> button to move it to the <b>Assigned Demands</b> list.&#160; Use 
+	Ctrl-Click or Shift-Click to select multiple demands for assignment.&#160; 
+		Any previous assignment a demand had will be automatically removed when 
+		a new assignment is made. </p></li><li><p style="margin-top: 3px;margin-bottom: 3px;">To remove a demand from 
+		the VCG being edited, select the demand from the <b>Assigned Demands</b> 
+		list and click on the <b>&lt;&lt;</b> button to move it to the <b>Assignable 
+		Demands</b> list.&#160; Use Ctrl-Click or Shift-Click to select multiple 
+		demands for removal.</p></li></ul></li>
+            <li>Click on the <b>Assign</b> button to finalize your edits and leave 
+	the dialog open for further assignments.&#160; Click on the <b>Assign and 
+	Close</b> button to finalize your edits and close the dialog.</li>
+        </ol>
+        <p style="margin: -2px -3px;" class="FigureTitle">&#160; </p>
+        <blockquote>
+            <p style="margin-left: -3px;margin-right: -3px;" class="FigureTitle">Assign 
+Demands to Virtual Concatenation Group Dialog</p>
+            <p style="margin-left: -3px;margin-right: -3px;" class="FigureTitle">
+                <img border="0" src="../Resources/images/AssignDemands.bmp" width="633" height="364" />
+            </p>
+        </blockquote>
+        <p class="BackToTopLink"><a href="#AssignDemandsTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">
+See Also:</p>
+        <p class="SeeAlsoLinks"><a href="..\In_Adding_Objects\Add%20a%20VCG.htm#AddVCGTop">Add a Virtual 
+Concatenation Group</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="..\In_Object_Model\Virtual%20Concatenation%20Groups.htm#VCGTop">Virtual 
+Concatenation Groups</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

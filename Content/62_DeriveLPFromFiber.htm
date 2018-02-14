@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Derive LightPath Properties From Fiber Length</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="FromFiberTop"></a>Derive LightPath Properties From Fiber Length</h1>
+        <p>When fiber information is
+available, the amount of
+data that must be entered to create a network file can be minimized by deriving values for LightPath Length and LightPath
+AdminCost properties from Fiber Length.&#160; To accomplish this,
+follow the steps listed below:</p>
+        <ol>
+            <li><a href="#FromFiberFIbLen">Set Fiber Length</a>
+            </li>
+            <li><a href="#FromFiberLPLen">Derive LightPath Length from Fiber Length</a>
+            </li>
+            <li><a href="#FromFiberAdmCost">Derive LightPath AdminCost from LightPath Length</a>
+            </li>
+        </ol>
+        <p>Each of these steps is described in detail below.&#160;&#160;</p>
+        <p class="BackToTopLink"><a href="#FromFiberTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="FromFiberFIbLen"></a>Set Fiber Length</h2>
+        <p>To set Fiber Length, enter a value for the Length property of each Fiber
+object in your design.&#160; The most efficient means of accomplishing this is
+to enter length values into the 
+<a href="In_Network_Files\Create%20an%20Excel%20File%20for%20Import.htm#NFFiber">Fibers
+worksheet</a> of a <a href="In_Network_Files\NetworkFiles.htm#NFTop">Network file</a> and
+<a href="In_Network_Files\Open%20a%20Network%20File.htm#NFOpenFile">open</a>
+the file in the Modeler (as input).&#160; To use the Modeler's interface to set Fiber
+Length, click on a fiber in the Object tree to select it and enter a value using
+the Property editor.</p>
+        <p class="FigureTitle">Set Fiber Length Property</p>
+        <p>
+            <img border="0" src="Resources/images/SetFiberLength.bmp" width="358" height="524" />
+        </p>
+        <p class="BackToTopLink"><a href="#FromFiberTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="FromFiberLPLen"></a>Derive LightPath Length from Fiber Length</h2>
+        <p>To derive LightPath Length from Fiber Length, click on the LightPaths
+collection object in the Object tree to select it.&#160; Using the Property
+editor, enter a value of True for the LengthsFromFiber property.&#160; When you
+do so, the Modeler will calculate a length value for each lightpath by totaling the
+lengths of the fibers it travels over.&#160; To verify this action, select a
+lightpath in the Object tree and note the value of its Length property in the
+Property editor.&#160;&#160;</p>
+        <p class="Note">Note: Properties for collection objects often serve a dual
+purpose.&#160; They provide status information for the collection and provide a
+means for you to edit collection members as a group.&#160;&#160; The
+LengthsFromFibers property of the LightPaths collection fits this
+description.&#160; When you set it to True, the LengthsFromFibers property of
+each LightPath object is set to True.&#160; When it is False, it means that the
+LengthsFromFibers property for one or more objects in the collection has been
+set to False.</p>
+        <p class="FigureTitle">Set LightPaths LengthsFromFibers Property</p>
+        <p>
+            <img border="0" src="Resources/images/SetLPLengthFromFiber.bmp" width="511" height="538" />
+        </p>
+        <p class="BackToTopLink"><a href="#FromFiberTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="FromFiberAdmCost"></a>Derive LightPath AdminCost from LightPath Length</h2>
+        <p>To derive LightPath AdminCost from LightPath Length, follow the steps listed 
+below:</p>
+        <ol>
+            <li>Select <b>Edit, 
+LightPaths, Admin Costs</b> from the main menu.&#160; The dialog shown below will
+appear.&#160;&#160;</li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Set LightPath AdminCost Based on LightPath Length</p>
+            <p>
+                <img border="0" src="Resources/images/LPAdminCostFromLength.bmp" width="757" height="371" />
+            </p>
+        </blockquote>
+        <ol start="2">
+            <li>Click the <b>Select All</b> button to target all of the lightpaths in 
+	the network for editing.</li>
+            <li>Enter the offset and coefficient values shown above (these values are 
+	present by default when the dialog opens) into the AdminCost equation.</li>
+            <li>Click <b>OK </b>to set admin cost values.</li>
+        </ol>
+        <p class="BackToTopLink"><a href="#FromFiberTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;<a href="In_Network_Files\Create%20an%20Excel%20File%20for%20Import.htm#NFCreateExcel"> <![CDATA[ ]]></a></p>
+        <p class="SeeAlsoLinks"><a href="In_Network_Files\Create%20an%20Excel%20File%20for%20Import.htm#NFCreateExcel"> 
+Create an Excel File for Import</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="62_DeriveFiberLengthFromGCD.htm#DeriveLPTop">Derive Fiber Length from 
+Great Circle Distance</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="62_DeriveLPLengthFromGCD.htm">Derive 
+LightPath Length from Great Circle Distance</a>
+        </p>
+        <p>&#160;</p>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

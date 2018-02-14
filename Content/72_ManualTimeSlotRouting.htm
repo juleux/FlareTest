@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Manual Time Slot Editing - Mesh</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="TSEditTop"></a>Manual Time Slot Editing - Mesh</h1>
+        <p>This help section describes the Manual Time Slot Editing tool and the process for manually 
+editing the time slot assignments for a selected demand.&#160; It contains 
+instructions for <a href="#TSEditOpen">opening</a> the editor and using it to
+<a href="#TSEditEdit">edit</a> existing time slot assignments. </p>
+        <h2><a name="TSEditOpen"></a>Open the Manual Time Slot Editor</h2>
+        <p>The Modeler's Manual Time Slot Editor provides tools to view and edit the time 
+slots assigned to individual demands.&#160; To use the editor:</p>
+        <ol>
+            <li>Click on the name of the demand you wish to edit in the Object tree.</li>
+            <li>Locate the WorkingPathStartingTimeSlots property (or the ProtectPathStartingTimeSlots property, if the 
+	demand type is OnePlusOne) and click on it.&#160;
+ A button with <b>…</b> in it will appear on the right edge of the box.</li>
+            <li>Click on the <b>ellipsis …</b> button (as shown below).</li>
+            <li>The manual time slot editor will appear.&#160; The editor will display 
+	the time slot information for the demand you selected.&#160; </li>
+        </ol>
+        <p class="FigureTitle">Property Editor - Select a Demand and Open the Time Slot 
+Editor</p>
+        <p class="FigureTitle">
+            <img border="0" src="Resources/images/ManualTimeSlotProperty.bmp" width="578" height="548" />
+        </p>
+        <p class="BackToTopLink"><a href="#TSEditTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="TSEditEdit"></a>Edit a Time Slot Assignment</h2><span><p>To edit a time slot assignment, you must first select a demand and
+<a href="#TSEditOpen">open the time slot editor</a>.&#160; A screen capture of the Manual Time Slot Editor is shown below.&#160; The 
+editor contains a list of the lightpaths that comprise the selected demand's 
+path along with the starting time slot.&#160; To edit a time slot assignment:</p><ol><li>Click on the Demand Quantity pull-down to select the demand index (for 
+	those demands of quantity &gt; 1) you 
+	wish to edit.</li><li>Click on the StartingTimeSlot pull-down to select from a list of the 
+	starting time 
+	slots available for assignment.&#160; If the desired time slot is not 
+	listed, it is being used by another demand.&#160; To view a list of the time 
+	slots assigned to a particular lightpath, use the
+	<a href="In_NetworkDataTool\The%20Network%20Data%20Tool.htm">Network Data Tool</a>.</li><li>Choose a value for the <b>Fix LightPath TimeSlots</b> option. When the <b>
+	Fix LightPath TimeSlots </b>option is checked, both the FixedLightPathTimeSlots property 
+	and the FixedLightPathRouting property of the demand being edited will be set to True 
+when you exit the time slot routing tool.&#160; By using this default option, 
+	you prevent the time slots assigned during the editing process from being 
+	overwritten the next time a routing algorithm executes.&#160; </li><li>When your edits are complete, click on the <b>OK</b> button to close the 
+	editor.</li></ol><p class="FigureTitle">Sample Manual Time Slot Editor Dialog</p><p><img border="0" src="Resources/images/ManualTimeSlotPulldown.bmp" width="827" height="351" /></p></span>
+        <p class="BackToTopLink"><a href="#TSEditTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+        <p class="BackToTopLink">&#160;</p>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

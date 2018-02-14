@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term0"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Demand</Term>
+    </Terms>
+    <Definition
+      Link="">A group of point-to-point circuits of user-defined type, quantity, and
+protection.  During the design process, demands are routed over a sequence
+of lightpaths.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term1"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Conduit</Term>
+    </Terms>
+    <Definition
+      Link="">A conduit is a number that you can assign to group 
+ of fibers and/or lightpaths as a means of stating that they share a common
+point of failure.  What constitutes a point of failure is
+strictly up to you.  Examples include electrical conduit, ports,
+cards, and shared power sources.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term2"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Ethernet Service</Term>
+    </Terms>
+    <Definition
+      Link="">The connection of a standard Ethernet interface to a Sycamore optical switch.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term3"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Fiber</Term>
+    </Terms>
+    <Definition
+      Link="">An individual fiber or a set of interconnected fibers
+that work as one.  Fibers have user-defined start and end locations. 
+Networks can be defined and routed with or without fiber information.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term4"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Local Demand</Term>
+    </Terms>
+    <Definition
+      Link="">A demand that starts and ends at the same 
+location. Also referred to as a local circuit.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term5"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Locale</Term>
+    </Terms>
+    <Definition
+      Link="">A graphical representation of a location.  Within
+each network view, there is one locale object for every location object in the
+network.  Users determine which locales are visible and
+their X-Y coordinates within the view.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term6"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Location</Term>
+    </Terms>
+    <Definition
+      Link="">A unique physical location where one or more nodes
+exist.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term7"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Network View</Term>
+    </Terms>
+    <Definition
+      Link="">A graphical representation of a
+network.  A network view contains a map of interconnected nodes with fiber,
+lightpath and/or demand information superimposed on top.  Network views can
+be configured to display various types of network data (i.e. traffic, capacity,
+routing).  Network views are covered in more detail in the 
+Network Views section of this help file.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term8"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Ring</Term>
+    </Terms>
+    <Definition
+      Link="">A set of interconnected lightpaths that form a closed loop.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term9"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Virtual Concatenation Group (VCG)</Term>
+    </Terms>
+    <Definition
+      Link="">A 
+logical (rather than physical) combination of one or more circuits within a 
+network that provide paths between two endpoint locations.  To each 
+endpoint location, the circuits assigned to a VCG function as a single Ethernet 
+connection.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term10"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Virtual Private Network (VPN)</Term>
+    </Terms>
+    <Definition
+      Link="">A set of fibers and/or lightpaths
+that combine to form a private sub-network within a larger network.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Modeler Glossary.Term11"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>LightPath</Term>
+    </Terms>
+    <Definition
+      Link="">A set of fibers or conduits over which a signal travels. 
+LightPaths travel from a start location to an end location over a user-defined sequence of fibers or conduits.</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

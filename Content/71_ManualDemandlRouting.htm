@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Manual Demand Routing - Mesh</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="ManRouteTop"></a>Manual Demand Routing - Mesh</h1>
+        <p>This help section describes the Manual Demand Routing tool and the process for manually routing 
+a demand in your network.&#160; The following information is included:</p>
+        <ul>
+            <li>Instructions for selecting a demand and <a href="#ManRouteOpen">opening</a> the tool</li>
+            <li>Using the tool to: 
+	<ul><li><a href="#ManRouteConstraint">Apply Routing and Diversity 
+		Constraints</a></li><li><a href="#ManRouteClearAll">Clear an Existing or Proposed Route</a></li><li><a href="#ManRouteClearLP">Clear one or more LightPaths in a Route</a></li><li><a href="#ManRouteFindShort">Find the Shortest Route from the 
+		Current Location</a></li><li><a href="#ManRouteCreateNew">Create a New Route</a></li><li><a href="#ManRouteOpacity">Edit Form Opacity</a></li><li><a href="#ManRouteFix">Prevent a Route from being Overwritten</a></li><li><a href="#ManRouteReset">Reset the Manual Routing Tool</a></li></ul></li>
+            <li>A step-by-step <a href="#ManRouteExam">example</a> for using this tool 
+	to route a demand</li>
+        </ul>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteOpen"></a>Open the Manual Demand Routing Tool</h2>
+        <p>To access the Manual Demand Routing tool:</p>
+        <ol>
+            <li>Click on a demand name in the Object tree.</li>
+            <li>Locate the WorkingPath property (or the ProtectPath property) and click on it.&#160;
+ A button with <b>…</b> in it will appear on the right edge of the box.</li>
+            <li>Click on the <b>ellipsis …</b> button (as shown below).</li>
+            <li>The manual routing dialog will appear.&#160; The dialog will display 
+	any existing routing information for the demand you selected.&#160; </li>
+        </ol>
+        <p class="FigureTitle">Property Editor - Edit Demand Working Path</p>
+        <p>
+            <img border="0" src="Resources/images/ManualRouteProperty.bmp" width="837" height="485" />
+        </p>
+        <p>A sample Manual Routing dialog is shown below.&#160; It contains the two 
+lists described below:</p>
+        <ul>
+            <li><b>CurrentLocation LightPaths - </b>Within this tool, current location 
+	refers to the location that is the starting point of the current hop.&#160; 
+	The CurrentLocation LightPaths list contains the set of the lightpaths that 
+	connect to the current location. Lightpaths are ranked top to bottom by 
+	cost.&#160; Each time a lightpath is selected, this list is updated to 
+	reflect the change in the current location.&#160; </li>
+            <li><b>Path LightPaths -</b> This list contains the set of lightpaths that 
+	have been selected to form the proposed route.&#160; Lightpaths are listed 
+	in the order that they are selected.&#160; The list is considered complete 
+	when it's start and end points match those of the demand being routed.</li>
+        </ul>
+        <p class="FigureTitle">Sample Manual Routing Dialog</p>
+        <p>
+            <img border="0" src="Resources/images/ManualRoutePartialPath.bmp" width="817" height="488" />
+        </p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteConstraint"></a>Apply Routing and Diversity Constraints</h2>
+        <p><span>Routing and diversity constraints provide a means of 
+setting priorities for lightpath selection during the routing process.&#160; 
+Potential lightpath selections that violate a hard constraint are not made 
+available for selection in the CurrentLocation LightPaths list.&#160; When soft constraints are specified, a cost 
+penalty is applied to any potential lightpath selection that is in violation.&#160;By comparing the combined penalties for each potential selection, you can 
+identify the lightpath that best meets all of your criteria.&#160; Lightpaths 
+that violate soft constraints appear in the CurrentLocation LightPaths list in 
+red text. </span>
+        </p>
+        <p>The Modeler includes routing constraints<span> for 
+a lightpath's maximum capacity, minimum capacity, VPN, and through traffic 
+requirements.&#160; To select options for 
+routing constraints, click on the <b>Routing Constraints...</b> 
+button.&#160; For a description of each constraint option, read the
+<a href="63_RoutingConstraints.htm#top">Routing Constraints</a> section of this 
+help file.</span></p>
+        <p>The Modeler's diversity constraints <span>provide a means of 
+maintaining conduit and/or node diversity during the routing process.&#160;&#160; To select options for 
+diversity constraints, click on the <b>Diversity Constraints...</b> button. The 
+dialog shown below will appear:</span></p>
+        <p><span>&#160;</span>
+            <img border="0" src="Resources/images/DiversityConstraints.bmp" width="248" height="217" />
+        </p>
+        <p><span>
+The impact each diversity constraint option has on the routing process is 
+described below.</span>
+        </p><span><h3>Constrain Path Diversity by Conduit</h3><p>Select one of these two options:</p><ul><li><b>Hard</b>: If routing a given demand over a lightpath will cause the 
+	lightpath to share a conduit with another of this demand's paths, then that 
+	lightpath will be not be available for selection in the CurrentLocation 
+	LightPaths list.</li><li><b>Soft:</b>&#160; If routing a given demand over a lightpath will cause 
+	the lightpath to share a conduit with another of this demand's paths, then a cost penalty 
+	will be assessed on
+ the lightpath and it will be displayed in red in the CurrentLocation 
+	LightPaths list. </li></ul><h3>Constrain Path Diversity by Node</h3><p>This option is enabled only when the demand's NodeProtection property is set 
+to True.&#160; Select one of these two options:</p><ul><li><b>Hard</b>: If routing a given demand over a lightpath will cause the 
+	lightpath to share a node with another of this demand's paths, then that 
+	lightpath will be not be available for selection in the CurrentLocation 
+	LightPaths list.</li><li><b>Soft:</b>&#160; If routing a given demand over a lightpath will cause 
+	the lightpath to share a node with another of this demand's paths, then a cost penalty 
+	will be assessed on the lightpath and it will be displayed in red in the 
+	CurrentLocation LightPaths list. </li></ul></span>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteClearAll"></a>Clear an Existing or Proposed Route</h2>
+        <p>To clear an existing or proposed route, click on the <b>Clear All/Selected LightPaths</b> 
+button.&#160; The entire Path LightPaths list will be deleted.</p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteClearLP"></a>Clear one or more LightPaths in a Route</h2>
+        <p>Click to select a lightpath from the Path LightPaths list.&#160; Click on the
+<b>Clear All/Selected LightPaths</b> button.&#160;The lightpath you selected, 
+along with any lightpaths that are downstream from it (below it in the list) will be 
+removed from the Path 
+LightPaths list.</p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteFindShort"></a>Find the Shortest Route from the Current 
+Location</h2>
+        <p>To find the shortest path from the current location 
+to the end location, click on the <b>Find Shortest Path From CurrentLocation</b> 
+button. You can use this button when there is no existing route information or 
+when a partial route is present in the Path LightPaths list.&#160; </p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteCreateNew"></a>Create a New Route</h2>
+        <p>To create a new proposed route, perform the following steps:</p>
+        <ol>
+            <li><a href="#ManRouteConstraint">Set routing and 
+diversity constraints</a>.</li>
+            <li><a href="#ManRouteClearAll">Clear existing path information</a>, if it exists.&#160; 
+	</li>
+            <li>From the CurrentLocation LightPaths list, select the desired lightpath and 
+double-click on it.&#160; Lightpaths are ranked based on cost, with the lowest 
+	cost selection at the top of the list. Your selection will be added to the Path LightPaths 
+list and it's endpoint will become the new Current Location.&#160; At the same 
+time, the CurrentLocation LightPaths field will be updated with lightpaths that 
+connect to your previous selection.&#160; </li>
+            <li>Continue to select lightpaths until a 
+path is established that connects the demand's start and end locations.&#160; At 
+any point during the selection process, you can click on the <b>Find Shortest Path From CurrentLocation</b> 
+button.&#160; </li>
+            <li>When you are satisfied with the path, click on the <b>OK</b> 
+button.&#160; When you do so, the demand's routing path will be updated and the 
+text "Manually Routed" will be added to it's RoutingNotes property.</li>
+        </ol>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteOpacity"></a>Edit Form Opacity</h2>
+        <p>Use the <b>Form Opacity</b> slider to reduce the opacity of the manual routing dialog.&#160; This 
+functionality is helpful when you want to see the lightpath selections you are 
+making highlighted within the network view.&#160; The desired network view must 
+be displayed prior to opening the manual routing tool.</p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteFix"></a>Prevent a Route from being Overwritten</h2>
+        <p>When the <b>Fix LightPath Routing </b>option is checked, the 
+FixedLightPathRouting property of the demand being edited will be set to True 
+when you exit the manual routing tool.&#160; By using this default option you 
+prevent the route you have 
+selected from being overwritten the next time a routing algorithm executes.&#160; </p>
+        <p>When the <b>Fix LightPath TimeSlots </b>option is checked,
+<span>
+
+both the FixedLightPathTimeSlots property and the FixedLightPathRouting property of the demand being edited will be set to True 
+when you exit the 
+
+</span>
+
+manual routing tool.&#160; By using this default option you prevent the time 
+slots assigned during the manual editing process from being overwritten the next 
+time a routing algorithm executes.&#160; </p>
+        <p>Both the Fix LightPath Routing and the Fix LightPath TimeSlots options are 
+selected by default.&#160; While you may opt to fix lightpath routing without 
+also fixing time slots, you cannot fix time slots without also fixing lightpath 
+routing.&#160; In other words, the Fix LightPath TimeSlots option must be used 
+in conjunction with the Fix LightPath Routing option.<span>&#160;
+
+</span></p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteReset"></a>Reset the Manual Routing Tool</h2>
+        <p>When you reset the Manual Routing tool, you return it to the state it was in 
+when you first opened it.&#160; This removes all of the edits you made to the 
+route since opening the tool and restores any route information that was 
+present.&#160; To reset the Manual Routing tool, click 
+the <b>Reset</b> button on the right side of the dialog.</p>
+        <p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="ManRouteExam"></a>Manual Routing Example</h2>
+        <p>This example will guide you through the process of manually routing the 
+working path of a previously routed demand named D_75.&#160; Prior to opening 
+the tool, you may wish to open a network view to help you visualize potential 
+routes during the manual routing process.&#160; The next step is to select a 
+demand and open the tool.&#160; Upon opening, the Manual Routing tool displays 
+the existing path information for the demand as shown below.&#160; In this case, 
+we want to create a new route that avoids the location Kansas City, which is 
+also present in this demand's protect path.&#160; </p>
+        <p>Prior to editing the route itself, select the desired settings for both 
+<a href="#ManRouteConstraint">Routing and Diversity constraints</a>.&#160; </p>
+        <p class="FigureTitle">Manual Route Tool - Open Dialog</p>
+        <p>
+            <img border="0" src="Resources/images/ManualRouteOpenDialog.bmp" width="776" height="537" />
+        </p>
+        <p>The next step in the process of creating a new route is to delete all or part 
+of the existing route.&#160; For this example, we will retain the first 
+lightpath in the existing route, and remove the remaining lightpaths.&#160; To 
+accomplish this, click on the second lightpath in the list: LP_Kansas City_St. 
+Louis as shown below. </p>
+        <p class="FigureTitle">Edit Demand Working Path - Select LightPaths to
+Clear</p>
+        <p class="FigureTitle">
+            <img border="0" src="Resources/images/ManualRouteExam2.bmp" width="776" height="473" />
+        </p>
+Next, click on the <b>Clear All/Selected LightPaths</b> button to remove the 
+selected lightpaths as shown below.
+<p class="FigureTitle">Edit Demand Working Path - After Selected
+LightPaths are Cleared</p><p class="FigureTitle"><img border="0" src="Resources/images/ManualRouteExam3.bmp" width="776" height="473" /></p>
+The CurrentLocation LightPaths frame now shows St. Louis as the CurrentLocation and the 
+lightpaths listed below it are those that
+ connect St. Louis to other locations in the network.&#160;Any lightpaths 
+that violate the hard constraints we selected do not appear in the list. Any 
+lightpaths that violate the soft constraints we selected ( in this case, none) 
+appear in the list in red text. <p> To add a LightPath to the
+Path LightPaths list, double-click on
+ the desired lightpath in the CurrentLightPaths list (top half of dialog). In this example if you double-clicked on the LP_Nashville_St. 
+Louis, the
+ dialog would be updated to look like the one below.</p><p class="FigureTitle">Edit Demand Working Path - Add LightPath to Route</p><p class="FigureTitle"><img border="0" src="Resources/images/ManualRouteExam4.bmp" width="776" height="487" /></p>
+Simply repeat the process of selecting lightpaths and double-clicking on them to 
+create the desired route. To better visualize potential paths, you can adjust 
+form opacity to reveal any network views on display beneath the tool.&#160; At 
+any point in the selection process, you can:<ul><li>Click on the <b>Add
+ Shortest Path from CurrentLocation</b> and the Modeler will find the 
+	shortest path to the end location for you.</li><li>Click on the <b>Reset</b> button if you are unhappy with the path the 
+	proposed route is taking and want to restart the selection process from the 
+	beginning.</li><li>Remove one or more lightpaths in the proposed route using the <b>Clear 
+	All/Selected LightPaths</b> button.</li></ul><p>The proposed route is complete when it connects the demand's start location 
+to it's end location as shown below.&#160; Click the <b>OK</b> button to save 
+the proposed route and exit the tool.</p><p class="FigureTitle">Edit Demand Working Path - Proposed Route Complete</p><p class="FigureTitle"><img border="0" src="Resources/images/ManualRouteExam5.bmp" width="783" height="548" /></p><p class="BackToTopLink"><a href="#ManRouteTop">Back to top</a></p><hr /><p class="BackToTopLink"><img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" /></p><p class="BackToTopLink">&#160;</p><p class="BackToTopLink"><img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" /></p></body>
+</html>

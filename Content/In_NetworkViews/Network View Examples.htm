@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Network View Examples</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="NetViewExamples"></a>Network View Examples</h2>
+        <p>Some of the basic functionality of network views is presented in the three examples
+provided below.&#160; Each example uses the default property settings of
+Modeler's Fiber view, except where noted.&#160;&#160;</p>
+        <h3>Fiber Layer</h3>
+        <p>The first example below shows the fiber layer of the map.&#160; Fibers appear as
+dark red lines connecting locales <img border="0" src="../Resources/images/AddLocation.gif" width="18" height="16" />.&#160; 
+Multiple fibers can exist between any two locales.&#160; </p>
+        <ul>
+            <li>
+                <p style="margin-bottom: 3;">When you click on a fiber to select it:</p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 3;">The fiber changes to a bold red line.&#160;</p>
+                    </li>
+                    <li>
+                        <p style="margin-bottom: 3;">Selection handles appear.&#160; Click and drag a handle to pull a fiber
+ aside, forming an arc (endpoints remain in place).&#160; Any additional
+ fibers underneath will be revealed.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 3;">When you select a lightpath (using
+the object tree), the fibers over which the lightpath travels appear as bold red
+lines.&#160; </p>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 3;">When you select a ring (using
+the object tree), the fibers over which the ring's lightpaths travel appear as bold red
+lines.&#160;&#160;</p>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 3;">When you select a routed demand 
+(using the object tree), the fibers over which the demand is routed appear as 
+bold red lines, solid for the work path, dashed for the protect path (if 
+present).&#160; </p>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 3;">When you select a conduit (using
+the object tree), the fibers associated with the conduit (in other words, fibers 
+whose ConduitId property contains the id of the selected conduit) appear as bold red
+lines.&#160;&#160;</p>
+            </li>
+        </ul>
+        <p class="FigureTitle">Example Network View - Fiber</p>
+        <p>
+            <img border="0" src="../Resources/images/MapSampleFiber.bmp" width="706" height="339" />
+        </p>
+        <p class="BackToTopLink"><a href="#NetViewExamples">Back to top</a>
+        </p>
+        <hr />
+        <h3>LightPath Layer</h3>
+        <p>The second example below shows the lightpath layer of the map superimposed on
+the fiber layer.&#160; LightPaths appear as dark green lines connecting
+locales <img border="0" src="../Resources/images/AddLocation.gif" width="18" height="16" />.&#160; Multiple lightpaths
+can exist between any two locales.&#160;  </p>
+        <ul>
+            <li>
+                <p style="margin-bottom: 4;">When you click on a lightpath to select
+it:</p>
+                <ul>
+                    <li>
+                        <p style="margin-bottom: 4;">The lightpath changes to a bold green line.</p>
+                    </li>
+                    <li>
+                        <p style="margin-bottom: 4;">Selection handles appear.&#160; Click and drag a handle to pull a
+ lightpath aside, forming an arc (endpoints remain in place).&#160; Any
+ additional lightpaths or fibers underneath will be revealed.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 4;">When you select a routed demand
+(using the object tree), the lightpaths over which the demand is routed appear 
+as bold green lines.&#160; </p>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 4;">When you select a ring (using the 
+object tree), the lightpaths which form the ring appear as bold green lines.&#160;</p>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 4;">When you select a conduit (using the 
+object tree), the lightpaths associated with the conduit (in other words, 
+lightpaths whose ConduitId property contains the id of the selected conduit) appear as bold 
+green
+lines.&#160;</p>
+            </li>
+            <li>
+                <p style="margin-top: -1;margin-bottom: 4;">When you select a VPN (using the 
+object tree), the lightpaths assigned to the VPN&#160; (in other words, 
+lightpaths whose VPN property contains the id of the selected VPN) appear as bold 
+green
+lines.&#160;&#160;&#160; </p>
+            </li>
+        </ul>
+        <p class="BackToTopLink" style="margin-top: -1;margin-bottom: -2;">&#160;</p>
+        <p class="Note">Note:&#160; In exception to default Fiber view settings,
+lightpaths are shown in this example.&#160; To display lightpaths, set the
+LightPathRouting property of the
+view to Direct.&#160;&#160;&#160;</p>
+        <p class="FigureTitle">Example Network View - LightPaths</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/MapSampleLP.bmp" width="858" height="375" />
+        </p>
+        <p class="BackToTopLink"><a href="#NetViewExamples">Back to top</a>
+        </p>
+        <hr />
+        <h3>Demand Layer</h3>
+        <p>The third example below shows the demand layer of the map superimposed on the
+fiber and lightpath layers.&#160; Demands appear as blue lines.&#160; Multiple demands can exist between any two locales.&#160;
+When selected, demands function in the same way as fibers and&#160; lightpaths -
+they appear as bold lines with selection handles to enable dragging.</p>
+        <p>As this example illustrates, the more information a view contains, the more
+difficult it becomes to identify and select individual objects. The following
+Modeler tools are particularly useful when working with object-dense views:</p>
+        <ul>
+            <li><b>Spread Links tool</b> - object layers can be spread (formed into an arc) by clicking on
+ the Spread links <img border="0" src="../Resources/images/SpreadIcon.gif" width="16" height="12" /> icon.&#160; To
+ re-layer (straighten) links that have been spread, click on the Straighten
+ links <img border="0" src="../Resources/images/StraightenIcon.gif" width="16" height="12" /> icon.&#160;&#160;</li>
+            <li><b><a href="Using%20the%20Pan%20and%20Zoom%20Window.htm#NetViewPan">Pan
+and Zoom</a> window</b> - to navigate within large views and change their scale.</li>
+            <li><b>Expand View Proportionately tool</b> - this tool changes the relative
+ position of a view's locales by a user specified factor.&#160; To expand (or
+ contract) a view, click on the 
+  <img border="0" src="../Resources/images/ExpandPropIcon.gif" width="14" height="14" />
+    icon in the 
+	<a href="..\In_User_Interface\The%20Main%20Toolbar.htm#MainToolbar">Main Toolbar</a> and
+ enter a value for the expansion factor.&#160;</li>
+        </ul>
+        <p class="BackToTopLink" style="margin-bottom: -2;">&#160;</p>
+        <p class="Note">Note:&#160; In exception to default Fiber view settings, demands
+and&#160; lightpaths are shown in this example.&#160; To display demands and
+lightpaths, set the LightPathRouting property and the DemandRouting property of the
+view to Direct.&#160; To display demand quantity, set the DemandLabel property
+of the view to Quantity.</p>
+        <p class="FigureTitle">Example Network View - Demands</p>
+        <p class="FigureTitle">
+            <img border="0" src="../Resources/images/MapSampleDemand.bmp" width="807" height="445" />
+        </p>
+        <p class="BackToTopLink"><a href="#NetViewExamples">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Network%20Views.htm">Network Views</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="..\In_User_Interface\The%20Object%20Tree.htm#MainObjectTree">The Object Tree</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

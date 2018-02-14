@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2603" MadCap:lastWidth="817">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Advanced Options for Failure Analysis</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="FailOptionsTop"></a>Advanced Failure Analysis Options</h1>
+        <p>To set advanced failure analysis options, select <b> Algorithms, Mesh, Failure Analysis</b> from the main
+menu and click on the Advanced tab.&#160; The dialog shown below will appear.<span></span></p><span><p>&#160;</p><hr /><p class="BackToTopLink"><a href="#FailOptionsTop">Back to top</a></p><p>For assistance with the algorithm options described above,&#160; please contact the design tools
+team at <a href="mailto:designtools@sycamorenet.com">designtools@sycamorenet.com</a>.</p><ul><li><b>Permit Restoration Over Rings:</b>&#160; Select this option when you 
+	want to allow mesh demands to be restored over ring lightpaths.&#160; When 
+	this option is selected, you must also select one or both of options listed 
+	below.</li><li><b>Use Ring Working Capacity for Restoration</b>: Select this option when 
+	you want to allow mesh demands to be restored using the available working 
+	capacity of one or more rings.</li><li><b>Use Ring Protect Capacity for Restoration</b>: Select this option when 
+	you want to allow mesh demands to be restored using the available protect 
+	capacity of one or more rings.</li></ul><p>Determines if available ring capacity can be used to restore mesh demands.&#160; Select one or more of these options:</p><h3><a name="FailOptionsCombinedProtection"></a>Combined Mesh and Ring Protection</h3><ul><li><b>Show Iteration Details:</b>&#160; Select this option when you want to
+ look at the results of each iteration of the failure analysis.</li><li><b>Show Restoration Paths</b>:&#160; Select this option when you want to
+ view a list of the paths used to restore demands affected by a failure.</li></ul><p>Determines what, if any, additional information will be included in the
+<a href="65_FailureAnalResults.htm">Failure Analysis Results</a>.</p><h3>Results</h3><p>Calculates a number to represent the severity of each failure scenario based
+on it's demand traffic values.&#160; Use these coefficients to rank scenarios
+based on the amount of each type of demand traffic ( i.e. Mesh/Ring Restored demands,
+Failed Protected demands, Failed Unprotected demands, and Unprotected OnePlusOne
+demands) they contain.&#160; By increasing a Failure Severity Coefficient for a
+particular type of demand traffic, you are increasing the Failure Severity
+rating for each scenario that contains that type of traffic.&#160; For each
+iteration that a given scenario is analyzed, the value of each type of demand
+traffic is multiplied by it's corresponding coefficient.&#160; The result of
+each multiplication is added together to obtain a failure severity rating for
+each iteration of each scenario.&#160; When all of the iterations have been
+completed, the worst-case severity value for each scenario remains.&#160;
+Failure Severity ratings appear in the <b>Results, Failures</b> tab.&#160;</p><h3>Failure Severity Coefficients</h3><p>The algorithm will perform the specified number of iterations and choose the
+best solution from among them.&#160; Demands are randomly sorted between iterations.&#160; Hence,
+as you increase the number of&#160; iterations, the algorithm will evaluate more demand orderings
+and the likelihood that additional capacity will be added to the network will
+increase (assuming you did not select the Fixed at Current Capacity option).&#160; To run the algorithm&#160; indefinitely,
+set the number of iterations to
+zero.&#160; To stop running the algorithm, click the <b> Stop</b> button on the progress dialog.</p><h3>Iterations</h3><ul><li><b>Current Affected Demand:</b>&#160; The non-failed resources of the current
+ affected demand (the demand being
+ restored) are made available (released) during the restoration process for
+ use by the current demand only.</li><li><b>None</b>: The most conservative option, the non-failed resources of all failed
+ demands are unavailable during the restoration process.</li><li><b>All Affected Demands:</b>&#160; The most liberal option, the non-failed resources
+ of all affected demands are made available (released) during the restoration
+ process.</li></ul><p>Select one of these three options:</p><p>Determines the degree to which valid resources assigned to failed routes are
+made available for the restoration of other demands.&#160; This option applies 
+only when using Automatic Failure Analysis.&#160; </p><h3>Release Resources Before Restore</h3><ul><li><b>Fixed at Current Capacity:</b>&#160; Lightpath capacity cannot be
+ increased in the process of restoring failed demands.</li><li><b>Up to Max Capacity</b>: Lightpath capacity can be increased in the process of restoring failed demands, 
+	up to but not exceeding the amount of maximum capacity for the lightpath. To 
+	prevent lightpaths with a capacity equal to zero (the default value) from 
+	being used for restoration, click to select the <b>Ignore Zero-Capacity 
+	LightPaths</b> option.</li><li><b>Unconstrained:</b>&#160; Lightpath capacity can be increased without
+ restriction during the process of restoring failed demands. To prevent 
+	lightpaths with a capacity equal to zero (the default value) from being used 
+	for restoration, click to select the <b>Ignore Zero-Capacity LightPaths</b> 
+	option.</li></ul><p>Determines what, if any action can be taken when an increase in lightpath 
+capacity is required to restore a failed demand.&#160; This option applies only when using Automatic Failure Analysis.&#160; Select one of these three options:</p><h3>Increase LightPath Capacity</h3><p>Use the descriptions below to select advanced options for analyzing failures 
+in your network.&#160; Each advanced option applies to both the manual and 
+automatic modes of failure analysis unless stated otherwise. 
+When your selections are complete, continue the failure analysis process by 
+clicking on either the Manual or Automatic tab in the Failure Analysis dialog.</p><p class="FigureTitle"><img border="0" src="Resources/images/FailAnalAdv.bmp" width="721" height="444" /></p><p class="FigureTitle">Failure Analysis Dialog, Advanced Tab</p></span>
+    </body>
+</html>

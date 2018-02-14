@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1370" MadCap:lastWidth="851">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Automatic Failure Analysis</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="FailAutoTop"></a> Automatic Failure Analysis</h1>
+        <p>Use automatic failure analysis when you want the algorithm to evaluate each 
+failure scenario for multiple iterations or when you want the algorithm to 
+automatically adjust capacity as needed to re-route failed demands.&#160; Prior to running this algorithm, the network must contain at least some 
+demand routing information (acquired by running a routing algorithm or via 
+import from <MadCap:variable name="Modeler.CompanionProduct" />).&#160; 
+The Failure Analysis algorithm uses the working path (for
+Unprotected and SharedPath demands) and 
+protect path (for OnePlusOne demands) assigned to each demand to analyze 
+failures.&#160; Any un-routed demands in the network are ignored by the 
+algorithm.</p>
+        <p>To run the Failure Analysis algorithm, select <b>Algorithms, Mesh, Failure 
+Analysis </b>from
+the main menu. The dialog shown below will appear with the Automatic tab 
+selected.&#160; To perform a basic failure analysis using default options, click on the <b>
+Calculate</b> button.&#160; To select options that influence the analysis 
+performed by the algorithm, click on <b><a href="65_FailureAnalAdvancedOptions.htm#FailOptionsTop">Advanced</a></b> tab.<span>&#160;
+</span></p><span> <![CDATA[ ]]></span>
+        <p>When the algorithm has completed it's analysis (as
+described below), a summary of results will appear in the form of a log within
+the Automatic tab window.&#160; For more detailed results information, click on the <b><a href="65_FailureAnalResults.htm#FailResultsTop">Results</a></b>
+tab.</p>
+        <p>
+            <img border="0" src="Resources/images/FailAnalBasic.bmp" width="476" height="452" />
+        </p>
+        <p>In automatic mode, the algorithm performs multiple iterations (you can 
+specify the quantity on the Advanced
+tab).&#160; For each iteration, the algorithm randomly sorts the demands and cycles
+through a series of&#160;user-defined failure scenarios.&#160; Demands whose BroadleafSourceReroute property is
+set to Off, are not restored upon failure.&#160; For demands whose BroadleafSourceReroute property is
+set to On, the algorithm attempts to restore them upon failure (in random
+order) using OSPF.&#160; If there is insufficient capacity to restore a failed
+demand and LightPath capacity is fixed (as it is by default), the demand will
+remain failed.&#160; If however, an increase in LightPath capacity is permitted
+(as selected in the Advanced tab), a minimal amount of capacity is added to the
+network in order to make restoration possible.&#160; This additional capacity is
+then available for all other demands and failure scenarios.&#160; Hence, the
+more iterations that the algorithm is run, the more likely it is that capacity
+will be added to the network.&#160; The additional capacity is necessary to
+ensure that the network has sufficient shared protection.</p>
+        <p class="Note">Note:&#160; The BroadleafSourceReroute and Protection Type
+properties of demands are inter-related.&#160; If Protection Type is set to
+Unprotected then BroadleafSourceReroute is set to Off.&#160; If Protection Type
+is set to SharedPath then BroadleafSourceReroute is set to On.&#160; If
+Protection Type is set to OnePlusOne then BroadleafSourceReroute can be set to
+either On or Off.</p>
+        <p class="BackToTopLink"><a href="#FailAutoTop">Back to top</a>
+        </p>
+        <hr />
+    </body>
+</html>

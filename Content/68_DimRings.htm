@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3011" MadCap:lastWidth="834">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Dimensioning Rings</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="RingTop"></a>Dimensioning Rings</h1>
+        <p>The Ring Dimensioning algorithm routes demands with the goal of minimizing either the total network capacity (i.e. OC-48)
+or capacity-distance (i.e. OC-48-mi.). This minimization is achieved by
+repeatedly removing and re-routing each ring demand on the best path available to
+that demand. The algorithm takes into account both the working and protect
+capacity needed on each ring for that demand.&#160; The algorithm will consider
+all defined rings, but depending on the topology and demand set, it will not necessarily use all rings.</p>
+        <p>You can run the Dimension Rings algorithm using either default or advanced 
+dimensioning options.&#160; 
+Default ring dimensioning options are in effect from the moment you install the Modeler.&#160; 
+Their values are carefully selected to provide optimum routing results for a 
+majority of applications.&#160; Ring dimensioning options retain their default values 
+unless you elect to edit them using the <a href="#RingAdv">Advanced 
+tab</a> 
+dialog.&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="Note"><b>Note:&#160; </b>Advanced dimensioning options are reset to 
+their default values upon closure of the Dimension Rings dialog.</p>
+        <p>Advanced 
+dimensioning options are helpful in 
+those rare situations where default parameters do not provide the desired 
+results.&#160; Each dimensioning option is described in the <a href="#RingAdv">Advanced 
+Dimensioning Options</a> section of this help file.</p>
+        <p>Once you have determined which options to use, follow the steps below to 
+initiate the dimensioning process:</p>
+        <ol>
+            <li>Create any additional objects or object properties necessary to define 
+	your network.&#160; Refer to the list of
+	<a href="62_PrepRoute.htm#PrepMinimum">Minimum Routing Requirements</a> described in the
+	<a href="62_PrepRoute.htm#PrepRouteTop">Preparation for
+Routing</a> section of this help file. </li>
+            <li>Select <b>Algorithms, Rings, Dimension Rings</b> from the main
+menu. The following dialog will
+appear displaying an empty log: </li>
+        </ol>
+        <p class="FigureTitle">Ring Dimensioning Dialog, Basic Tab</p>
+        <blockquote>
+            <p>
+                <img border="0" src="Resources/images/DimRingBasic.bmp" width="425" height="465" />
+            </p>
+        </blockquote>
+        <ol start="3">
+            <li>If you want to execute the algorithm using default dimensioning options, 
+	proceed to the next step.&#160; Otherwise, click on the <b>Advanced</b> tab and 
+	select the desired <a href="#RingAdv">advanced dimensioning options</a>.&#160; 
+	When complete, click to return to the <b>Basic</b> tab.</li>
+            <li>Click the <b>Calculate</b> 
+button on the Basic tab to execute the dimensioning algorithm.&#160;</li>
+        </ol>
+        <p>Upon initiation, the Dimension Rings algorithm will perform the tasks 
+listed below for all ring demands that are enabled for routing.&#160;&#160;</p>
+        <ul>
+            <li>Routes the demand working and protect paths over the lightpath layer.&#160; 
+	Note that demands whose FixedLightPathRouting property is set to True or 
+	whose DoNotRoute property is set to True will not be routed.&#160; Demands are routed based on lightpath admin
+ costs.</li>
+            <li>Updates the lightpath TrafficWorking, TrafficProtectDedicated and
+ TrafficProtectShared properties which are used to calculate the lightpath
+ Capacity property.</li>
+            <li>Loads network statistics information into the log.</li>
+        </ul>
+        <p>The appearance of network information in the log portion of the dialog is 
+your signal that the dimensioning process is complete.&#160; For tips on evaluating routing results, read the
+<a href="69_EvaluateRouting.htm#EvalTop">Evaluating
+Routing Results</a> section of this help file.</p>
+        <p class="BackToTopLink"><a href="#RingTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="RingAdv"></a>Advanced Dimensioning Options</h2>
+        <p>The Advanced tab of the Ring Dimensioning dialog is shown below.<span>&#160;
+By making selections in this dialog, you determine which factors take precedence 
+during the dimensioning process.&#160; Your selections will also influence the amount 
+of time required for the algorithm to complete it's analysis.&#160; Use the 
+description of each option (included below) to determine the desired settings.&#160; 
+When your selections are complete, return to the <b>Basic</b> tab and click on 
+the <b>Calculate</b> button to initiate the dimensioning process.</span></p>
+        <p class="FigureTitle">Ring Dimensioning Dialog, Advanced Tab</p>
+        <p>
+            <img border="0" src="Resources/images/DimRingAdvanced.bmp" />
+        </p>
+        <p><span>
+A description of each advanced routing option is provided below.&#160; Any changes you make to option values are retained until the 
+Ring Dimensioning dialog is closed.&#160;
+
+</span>
+        </p>
+        <h3>Minimize LightPath</h3>
+        <p>By default, Modeler makes routing decisions with the goal of minimizing total
+lightpath capacity.&#160; As an alternative, Modeler can make routing decisions
+with the goal of minimizing total lightpath capacity distance.&#160;</p>
+        <h3>Clear Routing and Statistics</h3>
+        <p>This option determines whether existing routing information will be deleted
+prior to running this algorithm.&#160; As the algorithm runs, each potential
+solution is compared to the 'Initial Solution' and the least cost result is
+retained.&#160; This result becomes the 'Initial Solution' to which subsequent
+solutions are compared.&#160;&#160;</p>
+        <p> When this option is unchecked (default), the solution that existed prior to
+running the algorithm is used as the 'Initial Solution'.&#160; When this option
+is checked, the algorithm does not use the pre-existing solution as it's
+'Initial Solution'.&#160; Use this option when you want to route all of the
+demands to arrive at a new solution.&#160; For example, in situations, such as
+adding more demand to the network, that will naturally require a more expensive
+solution than the pre-existing one.</p>
+        <h3>Delete Rings Without Traffic</h3>
+        <p>When checked, rings without traffic will be deleted after the dimensioning
+process is complete.</p><span><h3>Iterations</h3><p>During each iteration, solution's capacity/capacity distance is calculated
+and compared to that of the benchmark (lowest capacity/capacity distance)
+solution.&#160; The solution with the lowest capacity/capacity distance becomes
+the new benchmark to which future solutions will be compared.&#160;
+Demands are randomly sorted between iterations.&#160; Hence, the more
+iterations that the algorithm is run, the more demand sequences will be tried
+and the greater the chance of finding the lowest capacity/capacity distance
+solution.&#160; To run the algorithm&#160; indefinitely,
+set the number of iterations to
+zero.&#160; To stop running the algorithm, click the <b> Stop</b> button on the progress dialog.</p></span>
+        <p>For assistance with the algorithms described above,&#160; please contact the design tools
+team at <a href="mailto:designtools@sycamorenet.com">designtools@sycamorenet.com</a>.</p>
+        <p class="BackToTopLink"><a href="#RingTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:</p>
+        <p class="SeeAlsoLinks"><a href="69_EvaluateRouting.htm#EvalTop">Evaluating Routing Results</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="62_PrepRoute.htm#PrepRouteTop">Preparation for 
+Routing</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="67_RingCover.htm#RingTop">Ring Cover</a>
+        </p>
+    </body>
+</html>

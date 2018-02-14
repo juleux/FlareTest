@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Ring Traffic Report</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="RepRingTraf"></a>Ring Traffic Report</h2>
+        <p>This report is provided as a worksheet entitled "Ring
+Traffic".&#160; It contains the information described in the table
+below.&#160; Use this report to evaluate traffic flow for one or more rings
+in your proposed design.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="640">
+            <tr>
+                <th class="TableHeader" width="100">Type of Data</th>
+                <th class="TableHeader" width="211">Column Name(s)</th>
+                <th class="TableHeader" width="297">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Ring</td>
+                <td class="TableBody" width="211" valign="top">Name, LongName, Locked</td>
+                <td class="TableBody" width="297" valign="top">This is user supplied
+ information that uniquely describes each ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Architecture</td>
+                <td class="TableBody" width="297" valign="top">This is user supplied
+ information for ring architecture.&#160; Valid entries include:
+      <ul><li>BLSR2F_MSSSPRING2F</li><li>BLSR4F_MSSSPRING4F</li><li>ASYM4F</li><li>UPSR_SNCP</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Type</td>
+                <td class="TableBody" width="297" valign="top">This is user supplied
+ information for ring type.&#160; Valid entries include:
+      <ul><li>OC3_STM1</li><li>OC12_STM4</li><li>OC48_STM16</li><li>OC192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">StackCount</td>
+                <td class="TableBody" width="297" valign="top">The quantity of stacked
+ rings.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">MaximumCapacity</td>
+                <td class="TableBody" width="297" valign="top">The maximum capacity
+ of all lightpaths associated with a ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Traffic Working</td>
+                <td class="TableBody" width="211" valign="top">Maximum</td>
+                <td class="TableBody" width="297" valign="top">The maximum working capacity
+ of a ring based on the maximum working traffic over all ring lightpaths.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Capacity</td>
+                <td class="TableBody" width="297" valign="top">The amount of working
+ capacity based on the maximum working traffic over all ring lightpaths.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">GroomingFactor</td>
+                <td class="TableBody" width="297" valign="top">A function of ring type and
+ architecture which is used to calculate the size of a ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Circumference</td>
+                <td class="TableBody" width="297" valign="top">The total length of the
+ lightpaths that comprise a ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">NumberOfNodes</td>
+                <td class="TableBody" width="297" valign="top">The number of locations that
+ add or drop traffic within a ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Location</td>
+                <td class="TableBody" width="100" valign="top">Locations</td>
+                <td class="TableBody" width="297" valign="top">A list of the locations (comma delimited)
+ that comprise a ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Fiber</td>
+                <td class="TableBody" width="100" valign="top">Fibers</td>
+                <td class="TableBody" width="297" valign="top">A list of the fibers
+ (comma delimited) that comprise a ring.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">LightPath</td>
+                <td class="TableBody" width="100" valign="top">LightPaths</td>
+                <td class="TableBody" width="297" valign="top">A list of the lightpaths (comma delimited)
+ that comprise a ring.</td>
+            </tr>
+        </table>
+        <p>To generate a report, click on the Export Excel Report
+icon<span>&#160;</span><img border="0" src="../Resources/images/Report.gif" width="14" height="16" />, or
+select <b>Tools, Reporting</b> from the menu. Place a checkmark next to the 
+type of report you wish to create, then click <b>OK</b>.</p>
+        <p class="BackToTopLink"><a href="#RepRingTraf">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Generating%20Reports.htm#ReportTop">Generate Reports</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

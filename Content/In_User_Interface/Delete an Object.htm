@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Delete an Object</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="DeleteObjectTop"></a>Delete an Object</h2>
+        <p>To delete an object, click to <a href="Select%20an%20Object.htm#SelectObjectTop">select</a> it and 
+then press the "Delete" key.&#160;
+When using the <a href="The%20Object%20Tree.htm#MainObjectTree">Object tree</a>, you can also access the delete command by
+right-clicking on an object and selecting <b>Delete</b> from the pop-up
+menu.&#160;<span style="font-family: Times New Roman;"> <![CDATA[ ]]></span></p>
+        <p>A
+<span style="font-family: Times New Roman;">
+message box will appear asking you to confirm your desire to delete.&#160; After
+confirmation, </span>the Modeler<span style="font-family: Times New Roman;">
+will delete the object and any objects related to it.&#160; Related objects are 
+objects that are connected to the deleted object in some way.&#160; Examples of 
+related objects include:</span></p>
+        <ul>
+            <li>Any object that is a child of the deleted object.&#160; When a network 
+	view is deleted, the locales within it are deleted also.</li>
+            <li>Any object that is linked to (routed over or through) the deleted 
+	object.&#160; When a lightpath is deleted, any demands routed over it are 
+	also deleted.&#160; When a location is deleted, any fibers or lightpaths 
+	connected to it are also deleted.</li>
+            <li>Any object that is a child of or is linked to a relative of the deleted 
+	object.&#160; When a location is deleted, any lightpaths connected to it are 
+	also deleted and any demands routed over the related lightpaths will also be 
+	deleted.</li>
+        </ul>
+        <p>As always, it is important to exercise caution when deleting information.&#160;
+When you delete objects from your network file, you can replace them by reentry
+only.<span>&#160; Therefore, it is wise to frequently 
+<a href="..\In_Network_Files\Save%20a%20Network%20File.htm#NFSaveFile">save</a> a backup copy of your network file.</span></p>
+        <p class="BackToTopLink" style="margin-top: -2px;margin-bottom: -2px;"><a href="#DeleteObjectTop">&#160;</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="..\In_Network_Files\Save%20a%20Network%20File.htm#NFSaveFile">Save a 
+Network File</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="Select%20an%20Object.htm#SelectObjectTop">Select an Object</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="The%20Object%20Tree.htm#MainObjectTree">The Object Tree</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

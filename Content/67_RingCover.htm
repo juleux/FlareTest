@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2842" MadCap:lastWidth="834">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Ring Cover Algorithm</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="RingTop"></a>Ring Cover</h1>
+        <p>The Ring Cover algorithm
+analyzes the Fiber Layer of the Network and creates Rings, and their associated
+LightPaths, based on algorithm parameters such as maximum length and number of
+nodes.&#160; The Ring Cover algorithm remembers all Rings that existed before it
+was run and will not create duplicates.&#160; Prior to running the Ring Cover 
+algorithm, make sure that you have created a Network with all the desired 
+Locations and Fibers connecting them.&#160; </p>
+        <p>You can run the Ring Cover algorithm using either default or advanced options.&#160; 
+Default ring cover options are in effect from the moment you install the Modeler.&#160; 
+Their values are carefully selected to provide optimum results for a 
+majority of applications.&#160; Ring cover options retain their default values 
+unless you elect to edit them using the <a href="68_DimRings.htm#RingAdv">Advanced 
+tab</a> 
+dialog.&#160;&#160;&#160;&#160;&#160; </p>
+        <p class="Note"><b>Note:&#160; </b>Advanced ring cover options are reset to 
+their default values upon closure of the Ring Cover dialog.</p>
+        <p>Advanced ring 
+cover options are helpful in 
+those rare situations where default parameters do not provide the desired 
+results.&#160; Each ring cover option is described in the <a href="#RingAdv">Advanced 
+Ring Cover Options</a> section of this help file.</p>
+        <p>Once you have determined which options to use, follow the steps below to 
+initiate the ring creation process:</p>
+        <ol>
+            <li>Create any additional objects or object properties necessary to define 
+	your network including locations connected by fibers.</li>
+            <li>Select <b>Algorithms, Rings, Ring Cover</b> from the main
+menu. The following dialog will
+appear displaying an empty log: </li>
+        </ol>
+        <blockquote>
+            <p class="FigureTitle">Ring Cover Dialog, Basic Tab</p>
+            <p>
+                <img border="0" src="Resources/images/RingCoverBasic.bmp" width="506" height="264" />
+            </p>
+        </blockquote>
+        <ol start="3">
+            <li>If you want to execute the algorithm using default ring cover options, 
+	proceed to the next step.&#160; Otherwise, click on the <b>Advanced</b> tab and 
+	select the desired <a href="#RingAdv">advanced ring cover options</a>.&#160; 
+	When complete, click to return to the <b>Basic</b> tab.</li>
+            <li>Click the <b>Calculate</b> 
+button on the Basic tab to execute the ring cover algorithm.&#160;</li>
+        </ol>
+        <p>Upon initiation, the Ring Cover algorithm will perform the tasks 
+listed below for all ring demands that are enabled for routing.&#160;&#160;</p>
+        <ul>
+            <li>Records all existing rings in the network.</li>
+            <li>Generates candidate rings.</li>
+            <li>Generates candidate rings over parallel fibers, if any exist.</li>
+            <li>Sorts ring candidates by ranking</li>
+            <li>Builds top ranked rings.</li>
+            <li>If enabled, builds rings over any uncovered nodes.</li>
+        </ul>
+        <p>The appearance of network information in the log portion of the dialog is 
+your signal that the ring cover process is complete.&#160; </p>
+        <p class="BackToTopLink"><a href="#RingTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="RingAdv"></a>Advanced Ring Cover Options</h2>
+        <p> The Advanced tab of the Ring Cover dialog is shown below.<span>&#160;
+By making selections in this dialog, you determine which factors take precedence 
+during the ring creation process.&#160; Your selections will also influence the amount 
+of time required for the algorithm to complete it's analysis.&#160; Use the 
+description of each option (included below) to determine the desired settings.&#160; 
+When your selections are complete, return to the <b>Basic</b> tab and click on 
+the <b>Calculate</b> button to initiate the ring creation process.</span></p>
+        <p class="FigureTitle">Ring Cover Dialog, Advanced Tab</p>
+        <p>
+            <img border="0" src="Resources/images/RingCoverAdv.bmp" />
+        </p>
+        <p><span>
+A description of each advanced ring cover option is provided below.&#160; Any changes you make to option values are retained until the 
+Ring Cover dialog is closed.&#160;
+
+</span>
+        </p>
+        <h3>Nodes in Ring</h3>
+        <p>Enter the maximum and minimum number of nodes desired in each ring.&#160;
+Note that the minimum number of nodes must be at least 3.</p>
+        <h3>Cycle Type</h3>
+        <p>Select BLSR Ring or P Cycle.</p>
+        <h3>Cycle Ranking</h3>
+        <p>Select the ranking technique used to sort the rings.</p>
+        <h3>Find Rings Over Parallel Fibers</h3>
+        <p>Check if there are parallel fibers between nodes.&#160;</p>
+        <h3>Build Rings</h3>
+        <p>Check if you want to actually build rings, leave unchecked if you want to see
+how many ring candidates are found without actually building them.&#160;</p>
+        <h3>Cover All Nodes</h3>
+        <p>Check if you want to try to cover all nodes with at least one ring. Note that
+additional rings may be built beyond the Maximum Ring Count to achieve this.&#160;</p>
+        <h3>Maximum Ring Length</h3>
+        <p>Set a maximum limit for the total length of all ring lightpaths.</p>
+        <h3>Maximum Ring Count</h3>
+        <p>Set a maximum limit for the number of top ranked rings that are to be built.</p>
+        <p>For assistance with the algorithms described above,&#160;please contact the design tools
+team at <a href="mailto:designtools@sycamorenet.com">designtools@sycamorenet.com</a>.</p>
+        <p class="BackToTopLink"><a href="#RingTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:</p>
+        <p class="SeeAlsoLinks"><a href="68_DimRings.htm#RingTop">Dimension Rings</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="69_EvaluateRouting.htm#EvalTop">Evaluating Routing Results</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="62_PrepRoute.htm#PrepRouteTop">Preparation for 
+Routing</a>
+        </p>
+        <p class="SeeAlsoLinks">&#160;</p>
+    </body>
+</html>

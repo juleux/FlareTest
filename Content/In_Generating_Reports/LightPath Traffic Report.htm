@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1771" MadCap:lastWidth="783">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>LightPath Traffic Report</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="RepLPTraf"></a>LightPath Traffic Report</h2>
+        <p>This report is provided as a worksheet entitled "LightPath
+Traffic".&#160; It contains the information described in the table
+below.&#160; Use this report to evaluate traffic flow for one or more lightpaths
+in your proposed design.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="640">
+            <tr>
+                <th class="TableHeader" width="100">Type of Data</th>
+                <th class="TableHeader" width="211">Column Name(s)</th>
+                <th class="TableHeader" width="297">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">LightPath</td>
+                <td class="TableBody" width="211" valign="top">Name, LongName, Locked, StartLocation, EndLocation,
+ Cost, Length, ConduitIDs</td>
+                <td class="TableBody" width="297" valign="top">This is user supplied
+ information that uniquely describes each lightpath.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Type</td>
+                <td class="TableBody" width="297" valign="top">This is user supplied
+ information for lightpath type.&#160; Valid entries include:
+      <ul><li>OC3_STM1</li><li>OC12_STM4</li><li>OC48_STM16</li><li>OC192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Domain</td>
+                <td class="TableBody" width="297" valign="top">The ring this lightpath is
+ associated with.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">VPN</td>
+                <td class="TableBody" width="297" valign="top">The virtual private network (VPN)
+ this lightpath is assigned to.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">TrunkIDs</td>
+                <td class="TableBody" width="297" valign="top">The list of trunk 
+	identification numbers associated with this lightpath.&#160; TrunkID 
+	information is imported from <MadCap:variable name="Modeler.CompanionProduct" />. Individual ids are separated by 
+	colons.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Capacity</td>
+                <td class="TableBody" width="211" valign="top">CapacityMinimum, CapacityMaximum</td>
+                <td class="TableBody" width="297" valign="top">The minimum/maximum capacity
+ of a lightpath.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Capacity</td>
+                <td class="TableBody" width="297" valign="top">Sum of working and protect
+ path traffic for a lightpath.&#160; Units are based on Type entry above.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">CapacityIncremental</td>
+                <td class="TableBody" width="297" valign="top">The difference between
+ Capacity and CapacityMinimum.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">CapacityMaximumExceeded</td>
+                <td class="TableBody" width="297" valign="top">True if maximum Capacity has
+ been exceeded.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Utilization</td>
+                <td class="TableBody" width="297" valign="top">The percentage of lightpath capacity in use.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">TimeSlotsStatus</td>
+                <td class="TableBody" width="297" valign="top">The status of each timeslot 
+	in the lightpath.&#160; Status types include Available, Working, 
+	ProtectDedicated, and ProtectShared.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Traffic Vectors</td>
+                <td class="TableBody" width="211" valign="top">Working, ProtectDedicated, 
+	ProtectShared, Available</td>
+                <td class="TableBody" width="297" valign="top">The quantity of time slots of 
+	each signal type assigned to the demand's working (protect dedicated, etc.) 
+	path in the format of Type1:Type3:Type12:Type48:Type192 where 
+	<ul><li>Type1 = OC1_STS1_VC3_DS3_E3_AU3 </li><li>Type3 = OC3_STS3_STM1_VC4 </li><li>Type12 = OC12_STS12_STM4 </li><li>Type48 = OC48_STS48_STM16 </li><li>Type192 = OC192_STS192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Fiber</td>
+                <td class="TableBody" width="211" valign="top">Fibers</td>
+                <td class="TableBody" width="297" valign="top">The sequential list of fibers
+ (comma delimited) over which a given lightpath is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="211" valign="top">Fiber Count</td>
+                <td class="TableBody" width="297" valign="top">The number of fibers over
+ which a given lightpath is routed.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Traffic</td>
+                <td class="TableBody" width="211" valign="top">Working, ProtectDedicated,
+ ProtectShared, Available, Total</td>
+                <td class="TableBody" width="297" valign="top">The amount of each type of 
+	traffic routed over a lightpath. Units (dependent on
+	<a href="..\In_Adding_Objects\Setting%20Default%20Object%20Properties.htm#SetDefaultTop">
+	network type</a>) are displayed at the 
+	top of each column of traffic data.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Traffic Distance</td>
+                <td class="TableBody" width="211" valign="top">Working, ProtectDedicated,
+ ProtectShared, Available, Total</td>
+                <td class="TableBody" width="297" valign="top">The distance over which each 
+	type of traffic travels.&#160; Units (dependent on
+	<a href="..\In_Adding_Objects\Setting%20Default%20Object%20Properties.htm#SetDefaultTop">
+	network type</a>) are the same as other 
+	traffic data.</td>
+            </tr>
+        </table>
+        <p>To generate a report, click on the Export Excel Report
+icon<span>&#160;</span><img border="0" src="../Resources/images/Report.gif" width="14" height="16" />, or
+select <b>Tools, Reporting</b> from the menu. Place a checkmark next to the 
+type of report you wish to create, then click <b>OK</b>.</p>
+        <p class="BackToTopLink"><a href="#RepLPTraf">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Generating%20Reports.htm#ReportTop">Generate Reports</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

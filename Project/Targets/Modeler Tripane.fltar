@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="first"
+  Skin="/Project/Skins/HTML5 - Tripane.flskn"
+  MasterToc="/Project/TOCs/Silvx Modeler TOC.fltoc"
+  DefaultUrl="/Content/In_Introduction/NMA Overview.htm"
+  MasterStylesheet="/Content/MeshNet.css">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Glossaries>
+    <Glossary
+      Link="/Project/Glossaries/Modeler Acronyms.flglo" />
+    <Glossary
+      Link="/Project/Glossaries/Modeler Glossary.flglo" />
+  </Glossaries>
+</CatapultTarget>

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1368" MadCap:lastWidth="783">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Location Traffic Report</title>
+        <link rel="stylesheet" type="text/css" href="..\MeshNet.css" />
+    </head>
+    <body>
+        <h2><a name="RepLocTraf"></a>Location Traffic Report</h2>
+        <p>This report is provided as a worksheet entitled "Location
+Traffic".&#160; It contains the information described in the table
+below.&#160; Use this report to evaluate traffic flow for one or more locations
+in your proposed design.</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="640">
+            <tr>
+                <th class="TableHeader" width="100">Type of Data</th>
+                <th class="TableHeader" width="236">Column Name(s)</th>
+                <th class="TableHeader" width="272">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Location</td>
+                <td class="TableBody" width="236" valign="top">Name, LongName, Locked, Longitude,
+ Latitude, CLLI, Building, Hub, Type</td>
+                <td class="TableBody" width="272" valign="top">This is user supplied
+ information that uniquely describes each location.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="236" valign="top">SwitchIPAddress, RouterID</td>
+                <td class="TableBody" width="272" valign="top">This information, imported 
+	from <MadCap:variable name="Modeler.CompanionProduct" />, identifies the ip address and router identification 
+	number of a location.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">&#160;&#160;</td>
+                <td class="TableBody" width="236" valign="top">PermitThroughTraffic</td>
+                <td class="TableBody" width="272" valign="top">This is user supplied
+ information that tells the routing algorithms the types of lightpaths that 
+	will accept through traffic (traffic that does not terminate at a location). Valid entries include:
+      <ul><li>AnyLightPath</li><li>ExpressLightPaths</li><li>None</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Degrees</td>
+                <td class="TableBody" width="236" valign="top">Fiber, LightPath, Ring</td>
+                <td class="TableBody" width="272" valign="top">The total number of
+ fibers, lightpaths, or rings (of all types) associated with a location.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Dropped Traffic</td>
+                <td class="TableBody" width="236" valign="top">RingWorking, MeshWorking,
+ MeshProtectDedicated, MeshProtectShared, Total</td>
+                <td class="TableBody" width="272" valign="top">The amount of each type of
+ traffic that drops at a location. Units (dependent on
+	<a href="..\In_Adding_Objects\Setting%20Default%20Object%20Properties.htm#SetDefaultTop">network type</a>) are displayed at the 
+	top of each column of traffic data.&#160; </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Through Traffic</td>
+                <td class="TableBody" width="236" valign="top">RingWorking, MeshWorking,
+ MeshProtectDedicated, Total</td>
+                <td class="TableBody" width="272" valign="top">The amount of each type of
+ traffic that passes through a location.&#160; Units (dependent on
+	<a href="..\In_Adding_Objects\Setting%20Default%20Object%20Properties.htm#SetDefaultTop">network type</a>) are displayed at the 
+	top of each column of traffic data.&#160; </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="100" valign="top">Total Traffic</td>
+                <td class="TableBody" width="236" valign="top">&#160;</td>
+                <td class="TableBody" width="272" valign="top">The total amount of traffic
+ routed through a location. Units (dependent on
+	<a href="..\In_Adding_Objects\Setting%20Default%20Object%20Properties.htm#SetDefaultTop">network type</a>) are displayed at the 
+	top of each column of traffic data.</td>
+            </tr>
+        </table>
+        <p>To generate a report, click on the Export Excel Report
+icon<span>&#160;</span><img border="0" src="../Resources/images/Report.gif" width="14" height="16" />, or
+select <b>Tools, Reporting</b> from the menu. Place a checkmark next to the 
+type of report you wish to create, then click <b>OK</b>.</p>
+        <p class="BackToTopLink"><a href="#RepLocTraf">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160;
+</p>
+        <p class="SeeAlsoLinks"><a href="Generating%20Reports.htm#ReportTop">Generate Reports</a>
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="../Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

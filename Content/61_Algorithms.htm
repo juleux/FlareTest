@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Designing with Algorithms</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="AlgTop"></a>Designing with Algorithms</h1>
+        <p>This help section describes how to perform each step in the design process.&#160; For help
+creating and opening network files, read the 
+<a href="In_Network_Files\NetworkFiles.htm#NFTop">Network
+Files</a> and <a href="In_Adding_Objects\Adding%20Objects.htm">Add Objects</a>  sections of this help document.</p>
+        <h2><a name="AlgDijkstra"></a>The Routing Algorithm - Modified Dijkstra</h2>
+        <p>The Modeler uses a modified version of the Dijkstra algorithm to determine how to
+route Demand Paths over the LightPath layer. Each LightPath and Fiber has a mirrored set of directed Forward and
+Reverse Edges that connect its Start and End Locations together. Each Edge has its own Cost and Relaxed properties that are manipulated by
+various Modeler algorithms.</p>
+        <p>When a LightPath is relaxed both of its Edges are relaxed, along with all of
+the Fibers it is hosted by. When a Fiber is relaxed both of its Edges are also
+relaxed. When a Fiber Edge is relaxed any LightPath Edges hosted by it are also
+relaxed. When a LightPath Edge is
+relaxed prior to running the modified Dijkstra algorithm, the LightPath Edge
+will not be included in a Working or Protect Path between Start and End
+Locations.</p>
+        <p>Locations also have a relaxed property. When a Location is relaxed before running the modified Dijkstra Algorithm
+all LightPath Edges beginning or ending at the Location will not be included in
+a Working or Protect Path between Start and End Locations.</p>
+        <p class="BackToTopLink"><a href="#AlgTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="AlgDesignProcess"></a>The Design Process</h2>
+        <p>The process for creating a network design using the Modeler consists of:</p>
+        <ol>
+            <li>Use one of several methods to 
+	<a href="In_Network_Files\Create%20a%20Network%20File.htm#NFCreateFile">create
+ a Network file</a>.
+  </li>
+            <li>Route the network using the appropriate set of algorithms (<a href="#AlgMesh">mesh</a>,
+	<a href="#AlgRing">ring</a>, or a combination of both) as described below.</li>
+            <li>Use various tools within the Modeler to analyze your design and make 
+	changes as needed.</li>
+            <li>Use the 
+	<a href="In_Generating_Reports\Generating%20Reports.htm#ReportTop">Reporting 
+	Tool</a> or the <a href="In_NetworkDataTool">Network Data Tool</a> to generate the desired Excel reports.
+</li>
+        </ol>
+        <p class="BackToTopLink"><a href="#AlgTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="AlgMesh"></a>Mesh Routing</h2>
+        <p>To route mesh demands, perform the steps as outlined below:</p>
+        <ol>
+            <li><a href="62_PrepRoute.htm#PrepRouteTop">Routing Preparation</a> - complete entry of design
+ information
+  </li>
+            <li>Run either the <a href="63_Routing.htm#RouteTop">Route Demands</a> algorithm 
+	or the <a href="66_OptimizedRouting.htm#RouteOptTop"> Routing Optimization</a> algorithm</li>
+            <li>Reroute non-diverse demands using one of the following approaches:</li>
+        </ol>
+        <blockquote>
+            <ul>
+                <li type="square">Edit demand routing
+        <a href="70_ManualRouting.htm#top">manually&#160;</a></li>
+                <li type="square">Adjust LightPath AdminCosts and re-route demands</li>
+            </ul>
+        </blockquote>
+        <ol start="4">
+            <li>Optional: Run the <a href="65_FailureAnal.htm#FailTop">Failure Analysis</a> 
+	Algorithm</li>
+        </ol>
+        <p class="BackToTopLink"><a href="#AlgTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="AlgRing"></a>Ring Dimensioning</h2>
+        <p>To route ring demands, perform the steps as outlined below:</p>
+        <ol>
+            <li><a href="62_PrepRoute.htm#PrepRouteTop">Routing Preparation</a> - complete entry of design information&#160;</li>
+            <li>Run the <a href="68_DimRings.htm#RingTop">Dimension Rings</a>  algorithm</li>
+            <li>Optional: Run the <a href="65_FailureAnal.htm#FailTop">Failure Analysis</a> 
+	Algorithm</li>
+        </ol>
+        <p class="BackToTopLink"><a href="#AlgTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>

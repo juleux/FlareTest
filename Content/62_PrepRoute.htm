@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Preparation for Routing - Mesh and Ring</title>
+        <link rel="stylesheet" type="text/css" href="MeshNet.css" />
+    </head>
+    <body>
+        <h1><a name="PrepRouteTop"></a>Preparation for Routing - Mesh and Ring</h1>
+        <p>Preparation for routing entails creating network objects and entering values 
+into object properties.&#160; A <a href="#PrepMinimum">minimum</a> set of 
+network information is required for the routing algorithms to function properly.&#160; 
+However, you can enter additional information in the 
+form of objects and <a href="#PrepProp">object properties</a>, that will be factored into your routing 
+results.</p>
+        <h2><a name="PrepMinimum"></a>Minimum Routing Requirements</h2>
+        <p>In preparation for routing demands, the following information must be
+present:</p>
+        <ul>
+            <li>A set of locations</li>
+            <li>A set of lightpaths connecting the locations</li>
+            <li>A set of demands to be routed between locations</li>
+            <li>Values for the following lightpath properties:
+    <ul type="square"><li>Length - must be greater than zero</li><li>AdminCost - must be greater than zero</li><li>Type (i.e. <span>OC192_STM64</span>)</li></ul></li>
+            <li>
+                <p style="margin-top: 3;margin-bottom: 2;">Values for the following demand properties:
+    </p>
+                <ul type="square">
+                    <li>Type (i.e. <span>OC48_STS48_STM16</span>)</li>
+                    <li>Quantity</li>
+                    <li>Protection Type (i.e. OnePlusOne)</li>
+                    <li>Scope (Mesh or Ring)</li>
+                </ul>
+                <p style="margin-top: -2px;margin-bottom: -2px;">&#160;</p>
+            </li>
+        </ul>
+        <p class="Note">Note: Fiber objects are not required for routing to occur.&#160; 
+However, if fiber objects are present, then the information they contain is used 
+by the routing algorithms.</p>
+        <p>In addition to the above, <b>networks with rings</b> require the following:</p>
+        <ul>
+            <li>One or more rings must be present.&#160; (Note:&#160;&#160;The
+  <a href="67_RingCover.htm">Ring
+ Cover</a> algorithm is a quick way to create rings using existing location
+ and fiber information).</li>
+            <li>At least one demand must have it's Scope property set to Ring.</li>
+            <li>
+                <p style="margin-top: 3;margin-bottom: 2;">Values for the following ring properties:
+    </p>
+                <ul type="square">
+                    <li>Type (i.e. <span>OC192_STM64</span>)</li>
+                    <li>Architecture (i.e. <span>BLSR2F_MSSPRING2F</span>)</li>
+                </ul>
+            </li>
+        </ul>
+        <p>The majority of this information is often included in the
+<a href="In_Network_Files\NetworkFiles.htm#NFTop">network
+file</a> used to initiate the design process.&#160; Additional information can 
+be added by using the
+<a href="In_User_Interface\The%20Property%20Editor.htm#MainPropEdit">Property 
+editor</a> to enter values.&#160; </p>
+        <p class="Note">Note:&#160; When fiber information is
+available, the amount of
+data that must be entered to create a network file can be minimized by deriving values for LightPath Length and LightPath
+AdminCost properties from Fiber Length.&#160; Instructions on how to accomplish 
+this are provided in the <a href="62_DeriveLPFromFiber.htm#DeriveLPTop">Derive 
+LightPath Properties from Fiber Length</a> section of this help file.&#160; 
+Fiber and LightPath Lengths can also be derived from location coordinates.&#160; 
+For descriptions of these commands, read the
+<a href="62_DeriveFiberLengthFromGCD.htm#DeriveFiberTop">Derive Fiber Length 
+From Great Circle Distance</a> and
+<a href="62_DeriveLPLengthFromGCD.htm#DeriveLPTop">Derive LightPath Length From 
+Great Circle Distance</a> sections of this help file.</p>
+        <p class="BackToTopLink"><a href="#PrepRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <h2><a name="PrepProp"></a>Object Properties that Influence Routing Results</h2>
+        <p>Some of the object properties that impact routing results are described 
+in the table below.&#160; Values highlighted in bold are required for the 
+routing algorithms to generate valid routing results.&#160;&#160;&#160; </p>
+        <p class="FigureTitle">Routing Related Object Properties</p>
+        <table border="1" cellpadding="" cellspacing="" bordercolorlight="#F5F5F5" bordercolordark="#B0C4DE" width="656">
+            <tr>
+                <th class="TableHeader" width="79">Object</th>
+                <th class="TableHeader" width="168">Property</th>
+                <th class="TableHeader" width="383" height="18">Description</th>
+            </tr>
+            <tr>
+                <td class="TableBody" width="79" valign="top" height="54" rowspan="3">Location</td>
+                <td class="TableBody" width="168" valign="top" height="18">DoNotUse</td>
+                <td class="TableBody" width="383" valign="top" height="18"><span style="font-family: Arial;"><span style="font-size: 10pt;font-family: Arial;">If True, then the 
+			DoNotUse property of the lightpaths terminating&#160; at this 
+			location will be set to True preventing them from being used for 
+			routing demands.</span></span> <![CDATA[ ]]></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"> 
+			PermitThroughTraffic</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			Use this property to specify the type of lightpaths that 
+	will be allowed to support through traffic (traffic that does not terminate at a location) 
+			at a given location. Valid entries include:
+      <ul><li>AnyLightPath</li><li>ExpressLightPaths</li><li>None</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"> Type</td>
+                <td class="TableBody" width="383" valign="top" height="18">Location 
+			type.&#160; Valid entries
+ include:&#160;
+      <ul><li>SN16000&#160;</li><li>SN9000</li><li>SN3000</li><li> Switch</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="79" valign="top" height="54" rowspan="3">Fiber</td>
+                <td class="TableBody" width="168" valign="top" height="18">
+			ConduitIDs</td>
+                <td class="TableBody" width="383" valign="top" height="18">The sequential list of 
+			conduit ids
+ (colon delimited) assigned to this fiber.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">DoNotUse</td>
+                <td class="TableBody" width="383" valign="top" height="18"><span style="font-family: Arial;"><span style="font-size: 10pt;font-family: Arial;">When true, the 
+			lightpaths associated with this fiber are excluded from the routing 
+			process. </span></span> 
+		&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">Length</td>
+                <td class="TableBody" width="383" valign="top" height="18">The 
+			relative distance between the start and end locations of this fiber.&#160; 
+			Units (kilometers or miles) are determined by the LengthUnit 
+			property of the Network object.&#160; Values for fiber length can be 
+			derived from location coordinates by using the command described in 
+			the Derive Fiber Length From Great Circle Distance section of this 
+			help file.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="79" valign="top" height="144" rowspan="8">
+			LightPath</td>
+                <td class="TableBody" width="168" valign="top" height="18">
+			CapacityMaximum</td>
+                <td class="TableBody" width="383" valign="top" height="18">Use this 
+			property to specify an upper limit target for lightpath capacity.&#160; 
+			The routing algorithms use CapacityMaximum in conjunction with
+			<a href="63_RoutingConstraints.htm#top">Routing Constraint settings</a> 
+			to make routing decisions.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			CapacityMinimum</td>
+                <td class="TableBody" width="383" valign="top" height="18">Use this 
+			property to specify an lower limit target for lightpath capacity.&#160; 
+			The routing algorithms use CapacityMinimum in conjunction with
+			<a href="63_RoutingConstraints.htm#top">Routing Constraint settings</a> 
+			to make routing decisions.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>AdminCost</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			Use this property to assign a "cost"
+value to each lightpath.&#160; When you set the AdminCosts for the lightpaths in
+your design, you are in effect assigning a relative priority to each lightpath
+(higher cost = lower priority).&#160; These priorities are factored into the
+decisions made by Modeler's routing algorithms.&#160; The 
+			<a href="In_Edit_LightPaths\LightPath%20AdminCosts%20Property.htm#LPToolAdmin">Set LightPath Admin 
+Costs</a> tool allows you to set the admin costs of a group of lightpaths by 
+applying a simple equation.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			ConduitIDs</td>
+                <td class="TableBody" width="383" valign="top" height="18">The sequential list of 
+			conduit ids
+ (colon delimited) assigned to this lightpath.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">DoNotUse</td>
+                <td class="TableBody" width="383" valign="top" height="18"><span style="font-family: Arial;"><span style="font-size: 10pt;font-family: Arial;">When True, the 
+			lightpath is excluded from the routing process. </span></span>&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>Length</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">The 
+			relative distance between the start and end locations of this 
+			lightpath.&#160; Units (kilometers or miles) are determined by the 
+			LengthUnit property of the Network object.&#160; If your network 
+			file includes fiber length data, then you can automatically assign&#160; 
+			lightpath length values by following the instructions in the
+			<a href="62_DeriveLPFromFiber.htm#DeriveLPTop">Derive LightPath 
+			Length from Fiber Length</a> section of this help file.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>Type</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Lightpath 
+			type.&#160; Valid entries include:
+      <ul><li>OC3_STM1</li><li>OC12_STM4</li><li>OC48_STM16</li><li>OC192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">VPN</td>
+                <td class="TableBody" width="383" valign="top" height="18">The 
+			number of the virtual private network (VPN)
+ this lightpath is assigned to.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="79" valign="top" height="36" rowspan="2">
+			Ring</td>
+                <td class="TableBody" width="168" valign="top" height="18"><b>
+			Architecture</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Ring 
+			architecture.&#160; Valid entries include:
+      <ul><li>BLSR2F_MSSSPRING2F</li><li>BLSR4F_MSSSPRING4F</li><li>ASYM4F</li><li>UPSR_SNCP</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>Type</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Ring 
+			type.&#160; Valid entries include:
+      <ul><li>OC3_STM1</li><li>OC12_STM4</li><li>OC48_STM16</li><li>OC192_STM64</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="79" valign="top" height="234" rowspan="13">
+			Demand</td>
+                <td class="TableBody" width="168" valign="top" height="18">
+			DoNotRoute</td>
+                <td class="TableBody" width="383" valign="top" height="18"><span style="font-family: Arial;"><span style="font-size: 10pt;font-family: Arial;">When True, demand will 
+			be ignored by routing algorithms.</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>Quantity</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Demand size.&#160; Units are based on the value of the Type property.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>Scope</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Demand 
+			scope.&#160; Valid entries include:
+      <ul><li>Mesh&#160;</li><li>Ring&#160;</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>Type</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Demand 
+			type.&#160; Valid entries
+ include:&#160;
+      <ul><li>
+      AU3, DS-3, VC3, VC4, E3</li><li> STM-1, STM-4, STM-16, STM-64</li><li>STS-1, STS-3, STS-12, STS-48, STS-192</li><li> OC-1, OC-3, OC-12, OC-48, OC-192</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			BroadleafProtection</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			Type of Broadleaf Protection.&#160;
+			Valid entries
+ include:&#160;
+      <ul><li>Basic&#160;</li><li>DiverselyRouted</li><li> Conduit_ID_Diverse</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			BroadleafReversion</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			Type of Broadleaf Reversion.&#160;
+			Valid entries
+ include:&#160;
+      <ul><li>Disabled&#160;</li><li>Manual</li><li> Automatic</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			BroadleafSourceReroute</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			When On, Broadleaf Source Reroute is enabled.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			BroadleafTrunkRestoration</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			When On, Broadleaf Trunk Restoration is enabled.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">NodeProtection</td>
+                <td class="TableBody" width="383" valign="top" height="18">When 
+			True, node protection is enabled.&#160;&#160;</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18"><b>ProtectionType</b>
+                </td>
+                <td class="TableBody" width="383" valign="top" height="18">Demand 
+			Protection Type.&#160; Valid entries
+ include:&#160;
+      <ul><li>Unprotected (working only)&#160;</li><li>OnePlusOne (working and protect)&#160;</li><li> SharedPath (working and protect)&#160;</li></ul></td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			FixedLightPathRouting</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			When True, the lightpath routing of a demand cannot be changed by a 
+			routing algorithm.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">
+			FixedLightPathTimeSlots</td>
+                <td class="TableBody" width="383" valign="top" height="18">
+			When True, the timeslot assignments of a demand cannot be changed by 
+			a routing algorithm.&#160; When True, FixedLIghtPathRouting must 
+			also be True.</td>
+            </tr>
+            <tr>
+                <td class="TableBody" width="168" valign="top" height="18">VPN</td>
+                <td class="TableBody" width="383" valign="top" height="18">The 
+			number of the virtual private network
+ (VPN)
+ this demand is assigned to.</td>
+            </tr>
+        </table><span> <![CDATA[ ]]></span>
+        <p class="BackToTopLink"><a href="#PrepRouteTop">Back to top</a>
+        </p>
+        <hr />
+        <p class="SeeAlsoText">See Also:&#160; 
+</p>
+        <p class="SeeAlsoLinks"><a href="63_Routing.htm#RouteTop">Demand Routing - Mesh</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="68_DimRings.htm#RingTop">Dimension Rings</a>
+        </p>
+        <p class="SeeAlsoLinks"><a href="66_OptimizedRouting.htm#RouteOptTop">Optimized Demand Routing - Mesh</a>
+        </p>
+        <p class="SeeAlsoLinks">&#160;</p>
+        <p class="BackToTopLink">
+            <img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" />
+        </p>
+    </body>
+</html>
