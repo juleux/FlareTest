@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:o="http://UnknownNamespace.xsd" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="5982" MadCap:lastWidth="817">
+<html xmlns:o="http://UnknownNamespace.xsd" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="2014" MadCap:lastWidth="817">
     <head>
         <meta http-equiv="Content-Language" content="en-us" />
         <meta name="ProgId" content="FrontPage.Editor.Document" /><title>Optimized Demand Routing - Mesh</title>
@@ -94,96 +94,5 @@ Routing Results</a> section of this help file.</p>
         <p class="BackToTopLink"><span><a href="#RouteOptTop">Back to top</a></span>
         </p>
         <hr />
-        <h2><a name="RouteOptAdv"></a>Advanced Routing Options</h2>
-        <p>The Advanced tab of the Routing Optimization dialog is shown below.<span>&#160;
-By making selections in this dialog, you determine which factors take precedence 
-during the routing process.&#160; Your selections will also influence the amount 
-of time required for the algorithm to complete it's analysis.&#160; Use the 
-description of each option (included below) to determine the desired settings.&#160; 
-When your selections are complete, return to the <b>Basic</b> tab and click on 
-the <b>Calculate</b> button to initiate the routing process.</span></p>
-        <p class="FigureTitle">Routing
-Optimization Dialog, Advanced Tab</p>
-        <p class="FigureTitle">
-            <img border="0" src="Resources/images/RoutingOptAdv.bmp" width="676" height="549" />
-        </p>
-        <p>A description of each advanced routing option is provided below.&#160; Unless 
-noted otherwise, any changes you make to option values are retained until the 
-Routing Optimization dialog is closed.&#160; </p>
-        <h3><span>Solution Cost 
-Coefficients
-</span>
-        </h3>
-        <p><span>For each
-lightpath type that exists in the current project, you can set solution cost 
-coefficients. Cost coefficients are disabled for any type of lightpath that does not 
-exist within the current project. There are two coefficient options for each
-lightpath type: Incremental Capacity and Incremental Capacity
-Distance. The default setting for Incremental Capacity is 1 and the default 
-setting for Incremental Capacity Distance is 0. You can use any combination of 
-non-negative values for coefficients.&#160; Generally however, only one coefficient type is used in 
-a design (based on the
-design goals).
-</span>
-        </p>
-        <h3>Used Traffic</h3>
-        <p>This cost coefficient is multiplied by the amount of used traffic for each
-route under consideration.&#160;It comes into play when the algorithm is
-comparing solutions which have the same required capacity/capacity distance, but
-different amounts of used traffic.&#160; When this occurs, the solution with the
-least amount of used traffic will have the lowest cost and will therefore be
-selected as the preferred solution.</p>
-        <h3>Constraint and UnRouted Demand Penalty</h3>
-        <p><span>This penalty is 
-imposed on a potential solution for each UnRouted Demand, each NonDiverse </span>Demand,<span>
-and for each instance that a soft constraint is violated.</span></p><span><p class="BackToTopLink"><img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" /></p><p class="BackToTopLink">&#160;</p><p class="BackToTopLink"><img border="0" src="Resources/images/Placeholder.gif" width="10" height="464" /></p><p class="SeeAlsoLinks"><a href="62_PrepRoute.htm#PrepRouteTop">Preparation for Routing</a></p><p class="SeeAlsoLinks"><a href="69_EvaluateRouting.htm#EvalTop">Evaluating Routing Results</a></p><p class="SeeAlsoLinks"><a href="63_Routing.htm#RouteTop">Demand Routing</a></p><p class="SeeAlsoLinks"><a href="63_DefaultRoutingOptions.htm#DROTop">Apply Default Routing Options</a></p><p class="SeeAlsoText">See Also:&#160;<a href="In_Network_Files\Create%20an%20Excel%20File%20for%20Import.htm#NFCreateExcel">  <![CDATA[ ]]></a></p><hr /><p class="BackToTopLink"><a href="#RouteOptTop">Back to top</a></p><p>For assistance with the algorithm options described above,&#160; please contact the design tools
-team at <a href="mailto:designtools@sycamorenet.com">designtools@sycamorenet.com</a>.</p><p class="Note"><b>Note:&#160; </b>Routing Constraint settings are retained as 
-long as the current network file remains open.&#160; If you have made any 
-recent changes to routing constraints (regardless of which routing algorithm was 
-in use), click on the <b>Routing Constraints</b> button to verify that 
-constraint values reflect your current needs.&#160; </p><p>Routing constraints provide a means of setting priorities for lightpath 
-selection during the routing process.&#160; Based on your constraint selections, 
-penalties are applied to potential solutions that do not meet the selected 
-criteria.&#160; By comparing the combined penalties for each potential solution, 
-the Modeler's routing algorithms can identify the solution that best meets your 
-criteria. To select 
-options for routing constraints, click on the <b>Routing Constraints...</b> 
-button.&#160; For a description of routing constraints, read the
-<a href="63_RoutingConstraints.htm#top">Routing Constraints</a> section of this 
-help file.</p><h3>Routing Constraints</h3><p class="Note"><b>Note:&#160; </b>Diverse Routing Option settings are retained 
-indefinitely unless you reset them by clicking on the <b>Defaults</b> button.&#160; 
-Diverse Routing Options include Routing Algorithm, Diversity Iterations, and 
-Diversity Step Size settings.</p><p>Use the <b>Defaults</b> button to return each selection in the Diverse 
-Routing Options box to it's default value. Default values exist for the Use 
-Broadleaf Algorithm and Use Modeler Algorithm checkboxes, for the number of 
-Diversity Iterations, and for Diversity Step Size.</p><h3>Defaults</h3><p>Diversity Step Size applies to the Modeler algorithm.&#160; The optimum value
-for step size (optimum being the best result in the least amount of time) can
-vary greatly depending on the characteristics of a particular network.&#160; You
-can use the <a href="63_Routing.htm">Route
-Demands</a> algorithm to observe the impact of a range of step size values to
-determine a good working value for each network.</p><h3>Diversity Step Size</h3><p>Diversity Iterations defines the maximum number of attempts to find diverse 
-working and protect paths for each protected demand. The default value is 
-typically sufficient to ensure diversity.&#160; However, certain topologies are 
-more complex and require a greater number of diversity iterations. There are 
-scenarios for which a finding a diverse route is not possible, perhaps due to 
-Conduit Id settings or hard maximum capacity constraints. For these scenarios, you can 
-increase the speed of the algorithm by setting
-diversity iterations to a lower number.</p><h3>Diversity Iterations</h3><ul><li><b>Broadleaf:</b>&#160; A diverse routing algorithm based on <MadCap:variable name="Modeler.CompanyName" />'s
- embedded
- Broadleaf algorithm is used to route demands.</li><li><b>Modeler:</b> A diverse routing algorithm, custom developed for the
- Modeler, is used to route
- demands.&#160;</li><li><b>Both Broadleaf and Modeler:</b>&#160; The Broadleaf algorithm is
- executed first, followed by the Modeler algorithm in the event that a
- demand's routing paths are
- non-diverse.&#160;</li></ul><p>Select one of these three options:</p><h3>Diverse Routing Algorithm</h3><ul><li><b>Solution Cost:</b>&#160; As the algorithm executes, each lightpath is
- assigned a cost based on solution cost coefficients.&#160;&#160;</li><li><b>Admin Cost:</b> As the algorithm executes, each lightpath is assigned a
- cost based on it's AdminCost property.</li></ul><p>The Modeler algorithm factors lightpath cost into the routing selection
-process.&#160; Select one of these two options:</p><h3>LightPath Routing Cost</h3><p>During each optimization iteration, solution cost is calculated and compared to that of
-the benchmark (lowest cost) solution.&#160; The solution with the lowest cost
-becomes the new benchmark to which future solutions will be compared.&#160; Demands are
-randomly sorted between iterations.&#160; Hence, the more optimization iterations that the algorithm is run, the more demand sequences will be tried
-and the greater the chance of finding the lowest cost solution.&#160; To run the algorithm&#160; indefinitely,
-set the number of iterations to
-zero.&#160; To stop running the algorithm, click the <b> Stop</b> button on the progress dialog.</p><h3>Optimization Iterations</h3></span>
     </body>
 </html>

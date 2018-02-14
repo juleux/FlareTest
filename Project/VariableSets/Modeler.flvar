@@ -16,4 +16,8 @@
     Name="CompanionProduct"
     Comment=""
     EvaluatedDefinition="Silvx Manager">Silvx Manager</Variable>
+  <Variable
+    Name="CompanyEmail"
+    Comment=""
+    EvaluatedDefinition="designtools@sycamorenet.com">designtools@sycamorenet.com</Variable>
 </CatapultVariableSet>

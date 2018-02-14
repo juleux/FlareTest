@@ -314,7 +314,7 @@
       Link="/Content/66_OptimizedRouting.htm">
       <TocEntry
         Title="Advanced Routing Options"
-        Link="/Content/66_OptimizedRouting.htm#RouteOptAdv" />
+        Link="/Content/80_Advanced Routing.htm" />
     </TocEntry>
     <TocEntry
       Title="Failure Analysis - Mesh"
